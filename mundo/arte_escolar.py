@@ -3,15 +3,17 @@ import pygame
 import recursos
 import configuracoes
 from mundo.terminal import TelaTerminal
+from mundo.turma_laboratorio import TurmaLaboratorio
 
 
 class ArteEscolar:
-    def __init__(self, ambiente, largura):
-        nome = 'corredor_detalhado.png' if ambiente == 'corridor' else 'laboratorio_detalhado.png'
+    def __init__(self, ambiente, largura, mostrar_turma=False):
+        nome = 'patio_ifrn.png' if ambiente == 'corridor' else 'laboratorio_detalhado.png'
         self.fundo = recursos.load_image('cenarios/'+nome)
         self.ambiente = ambiente
         self.largura = largura
         self.terminais = TelaTerminal()
+        self.etapa_aula = 'codigo'
         self.telas_monitores = []
         self.estatico = pygame.Surface((largura, configuracoes.ALTURA_TELA), pygame.SRCALPHA)
         if ambiente != 'corridor':
@@ -19,6 +21,8 @@ class ArteEscolar:
                 for x in (112, 272, 432, 592):
                     if base+x+138 < largura:
                         self._workstation(base+x, 240)
+
+        self.turma = TurmaLaboratorio(self.telas_monitores) if mostrar_turma else None
 
     def _workstation(self, x, y):
         s = self.estatico
@@ -56,11 +60,13 @@ class ArteEscolar:
                           [(x+100, y+68), (x+100, y+88), (x+117, y+88), (x+117, y+110)], 2)
         pygame.draw.ellipse(s, (88, 104, 107), (x+91, y+66, 8, 5))
 
-    def draw(self, superficie, camera, instante, corrompido):
+    def draw(self, superficie, camera, instante, corrompido, hipnose=0):
         deslocamento = round(camera.deslocamento.x)
         # Módulos em resolução nativa: sem esticar uma sala para cobrir todo o corredor.
         for x in range(0, self.largura, self.fundo.get_width()):
             superficie.blit(self.fundo, (x-deslocamento, -round(camera.deslocamento.y)))
         superficie.blit(self.estatico, (-deslocamento, -round(camera.deslocamento.y)))
         for semente, retangulo in enumerate(self.telas_monitores):
-            self.terminais.draw(superficie, camera.apply(retangulo), instante, semente, corrompido)
+            self.terminais.draw(superficie, camera.apply(retangulo), instante, semente, corrompido, 'revolta' if corrompido else self.etapa_aula)
+        if self.turma:
+            self.turma.draw(superficie, camera, instante, hipnose)

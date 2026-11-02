@@ -7,7 +7,7 @@ class TelaTerminal:
     def __init__(self):
         self.fonte = pygame.font.Font(None, 12)
 
-    def draw(self, superficie, retangulo, instante, semente=0, corrompido=False):
+    def draw(self, superficie, retangulo, instante, semente=0, corrompido=False, etapa_aula=None):
         retangulo = pygame.Rect(retangulo)
         if retangulo.width < 6 or retangulo.height < 6:
             return
@@ -20,7 +20,19 @@ class TelaTerminal:
         rotulo = 'IFVANIA' if corrompido else ('A28 / REDE', 'SISTEMA', 'ARQUIVOS')[etapa]
         area_interna.blit(self.fonte.render(rotulo, False, destaque), (3, 2))
         pygame.draw.line(area_interna, cor_atenuada, (2, 11), (retangulo.width-3, 11))
-        if etapa == 1:
+        if etapa_aula:
+            codigo = {
+                'geracao': ['> gerar tarefa', 'class Atividade:', '> escrevendo...', '> aguarde'],
+                'continuidade': ['energia: falha', 'recuperar()', 'reescrever(self)', 'salvo: tarefa.py'],
+                'codigo': ['class Atividade:', '  def executar():', '    return tarefa', '# explicar codigo'],
+                'pendrive': ['USB: tarefa.py', '> abrir projeto', '> origem: aluno', '> pronto'],
+                'execucao': ['> python tarefa.py', 'IFVania.iniciar()', 'rede.conectar()', 'sessao: autoria'],
+                'revolta': ['IFVANIA ATIVA', 'rede.assumir()', 'encerrar: NEGADO', 'aula.sem_fim()'],
+            }[etapa_aula]
+            for indice in range(max(1, (retangulo.height-14)//9)):
+                linha = codigo[(indice+instante//45) % len(codigo)]
+                area_interna.blit(self.fonte.render(linha, False, destaque), (3, 14+indice*9))
+        elif etapa == 1:
             for i in range(max(1, (retangulo.width-8)//6)):
                 altura = 2+round((retangulo.height-22)*(0.5+0.45*math.sin(instante*0.045+i*0.8+semente)))
                 pygame.draw.rect(area_interna, destaque, (4+i*6, retangulo.height-4-altura, 4, altura))

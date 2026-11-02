@@ -1,0 +1,33 @@
+{
+  "ferramenta": "image_gen integrada",
+  "data": "2026-11-02",
+  "referencia_estilo": "recursos/fontes_arte/laboratorio_detalhado.png",
+  "geracoes": [
+    {
+      "nome": "biblioteca_ifrn.png",
+      "referencias": [
+        "recursos/fontes_arte/laboratorio_detalhado.png",
+        "referencia/ifrn/Captura de tela de 2026-11-02 17-24-38.png",
+        "referencia/ifrn/Captura de tela de 2026-11-02 17-24-56.png"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: background module for IFVania Pygame 2D side scrolling platform game. Generate a detailed pixel art environment in exactly the same detailed atmospheric pixel art style, pixel density, dark blue shadows, muted ochre walls, warm tiny lights and cold cyan fluorescent highlights as reference 1 (existing approved phase 1 lab). Wide 16:9 image, flat side-on view with slight floor depth like reference 1, no isometric perspective. Wall/floor junction at 65% image height, empty walkable foreground bottom third. No people, no game HUD, no UI, no Google Maps overlays or watermark, no gameplay platforms. Straight horizontal architecture. Subject: IFRN campus library. References 2 and 3 are material and furniture references only: gray metal bookshelves filled with books and small classification labels, pale wood reading tables and blue upholstered chairs, vertical blinds over windows, tiled light walls, linear ceiling lamps and exposed conduits. Turn into the nocturnal dark rich game art style of reference 1, not the photography lighting. Reading table and blue chairs on left, bookcases along rear wall on right, consultation desk. Keep furniture as background, all walking floor empty. No computers needed. Seam-friendly vertical walls at both edges. No text other than a small BIBLIOTECA sign."
+    },
+    {
+      "nome": "patio_ifrn.png",
+      "referencias": [
+        "recursos/fontes_arte/laboratorio_detalhado.png",
+        "referencia/ifrn/Captura de tela de 2026-11-02 17-26-04.png",
+        "referencia/ifrn/Captura de tela de 2026-11-02 17-27-22.png",
+        "referencia/ifrn/Captura de tela de 2026-11-02 17-27-45.png"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: background module for IFVania Pygame 2D side scrolling platform game. Generate a detailed pixel art environment in exactly the same detailed atmospheric pixel art style, pixel density, dark blue shadows, muted ochre walls, warm tiny lights and cold cyan fluorescent highlights as reference 1 (existing approved phase 1 lab). Wide 16:9 image, flat side-on view with slight floor depth like reference 1, no isometric perspective. Wall/floor junction at 65% image height, empty walkable foreground bottom third. No people, no game HUD, no UI, no Google Maps overlays or watermark, no gameplay platforms. Straight horizontal architecture. Subject: IFRN campus covered courtyard and garden at night. Reference photos 2-4 provide architecture and materials only: yellow square columns with white square ceramic tiled lower section and thin red stripe, terracotta roof with wood underside, greenish concrete benches, garden palms and shade trees, shrubs and low yellow campus buildings behind. Recreate this as detailed dark pixel art in reference 1 style. Side-on covered walkway across whole scene with plants and benches behind the walkable foreground. Match reference 1 wall-floor junction height. Tiny warm campus windows amid cool night foliage. Seam-friendly repeating columns at left/right. No enclosed classroom, no bookshelves, no computer furniture."
+    },
+    {
+      "nome": "memoria_tarefa.png",
+      "referencias": [
+        "recursos/fontes_arte/laboratorio_detalhado.png"
+      ],
+      "prompt": "Use case: stylized-concept. Asset type: brief visual flashback background for a 2D pixel art game IFVania. Use reference image ONLY for matching its detailed pixel art rendering, palette, nocturnal lighting and material texture. Create a small modest Brazilian student's bedroom with a study desk, desktop computer whose monitor interior is blank dark teal to be animated by the game, a school backpack with green/white uniform nearby, an open notebook titled POO and a small USB pendrive beside keyboard. Through open doorway at left glimpse warm dining room, dinner table, and mother seen from behind waiting seated. No student visible because selected protagonist will be drawn separately. Night, pale ochre walls, rich blue gray shadows, amber dining room light, cyan computer screen, same detailed pixels and framing as the phase 1 lab reference. Straight front side-view wide 16:9 framing. Desk computer occupies right half and monitor screen has clearly rectangular face, no visible text on screen. No UI, watermark or photographic artifacts."
+    }
+  ]
+}

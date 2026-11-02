@@ -5,17 +5,19 @@ câmera, spawn, update e draw), sem criar inimigos ou um boss antecipadamente.
 """
 from types import SimpleNamespace
 import pygame
+import recursos
 import configuracoes
 from entidades.professor import Professor
 from mundo.camera import Camera
 from mundo.arte_escolar import ArteEscolar
 from interface import tema
+from mundo.succao_computador import SuccaoComputador
 
 
 class FaseEscolar:
     Y_PISO = 352
-    NOMES = {'classroom': 'Aula de programação orientada a serviço',
-             'corridor': 'Corredores da escola — procure o laboratório A28',
+    NOMES = {'classroom': 'Laboratório de informática — programação orientada a objetos',
+             'corridor': 'Pátio coberto — procure o laboratório A28',
              'lab': 'Laboratório A28 — encontre o professor Romerito'}
 
     def __init__(self, ambiente):
@@ -29,7 +31,7 @@ class FaseEscolar:
                     pygame.Rect(largura, 0, 32, configuracoes.ALTURA_TELA),
                     pygame.Rect(0, -32, largura, 32)])
         self.camera = Camera(largura, self.mapa_blocos.altura)
-        self.surgimento_jogador = (120, self.Y_PISO-configuracoes.TAMANHO_PERSONAGEM[1])
+        self.surgimento_jogador = (64 if ambiente == 'classroom' else 120, self.Y_PISO-configuracoes.TAMANHO_PERSONAGEM[1])
         self.chefe = None
         self.professores = pygame.sprite.Group()
         if ambiente != 'corridor':
@@ -40,7 +42,11 @@ class FaseEscolar:
         self.corrompido = ambiente != 'classroom'
         self.instantes = 0
         self.instantes_visuais = 0
-        self.arte = ArteEscolar(ambiente, largura)
+        self.arte = ArteEscolar(ambiente, largura, mostrar_turma=ambiente == 'classroom')
+        self.hipnose = 0.0
+        self.succao = None
+        self.indice_historia = 0
+        self.fundo_memoria = recursos.load_image('cenarios/memoria_tarefa.png') if ambiente == 'classroom' else None
         self.fonte = pygame.font.Font(None, 22)
         self.fonte_pequena = pygame.font.Font(None, 18)
         self.instrucao = None
@@ -72,6 +78,7 @@ class FaseEscolar:
         self.instrucao = None
         self.inicio_ataque = next(iter(self.professores)).rect.x
         self.inicio_jogador = jogador.rect.x
+        self.succao = SuccaoComputador(self, jogador)
 
     def update_abduction(self, jogador, temporizador):
         # Investida breve de Romerito e recuo do aluno antes da captura.
@@ -94,6 +101,8 @@ class FaseEscolar:
 
     def update_visuals(self):
         self.instantes_visuais += 1
+        if self.corrompido:
+            self.hipnose = min(1, self.hipnose+1/90)
 
     def _door(self, superficie, x, rotulo, ativo=False):
         # Porta metálica: caixilho, visor, dobradiças, puxador e chapa inferior.
@@ -118,20 +127,19 @@ class FaseEscolar:
         if ativo:
             self._rect(superficie, (110, 182, 179), (x+91, 288, 7, 4))
 
-    def draw(self, superficie):
-        self.arte.draw(superficie, self.camera, self.instantes_visuais, self.corrompido)
+    def draw(self, superficie, ocultar_professores=False):
+        self.arte.draw(superficie, self.camera, self.instantes_visuais, self.corrompido, self.hipnose)
         if self.ambiente == 'corridor':
-            for x, rotulo in ((160, 'A25'), (640, 'A26'), (1120, 'A27')):
-                self._door(superficie, x, rotulo)
             self._door(superficie, self.porta_a28.x, 'A28', True)
             self._rect(superficie, (17, 34, 40), (1280, 95, 250, 30))
             self._text(superficie, 'LABORATÓRIO A28  >', 1295, 102)
         else:
-            titulo = 'IFVania — inteligência artificial' if self.ambiente == 'classroom' else 'LABORATÓRIO A28'
+            titulo = ('IFVania — inteligência artificial' if self.arte.etapa_aula in ('execucao', 'revolta')
+                      else 'Apresentação da atividade / POO') if self.ambiente == 'classroom' else 'LABORATÓRIO A28'
             self._text(superficie, titulo, 454, 170)
-            self._text(superficie, 'Programação orientada a serviço' if self.ambiente == 'classroom'
+            self._text(superficie, 'Programação orientada a objetos' if self.ambiente == 'classroom'
                        else 'Sistema sob controle da IFVania.', 454, 200, pequeno=True)
-        for professor in self.professores:
+        for professor in ([] if ocultar_professores else self.professores):
             professor.draw(superficie, self.camera)
             imagem = professor.get_draw_image()
             visual = imagem.get_rect(midbottom=professor.rect.midbottom)
@@ -147,20 +155,50 @@ class FaseEscolar:
             superficie.blit(texto, texto.get_rect(center=(480, 381)))
 
     def draw_abduction(self, superficie, jogador, progresso):
-        sobreposicao = pygame.Surface(superficie.get_size(), pygame.SRCALPHA)
-        sobreposicao.fill((16, 8, 59, int(180*progresso)))
-        superficie.blit(sobreposicao, (0, 0))
-        if progresso < 0.25:
-            visual = jogador.get_draw_image().get_rect(
-                midbottom=self.camera.apply(jogador.rect).midbottom)
-            pygame.draw.rect(superficie, (244, 201, 118),
-                             visual.inflate(8, 8), 2)
-        # Fios e anéis visuais representam a captura; não causam dano físico.
-        for ator in [jogador, *self.professores]:
-            retangulo = ator.get_draw_image().get_rect(
-                midbottom=self.camera.apply(ator.rect).midbottom)
-            raio = retangulo.width//2+6 + int(progresso*60)
-            pygame.draw.ellipse(superficie, (127, 227, 216),
-                                (retangulo.centerx-raio, retangulo.centery-12, raio*2, 24), 2)
-            pygame.draw.line(superficie, (127, 227, 216), (retangulo.centerx, 90), retangulo.midtop, 2)
-        self._text(superficie, 'IFVania: transportando para o mundo virtual...', 220, 235)
+        if self.succao:
+            self.succao.draw(superficie, progresso)
+
+    def sincronizar_aula(self, indice, indice_execucao, indice_corrupcao):
+        self.indice_historia = indice
+        self.arte.etapa_aula = ('revolta' if indice >= indice_corrupcao else
+                               'execucao' if indice >= indice_execucao else
+                               'pendrive' if indice >= indice_execucao-2 else 'codigo')
+        if indice >= indice_corrupcao:
+            self.corrompido = True
+            self.hipnose = max(self.hipnose, min(1, (indice-indice_corrupcao)/3))
+
+    def draw_apresentacao(self, superficie, indice, indice_memoria, indice_execucao):
+        if indice_memoria <= indice < indice_execucao:
+            area = pygame.Rect(130, 36, 700, 315)
+            pygame.draw.rect(superficie, (5, 13, 22), area.inflate(12, 12))
+            superficie.blit(pygame.transform.scale(self.fundo_memoria, area.size), area)
+            legenda = 'NA NOITE ANTERIOR / TAREFA DE POO'
+            self._text(superficie, legenda, 146, 46, pequeno=True)
+            monitor = pygame.Rect(area.x+round(area.width*0.725), area.y+round(area.height*0.39),
+                                  round(area.width*0.10), round(area.height*0.14))
+            self.arte.terminais.draw(superficie, monitor, self.instantes_visuais,
+                                    etapa_aula='geracao' if indice == indice_memoria else 'continuidade')
+            if indice == indice_memoria+1:
+                # Queda de energia e recuperação do programa, em batidas suaves.
+                escuro = pygame.Surface(area.size, pygame.SRCALPHA)
+                escuro.fill((1, 7, 17, 115 if (self.instantes_visuais//24) % 3 == 0 else 32))
+                superficie.blit(escuro, area)
+                self._text(superficie, 'Continuidade de aprendizagem ativada', 360, 312, (135, 235, 215), pequeno=True)
+            return
+        painel = pygame.Rect(38, 52, 350, 146)
+        pygame.draw.rect(superficie, (7, 17, 25), painel)
+        pygame.draw.rect(superficie, (66, 103, 111), painel, 2)
+        etapa = self.arte.etapa_aula
+        self._text(superficie, 'MONITOR DO ALUNO / tarefa.py', 50, 59, pequeno=True)
+        linhas = {
+            'codigo': ('class Atividade:', '    def executar(self):', '        return tarefa'),
+            'pendrive': ('USB conectado', 'Abrindo tarefa.py...', 'Origem: pendrive do aluno'),
+            'execucao': ('> python tarefa.py', 'IFVania.iniciar()', 'Conectando a rede da escola...'),
+            'revolta': ('IFVANIA / SESSAO SEM FIM', 'encerrar() -> ACESSO NEGADO', 'Controle da turma: ATIVADO'),
+        }[etapa]
+        for numero, linha in enumerate(linhas):
+            self._text(superficie, linha, 51, 86+numero*24,
+                       (233, 166, 148) if self.corrompido else (132, 219, 205), pequeno=True)
+        if indice >= indice_execucao:
+            self._rect(superficie, (151, 166, 161), (88, 310, 18, 7))
+            self._rect(superficie, (53, 121, 112), (103, 311, 9, 5))

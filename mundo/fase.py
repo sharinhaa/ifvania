@@ -10,6 +10,7 @@ from entidades.romer_bug import RomerBug
 from entidades.professor import Professor
 from habilidades import ItemHabilidade
 from mundo.escola_sombria import EscolaSombria
+from mundo.biblioteca import Biblioteca
 
 TB = configuracoes.TAMANHO_BLOCO
 
@@ -35,6 +36,9 @@ class Fase:
             esquerda = dados_fase.get('arena_left', TB)
             opcoes["arena"] = pygame.Rect(esquerda, TB, self.mapa_blocos.largura - esquerda - TB,
                                             self.mapa_blocos.altura - 2 * TB)
+        if dados_fase.get('library'):
+            esquerda = dados_fase['arena_left']
+            opcoes['arena'] = pygame.Rect(esquerda, TB, self.mapa_blocos.largura-esquerda-TB, 14*TB-TB)
         self.chefe = classe_chefe(bx, by, definicao_chefe["name"], definicao_chefe["subject"],
                           definicao_chefe["color"], vida=definicao_chefe["health"],
                           arquivo_figura=definicao_chefe.get("sprite_file"), **opcoes)
@@ -47,6 +51,7 @@ class Fase:
         self.concluido = False
         self.surgimento_jogador = self._grounded_spawn(*self.mapa_blocos.surgimento_jogador)
         self.exige_infeccao = dados_fase.get('requires_infection', False)
+        self.professor_liberto = False
         self.infectado = not self.exige_infeccao
         self.encontro_pendente = False
         self.professor_humano = Professor(bx, by, 'romerito') if self.exige_infeccao else None
@@ -56,6 +61,12 @@ class Fase:
         self.cenario_escolar = (EscolaSombria(self.mapa_blocos.largura, self.mapa_blocos.altura,
                                        self.surgimento_jogador[1]+configuracoes.TAMANHO_PERSONAGEM[1])
                              if dados_fase.get('school_battle') else None)
+
+        self.biblioteca = None
+        if dados_fase.get('library'):
+            self.biblioteca = Biblioteca(self.mapa_blocos.largura, self.mapa_blocos.altura, 14*TB)
+            self.cenario_escolar = self.biblioteca
+            self.mapa_blocos.solidos.append(self.biblioteca.portao)
 
         # sprites do cenário (carregados/cacheados uma vez em recursos.py)
         self.imagem_chao = recursos.load_image("blocos/chao.png", (TB, TB), configuracoes.COR_CHAO)
@@ -83,6 +94,10 @@ class Fase:
     def update(self, jogador, eventos_quadro):
         if self.concluido or self.encontro_pendente:
             return None, None
+        if self.biblioteca:
+            dialogo = self.biblioteca.interagir(jogador, eventos_quadro, self.mapa_blocos.solidos)
+            if dialogo:
+                return 'dialogue', dialogo
         if getattr(self.chefe, 'cinematica_pendente', False):
             return 'boss_transform', None
         if self.chefe.derrotado:
@@ -160,6 +175,10 @@ class Fase:
         if self.chefe.derrotado and not self.dialogo_derrota_exibido:
             self.dialogo_derrota_exibido = True
             self.chefe.projeteis.empty()
+            if self.professor_humano:
+                self.professor_liberto = True
+                self.professor_humano.rect.topleft = self.chefe.rect.topleft
+                self.professor_humano.posicao.update(self.chefe.rect.topleft)
             if self.dados.get('clear_encounter_on_defeat'):
                 self.inimigos.empty()
                 jogador.projeteis.empty()
@@ -230,7 +249,7 @@ class Fase:
         for item_habilidade in self.itens_habilidades:
             item_habilidade.draw(superficie, self.camera)
 
-        if self.infectado:
+        if self.infectado and not self.professor_liberto:
             self.chefe.draw(superficie, self.camera)
         else:
             self.professor_humano.draw(superficie, self.camera)

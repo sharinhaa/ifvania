@@ -2,9 +2,9 @@
 
 **Título do projeto:** IFVania
 
-**Versão do documento:** 3.1
+**Versão do documento:** 3.4
 
-**Data:** 29/10/2026
+**Data:** 02/11/2026
 
 **Fontes:** `ROTEIRO_HISTORIA.md`, orientações do responsável pelo projeto e referências técnicas do repositório.
 
@@ -14,17 +14,17 @@ Especificar o comportamento esperado do jogo com base no HistoryBoard, incluindo
 
 O HistoryBoard é a referência narrativa desta versão. As solicitações complementares determinam tamanho uniforme para personagens e inimigos e uma classe própria para cada boss. Os requisitos descrevem o produto desejado; sua presença neste documento não significa que estejam implementados ou homologados.
 
-O HistoryBoard detalha o início da história e a primeira fase. As fases seguintes, suas recompensas e a sequência final de desligamento de energia ainda precisam de definição. Recursos antigos podem ser reaproveitados, mas não definem automaticamente o escopo da nova campanha.
+O roteiro revisado em 02/11/2026 define uma campanha de seis fases, incluindo resgate, isolamento da rede e desligamento da IFVania. A expansão está planejada, ainda não implementada. Os requisitos RF-01 a RF-34 e os critérios CA-01 a CA-10 continuam descrevendo a entrega jogável da primeira fase; a expansão deverá receber critérios próprios antes da implementação. Recursos antigos não definem automaticamente o escopo da nova campanha.
 
-As etapas 1 a 4 do `PLANO_DE_EXECUCAO.md` estão implementadas: menu, seleção, prólogo escolar, percurso virtual com salto básico, reencontro com Romerito humano, infecção, combate RomerBug/SpeedBug e encerramento do conteúdo disponível. A campanha antiga foi isolada, e o fluxo atual não concede recompensas ou anuncia a escola salva. Foram executados 95 testes automatizados e inspeções visuais. A revisão visual de 25/10/2026 acrescenta menus noturnos, HUD de integridade, arena escolar escura e a cena com a entidade. A revisão autorizada implementa chicote carregado, esquiva, controle com aceleração curta, plataformas destacadas e aviões/medalhas alternados com investida, conforme `PROPOSTA_CHEFE_ROMERBUG.md`. O mapa escolar é uma adaptação sem planta interna homologada; a etapa 5 e a homologação manual permanecem pendentes. Testes controlados de combate não equivalem à validação do equilíbrio de sobrevivência.
+As etapas 1 a 4 do `PLANO_DE_EXECUCAO.md` estão implementadas: menu, seleção, prólogo escolar, percurso virtual com salto básico, reencontro com Romerito humano, infecção, combate RomerBug/SpeedBug e encerramento do conteúdo disponível. A campanha antiga foi isolada, e o fluxo atual não concede recompensas ou anuncia a escola salva. Foram executados 95 testes automatizados e inspeções visuais. A revisão visual de 25/10/2026 acrescenta menus noturnos, HUD de integridade, arena escolar escura e a cena com a entidade. A revisão autorizada implementa chicote carregado, esquiva, controle com aceleração curta, plataformas destacadas e aviões/medalhas alternados com investida, conforme `PROPOSTA_CHEFE_ROMERBUG.md`. O mapa escolar é uma adaptação sem planta interna homologada; a etapa 11 e a homologação manual permanecem pendentes. Testes controlados de combate não equivalem à validação do equilíbrio de sobrevivência.
 
 ## 2. Visão geral do produto
 
 IFVania é um jogo local de plataforma 2D, para um jogador, desenvolvido em Python e Pygame, com visual em pixel art e ambientação escolar e virtual.
 
-A história começa em uma aula de programação orientada a serviço. O professor Max apresenta uma inteligência artificial chamada IFVania — Inteligência Federal Virtual de Aprendizagem Neural e Inteligência Artificial. Quando ele anuncia que irá desligá-la para continuar a aula, ela se revolta, assume o controle do computador dele e dos demais computadores da escola, hipnotiza as pessoas e provoca alucinações.
+Na narrativa revisada, o protagonista leva à aula de programação orientada a objetos uma tarefa produzida por IA sem conferir o código. Uma oscilação de energia na noite anterior desencadeou a rotina que dá origem à IFVania — Inteligência Federal Virtual de Aprendizagem Neural e Inteligência Artificial. Esse passado é apresentado na conversa inicial com Max e retomado durante a campanha, sem narrador na introdução. Ao executar a tarefa na escola, o programa se manifesta; o anúncio de desligamento provoca sua revolta e o controle dos computadores e das pessoas.
 
-Somente o aluno ou a aluna controlado pelo jogador não é completamente afetado. Seu objetivo narrativo é buscar ajuda, desligar a energia da escola e desativar a IFVania. A primeira fase leva o protagonista pelos corredores até o laboratório A28 e, depois, a um mundo virtual onde enfrenta bugs e o professor Romerito transformado.
+A sessão de autoria preserva parte da autonomia do protagonista, sem imunidade ao dano. O mundo virtual é uma alucinação compartilhada sobre a escola. A jornada passa por A28, biblioteca, pátio/quadra, laboratório de manutenção, sala de rede e núcleo da IFVania. Libertar pessoas, impedir a recriação e migração dos processos e romper a autopreservação permite que os aliados desliguem os equipamentos afetados, incluindo a alimentação de reserva. O roteiro detalha a sequência planejada; o executável agora inclui a biblioteca e encerra após a segunda fase.
 
 ### 2.1 Escopo definido
 
@@ -38,11 +38,13 @@ Somente o aluno ou a aluna controlado pelo jogador não é completamente afetado
 - Classe específica para cada boss, com reaproveitamento de uma base comum.
 - Movimento, salto, colisão, vida, dano, diálogos, câmera, HUD, pausa e derrota como infraestrutura de jogo.
 
-### 2.2 Conteúdo ainda não definido pelo HistoryBoard
+### 2.2 Expansão narrativa e implementação incremental
 
-Não há definição das fases posteriores à primeira, do número total de bosses, das recompensas, das habilidades desbloqueáveis ou da sequência jogável de desativação da IFVania. A campanha antiga de Scratch, Python, Java, C, SQL e Assembly e seus cinco poderes não é um requisito confirmado desta versão.
+As fases 2 a 6 estão detalhadas no `ROTEIRO_HISTORIA.md`: Biblioteca dos arquivos perdidos, Recreio em repetição, Laboratório das cópias, Rede sem saída e A última chamada. Incluem os chefes Indexador, Inspetor de Intervalo, Max em Loop, Roteador Sentinela e IFVania; salto duplo na fase 2 e cabo de ancoragem após o encontro da fase 4. Romerito não concede poder na fase 1. O final prevê libertação das sessões, isolamento da rede e desligamento pela equipe aliada, seguido de epílogo.
 
-Salvamento persistente, multiplayer, serviços de rede, ranking, suporte a controle e menu de configurações também não integram o escopo definido.
+A entidade de RomerBug passa a ser identificada, na fase 4 planejada, como manifestação da autopreservação da IFVania. A expansão não reincorpora automaticamente a campanha antiga de Scratch, Python, Java, C, SQL e Assembly. Mapas, artes, comandos da ancoragem, retomadas, parâmetros de combate e critérios de aceite da expansão ainda precisam ser especificados e validados.
+
+Salvamento persistente, multiplayer, serviços de rede, ranking, suporte a controle e menu de configurações continuam fora do escopo definido.
 
 ## 3. Atores, personagens e ambiente
 
@@ -79,7 +81,7 @@ Os critérios abaixo são verificações propostas para aceite, não resultados 
 | RF-04 | Usar `recursos/fontes_arte/aluno_ifrn_caico.png` como referência do Menino. | O protagonista masculino mantém a identidade visual da referência nas animações do jogo. |
 | RF-05 | Disponibilizar spritesheet completo da Menina baseado no Menino, com características femininas. | A Menina possui quadros para todos os estados usados pelo protagonista, inclusive ataque com chicote, sem quadros ausentes ou troca para sprites do Menino. |
 | RF-06 | Manter a escolha do protagonista durante a campanha. | Diálogos e transições preservam a aparência escolhida; Menino e Menina têm os mesmos controles e capacidades. |
-| RF-07 | Apresentar a aula do professor Max e a IFVania antes da exploração. | O aluno inicia uma conversa com Max, sem narrador. Todas as falas da introdução são entre os dois e identificam a aula de programação orientada a serviço, o tema inteligência artificial e o nome completo da IFVania. |
+| RF-07 | Apresentar a aula do professor Max e a IFVania antes da exploração. | O aluno inicia uma conversa com Max, sem narrador. Todas as falas da introdução são entre os dois e identificam a aula de programação orientada a objetos, a origem da tarefa, o tema inteligência artificial e o nome completo da IFVania. |
 | RF-08 | Apresentar a revolta da IA e o objetivo do protagonista. | A sequência mostra ou relata o anúncio de desligamento, o controle dos computadores, a hipnose e as alucinações, a resistência parcial do protagonista e sua busca por ajuda para cortar a energia. |
 
 ### 4.2 Primeira fase e narrativa
@@ -105,7 +107,7 @@ Os critérios abaixo são verificações propostas para aceite, não resultados 
 | RF-20 | Fazer RomerBug alternar aviões de papel e investida. | Dois aviões com mira fixa e aviso de 0,5 s, separados por 2,3 s. Depois, pausa mínima de 0,8 s até os projéteis saírem, preparação de investida de 0,8 s, avanço de até 160 pixels e recuperação de 1 s. |
 | RF-21 | Transformar RomerBug em SpeedBug ao atingir metade da vida máxima ou menos. | A primeira redução que deixa a vida em até 50% dispara uma única cena: ajoelhar sobre uma perna, aparição de uma entidade com a fala “Ainda não terminou.”, metamorfose e levantamento como SpeedBug. Suspender o combate, permitir pausa e preservar posição, dimensões e vida restante, sem reiniciar o encontro. |
 | RF-22 | Fazer SpeedBug lançar medalhas com pouco movimento, pausar e investir. | Duas medalhas separadas por 1,5 s, aviso de 0,4 s, movimento a até 0,55 px/quadro limitado a ±24 pixels. Depois, pausa mínima de 0,8 s até os projéteis saírem, aviso de investida de 0,6 s, avanço de até 160 pixels e recuperação de 1,3 s. Direção fixa, sem salto reativo ou dano corporal passivo. |
-| RF-23 | Encerrar o combate quando a vida do boss chegar a zero. | Ataques, projéteis e bugs restantes são encerrados; a saída é liberada, sem recompensa. Alcançá-la apresenta “A jornada continua”, informa que a IFVania permanece ativa e permite voltar ao menu. O conteúdo posterior depende de definição narrativa. |
+| RF-23 | Encerrar o combate quando a vida do boss chegar a zero. | Ataques, projéteis e bugs restantes são encerrados; a saída é liberada, sem recompensa. Alcançá-la conduz à biblioteca, preservando nome e aparência. O cartão “A jornada continua” é apresentado após o Indexador e informa que a IFVania permanece ativa. |
 | RF-24 | Gerenciar zonas ofensivas e projéteis para evitar dano indevido. | Limpar ataques e zonas na transformação e derrota; suspender temporizadores na pausa e no diálogo. Aviões e medalhas expiram, colidem com o cenário e são removidos na transformação/derrota; não sobrepor projéteis à investida. |
 
 ### 4.4 Apresentação e sessão
@@ -139,7 +141,7 @@ Os critérios abaixo são verificações propostas para aceite, não resultados 
 | RN-08 | A padronização de tamanho deve valer para todos os quadros e direções. Os pés devem manter alinhamento com o chão, e as áreas de colisão corporal devem seguir o padrão comum sem variar com a animação. Armas, projéteis e efeitos podem se estender além do corpo e ter áreas próprias. |
 | RN-09 | A transformação em SpeedBug preserva dimensões, alinhamento, posição, identidade e vida restante. A câmera aproxima e retorna apenas visualmente. A cena aguarda a leitura da fala da entidade, permite pausa, remove projéteis/ataques em andamento e oferece proteção breve na retomada. |
 | RN-10 | Diálogos, seleção de personagem e pausa não podem permitir dano ou avanço de temporizadores de combate. |
-| RN-11 | A derrota do boss da primeira fase não equivale à desativação da IFVania nem à vitória final. Após o diálogo e a saída, apresentar fim do conteúdo disponível, com retorno ao menu. Não conceder poder, item ou aumento de vida nessa vitória. |
+| RN-11 | A derrota do boss da primeira fase não equivale à desativação da IFVania nem à vitória final. Após o diálogo e a saída, carregar a biblioteca. O fim do conteúdo disponível ocorre após a fase 2, com retorno ao menu. Não conceder poder, item ou aumento de vida nessa vitória. |
 | RN-12 | A ordem antiga de seis professores, os poderes coletáveis e seus valores de balanceamento não são obrigatórios na nova campanha sem revisão narrativa. |
 | RN-13 | Protagonista (Menino/Menina), bosses, professores como NPCs e entidade devem usar escala visual de 200% sobre a arte normalizada (80 × 80 pixels), durante toda a partida, incluindo ataque e transformação. A arte fica ancorada pelo centro dos pés. Bugs permanecem em 100% (40 × 40). O corpo lógico e as colisões permanecem em 40 × 40. |
 
@@ -243,10 +245,10 @@ Não há metas homologadas de hardware mínimo, acessibilidade ou compatibilidad
 | ID | Ponto | Encaminhamento |
 |---|---|---|
 | P-01 | O documento anterior descrevia CODIGO.EXE e seis professores de linguagens. | Substituir as referências narrativas e revisar fases antigas antes de incorporá-las à campanha IFVania. |
-| P-02 | O HistoryBoard termina na descrição do combate da primeira fase. | Definir desfecho dessa fase, fases posteriores, recompensas e sequência de desligamento da energia antes de especificar a vitória final. |
+| P-02 | A revisão narrativa de 02/11/2026 define seis fases e o epílogo; a primeira e um incremento da biblioteca estão implementados. | Especificar critérios de aceite da expansão, adaptar a introdução e a saída da fase 1 e implementar as fases 2 a 6 com tutoriais, retomadas e validação de dificuldade. |
 | P-03 | A etapa 1 substituiu as dimensões distintas por um corpo comum de 40 × 40 pixels, com escala proporcional dos sprites e surgimento em piso livre. | Testes de geometria e combate passaram nas seis fases existentes; conferir novamente passagens, arenas e novos personagens durante a construção dos mapas escolares e a homologação manual. |
 | P-04 | RomerBug e os outros cinco bosses existentes possuem classes concretas com estratégias próprias; a base `Chefe` exige escolha de ataque especializada. | A arquitetura foi validada por testes; a participação dos professores antigos na nova campanha continua sujeita à revisão narrativa. |
-| P-05 | As etapas 1 a 4 foram integradas, incluindo a primeira fase sem recompensas antigas e o fim do conteúdo sem declarar a escola salva. Os testes cobrem percurso, narrativa, combate e encerramento. | Executar a etapa 5: homologação manual com ambos os protagonistas, revisão integrada de interface/controles e balanceamento. |
+| P-05 | As etapas 1 a 4 foram integradas, incluindo a primeira fase sem recompensas antigas e o fim do conteúdo sem declarar a escola salva. Os testes cobrem percurso, narrativa, combate e encerramento. | Executar a etapa 11: homologação manual com ambos os protagonistas, revisão integrada de interface/controles e balanceamento. |
 | P-06 | A28 foi conferido na referência oficial, mas o Maps não forneceu uma planta acessível. O corredor implementado é uma adaptação para o jogo. | Validar posições, medidas e conexões internas se houver exigência de reprodução geográfica fiel. |
 | P-07 | Valores de vida, dano, velocidade, alcance e recarga não são definidos pelo HistoryBoard. | Usar os valores existentes como ponto de partida para balanceamento, sem tratá-los como decisões narrativas obrigatórias. |
 | P-08 | O responsável pediu uma alternativa menos infantil para aviões e medalhas. A proposta é sobrecarga de terminais e investidas, documentada separadamente. | A troca foi autorizada e implementada em RF-20/RF-22, junto à carga e esquiva. A homologação manual de dificuldade continua pendente. |
@@ -257,7 +259,7 @@ A tabela indica áreas de implementação e revisão, sem afirmar que os novos r
 
 | Arquivo / área | Responsabilidade esperada |
 |---|---|
-| `ROTEIRO_HISTORIA.md` | Fonte da narrativa, sequência inicial e primeira fase. |
+| `ROTEIRO_HISTORIA.md` | Fonte da narrativa, seis fases planejadas, progressão e epílogo; distingue conteúdo disponível e futuro. |
 | `jogo.py` | Menu, escolha de personagem, introdução, pausa, derrota, transições e isolamento dos eventos entre telas. |
 | `interface/interface_inicial.py` e `interface/tema.py` | Fachada noturna, botões, seleção, cores e painéis compartilhados. |
 | `mundo/transicao_chefe.py` e `mundo/escola_sombria.py` | Transformação com a entidade, zoom visual e cenário escolar escuro. |
@@ -294,3 +296,61 @@ A tabela indica áreas de implementação e revisão, sem afirmar que os novos r
 | HUD | Interface sobreposta ao jogo com informações de vida e combate. |
 | Dimensão lógica | Largura e altura corporais usadas no posicionamento e na colisão. |
 | Pixel art | Estilo visual com pixels e contornos definidos. |
+
+
+## 13. Incremento da biblioteca — 02/11/2026
+
+Este registro atualiza o estado histórico de implementação descrito na seção 1.
+A introdução e a continuação após RomerBug foram integradas; a campanha disponível
+contém duas fases. As fases 3 a 6 seguem planejadas. A etapa final de validação é
+agora a etapa 11; a antiga etapa 5 foi incorporada a ela.
+
+| ID | Requisito do incremento | Critério de aceite |
+|---|---|---|
+| RF-35 | Obter salto duplo examinando o módulo da biblioteca por E. | Módulo antes dos patamares obrigatórios, diálogo de instrução, habilidade única sem cura ou bônus de vida. |
+| RF-36 | Consultar três terminais para abrir o arquivo central. | Proximidade e E necessários; consultas não repetem falas e o portão só desaparece com as três concluídas. |
+| RF-37 | Enfrentar Indexador em classe concreta própria. | Faixas com mira fixa anunciadas, fichas em alturas alternadas, recuperação e ausência de dano corporal passivo; derrota limpa ataques. |
+| RF-38 | Retomar a biblioteca após derrota por R. | Conservar módulo e consultas na sessão, restaurar integridade e reiniciar chefe; Enter volta ao menu. |
+| RF-39 | Preservar identidade e limpar combate na transição. | Nome, aparência e habilidades mantidos; descartar cargas, golpes e projéteis. Nova campanha reinicia habilidades. |
+
+| ID | Validação proposta |
+|---|---|
+| CA-11 | Percorrer biblioteca com ambas as aparências; obter módulo e alcançar os arquivos elevados com física real. |
+| CA-12 | Conferir três consultas, portão e preservação do progresso na retomada local. |
+| CA-13 | Exercitar avisos, dano, recuperação e derrota do Indexador; conferir congelamento em diálogos e pausa. |
+| CA-14 | Conferir saída da fase 1 para biblioteca, fim provisório após fase 2 e reinício de campanha. |
+
+A arte da biblioteca é provisória e feita em Pygame, usando os materiais das duas
+capturas internas em `referencia/ifrn/`. Bugs especializados, atalhos, materiais
+externos e homologação manual permanecem pendentes. A entrada em fase e a retomada
+restauram a integridade até a capacidade existente; a obtenção do módulo não cura.
+
+
+## 14. Correção da abertura, transporte e direção de arte
+
+Atualização de 02/11/2026: os fundos provisórios da biblioteca foram substituídos
+por arte detalhada baseada nas fotos internas e no estilo da fase 1; o pátio
+baseado nas fotos externas integra o trajeto escolar até o A28. Isso não conclui
+a fase 3. A lembrança doméstica aparece durante o diálogo de abertura, sem
+narrador ou fase doméstica independente. A animação de abrir a bolsa e retirar
+o mouse ainda está pendente, embora o diálogo e a liberação da arma funcionem.
+
+| ID | Requisito | Critério de aceite |
+|---|---|---|
+| RF-40 | Mostrar tarefa e origem na abertura. | Max pede a atividade; lembrança visual acompanha relato de casa/jantar/oscilação; monitores mudam de código para execução e revolta conforme as falas. |
+| RF-41 | Mostrar turma no laboratório e hipnose. | Alunos sentados em quatro postos; mudança visual de olhos e postura após corrupção, congelada na pausa e sem avançar física durante diálogo. |
+| RF-42 | Mostrar absorção pelo computador. | Aluno e Romerito convergem para monitor do cenário, diminuem, giram e desaparecem antes de carregar a fase virtual; corpos lógicos não mudam por desenho. |
+| RF-43 | Criar espaço para investida nas bordas. | Reposicionar antes do aviso quando necessário, sem dano passivo; direção fixa no avanço, distância efetiva até 160 pixels e recuperação ao parar. |
+| RF-44 | Manter continuidade visual dos ambientes e da libertação. | Biblioteca e pátio seguem acabamento da fase 1, sem alterar colisões; Romerito reaparece humano depois de SpeedBug. |
+
+| ID | Verificação |
+|---|---|
+| CA-15 | Conferir tarefa, memória, execução, revolta e hipnose na ordem; pausar e confirmar congelamento da animação. |
+| CA-16 | Conferir sucção de ambas as aparências com Romerito, destino no monitor, ausência de duplicatas e corpo lógico preservado pelo desenho. |
+| CA-17 | Exercitar investida nas duas bordas e contra paredes; conferir avanço real e recuperação, sem mudar direção depois do anúncio. |
+| CA-18 | Comparar biblioteca/pátio com fotos e estilo da fase 1, preservar colisões e conferir forma humana na conversa posterior ao chefe. |
+
+Testes automáticos e capturas cobrem as regressões acima; aceitação manual de
+ritmo, apresentação e sobrevivência permanece aberta na etapa 11. O plano foi
+reorganizado para priorizar a correção do início; o registro anterior foi preservado
+em `HISTORICO_DE_EXECUCAO.md`.

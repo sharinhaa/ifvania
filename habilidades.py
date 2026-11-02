@@ -14,7 +14,7 @@ class Habilidade(Enum):
 
 
 NOMES_HABILIDADES = {
-    Habilidade.SALTO_DUPLO: "Pulo Duplo (RomerBug)",
+    Habilidade.SALTO_DUPLO: "Salto duplo",
     Habilidade.ARRANCADA: "Dash Veloz (Python)",
     Habilidade.ESCALADA_PAREDE: "Escalada de Parede (Java)",
     Habilidade.DISPARO_DISTANCIA: "Tiro de Ponteiro (C)",

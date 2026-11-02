@@ -4,10 +4,11 @@ Jogo de plataforma 2D em **Python + Pygame**, com arquitetura orientada a objeto
 Escolha Menino ou Menina e acompanhe a revolta da IFVania, uma inteligência artificial
 que assume o controle dos computadores da escola.
 
-O fluxo principal implementa o início da história e a primeira fase do
-[HistoryBoard](ROTEIRO_HISTORIA.md). As fases posteriores e o desligamento da energia
-ainda não foram definidos. A saída da primeira fase apresenta **A jornada continua**;
-a IFVania permanece ativa.
+O fluxo principal inclui a aula, o percurso pelo A28 e duas fases virtuais:
+RomerBug/SpeedBug e a Biblioteca dos arquivos perdidos, com salto duplo,
+consultas e Indexador. O [roteiro](ROTEIRO_HISTORIA.md) planeja seis fases;
+as fases 3 a 6 e o desfecho ainda não estão implementados. A saída da biblioteca
+apresenta **A jornada continua**; a IFVania permanece ativa.
 
 ## Como executar
 
@@ -18,19 +19,21 @@ pip install -r dependencias.txt
 python principal.py
 ```
 
-Dependência: `pygame>=2.5.0`. Validação atual com Python 3.9.6 e Pygame 2.6.1.
-O Python 3.15 do ambiente de desenvolvimento não compilou essa versão de Pygame;
-os testes usaram um ambiente separado com Python 3.9.6.
+Dependência declarada: `pygame>=2.5.0`. Este incremento foi verificado com
+Python 3.14.4 e pygame-ce 2.5.8, que fornece o módulo `pygame`. As validações
+anteriores usaram Python 3.9.6 e Pygame 2.6.1.
 
 ## Fluxo disponível
 
 1. Menu com fachada em pixel art, Jogar e Sair; navegação por clique ou setas/Enter.
 2. Escolha Menino/Menina, com prévia animada e confirmação por botão ou Enter.
 3. Digitação do nome (obrigatório, até 20 caracteres); Enter confirma e Esc volta.
-   A aula começa com o aluno conversando com Max, sem narrador, e apresenta a
-   IFVania e sua revolta após o anúncio de desligamento.
-4. Corredor navegável, entrada no A28 e encontro com Romerito por **E**.
-5. Investida de Romerito, abdução e transporte ao mundo virtual.
+   A aula começa com o aluno conversando com Max, sem narrador, sobre a tarefa
+   produzida por IA, com lembrança visual do quarto e jantar. Monitores exibem
+   a execução e a corrupção; colegas sentados são hipnotizados diante das telas.
+4. Pátio coberto navegável inspirado nas fotos do IFRN, entrada no A28 e encontro com Romerito por **E**.
+5. Investida de Romerito e sucção dos dois personagens para um monitor,
+   com trajetória, rotação e redução visual antes da chegada ao mundo virtual.
 6. Descoberta do mouse na bolsa; o chicote é liberado ao terminar esse diálogo.
 7. Percurso com bugs e degraus de 32 ou 64 pixels, alcançável com o salto básico.
 8. Reencontro com Romerito humano, fala sobre Brasília e corridas e infecção por um bug.
@@ -38,7 +41,11 @@ os testes usaram um ambiente separado com Python 3.9.6.
    vida, vira SpeedBug, que lança duas medalhas com pouco deslocamento e depois
    faz uma pausa, investida anunciada e recuperação.
 10. A derrota encerra as ameaças e libera a saída, sem conceder poderes. Alcançar
-    a saída encerra o conteúdo disponível e permite voltar ao menu.
+    a saída leva à biblioteca.
+11. Três terminais fornecem o mapa e os registros da rede. E examina o módulo
+    que libera salto duplo e consulta os arquivos; o portão exige as três consultas.
+12. Indexador alterna faixas anunciadas e fichas, com pausas para contra-atacar.
+    A saída após sua derrota encerra o conteúdo disponível.
 
 O prólogo e a fase virtual funcionam com os dois protagonistas, com os mesmos
 atributos e corpo lógico de 40 × 40 pixels. Protagonista, bosses, professores
@@ -60,15 +67,18 @@ A referência oficial de A28 está no [documento de requisitos](DOCUMENTO_DE_REQ
 | Tocar e soltar X | Golpe rápido de mouse com cabo reforçado: 1 de dano |
 | Segurar X por 0,6 s e soltar | Golpe carregado: 2 de dano |
 | Shift | Esquiva curta, após encontrar o mouse; recarga de 0,9 s |
-| E | Entrar no A28 / falar com Romerito na escola, ao se aproximar |
+| E | Entrar no A28 / falar com Romerito / consultar terminais e módulo na biblioteca |
+| Salto novamente no ar | Salto duplo após examinar o módulo na biblioteca |
+| R na derrota da biblioteca | Retomar mantendo módulo e consultas; Enter volta ao menu |
 | E / Enter / Espaço | Revelar ou avançar diálogo |
 | Esc | Pausar e retomar exploração, combate, abdução e infecção |
 | Enter / Espaço | Confirmar seleção, dispensar cartão ou voltar ao menu no encerramento |
 | Esc na seleção | Voltar ao menu |
 | Sair no menu / fechar janela | Encerrar a aplicação |
 
-Não há desbloqueio de pulo duplo, dash, escalada, tiro ou escudo na campanha atual.
-As dicas desses poderes não aparecem enquanto não estiverem disponíveis.
+Salto duplo é obtido no módulo da biblioteca, sem cura ou aumento de vida.
+Dash, escalada, tiro, escudo e ancoragem ainda não são liberados na campanha atual.
+Entrada em fase e retomada restauram a integridade atual, sem aumentar sua capacidade.
 
 ## Combate
 
@@ -207,7 +217,7 @@ Capturas anteriores da etapa 4: [reencontro](recursos/fontes_arte/previa_reencon
 python -m unittest discover -s testes -v
 ```
 
-**95 testes passaram**, incluindo o percurso com salto básico para ambos os
+**95 testes passaram na revisão anterior**, incluindo o percurso com salto básico para ambos os
 protagonistas, reencontro antes da infecção, transformação a 50%, projéteis,
 pausa, limpeza de ameaças, ausência de recompensas e retorno ao menu. Os novos
 testes também cobrem as seis poses da cena, fala da entidade, câmera visual,
@@ -217,7 +227,7 @@ da câmera, a escala ampliada e o congelamento visual na pausa. O combate
 com chicote foi verificado em condições controladas; isso não comprova o equilíbrio
 de sobrevivência por controle manual.
 
-As cenas da etapa 4 foram renderizadas e inspecionadas. A etapa 5 ainda inclui
+As cenas da etapa 4 foram renderizadas e inspecionadas. A etapa final de validação ainda inclui
 homologação manual, revisão integrada de interface/câmera/controles e balanceamento.
 Consulte o [plano](PLANO_DE_EXECUCAO.md) e os [requisitos](DOCUMENTO_DE_REQUISITOS.md).
 
@@ -257,3 +267,33 @@ e valide com `python -m unittest discover -s testes -v`. Nomes técnicos de
 descoberta, como `AGENTS.md`, `__init__.py` e `.gitignore`, foram mantidos.
 A renomeação preservou o conteúdo das 160 imagens e animações e passou pelos
 81 testes e pelos oito exportadores de arte em pasta temporária.
+
+
+## Expansão iniciada — 02/11/2026
+
+A biblioteca recebeu fundo detalhado gerado a partir das referências internas
+do IFRN e da direção de arte da fase 1. O pátio coberto também recebeu fundo
+baseado nas fotos, aplicado ao caminho escolar até o A28. Código próprio em `mundo/biblioteca.py`, mapa e falas em
+`mundo/dados_biblioteca.py`, encontro em `entidades/indexador.py`.
+A antiga etapa 5 passou a integrar a etapa 11, validação final; a expansão ocupa
+as etapas 5 a 10 do plano. A fase 3 ainda não está jogável: o fundo de pátio já integrado não inclui quadra, resgate ou chefe.
+
+Validação do incremento: **102 testes passaram** sem janela/áudio. Capturas da biblioteca inspecionadas; sobrevivência, ritmo e comandos ainda precisam de homologação manual.
+
+
+## Revisão do início e cenários — 02/11/2026
+
+A abertura agora encena apresentação da tarefa, lembrança de casa, execução,
+colegas nos computadores e hipnose. A abdução conduz as imagens de aluno e
+Romerito até um monitor durante 150 atualizações, sem dano e com pausa.
+SpeedBug recua antes de anunciar investida quando está sem espaço na borda;
+Romerito volta à forma humana depois da derrota.
+
+Fontes novas e prompts: [instrucoes_ambientes_ifrn.json](recursos/fontes_arte/instrucoes_ambientes_ifrn.json).
+Exportação: `python preparar_ambientes_ifrn.py`; para conferir sem substituir
+recursos: `python preparar_ambientes_ifrn.py --destino /tmp/ifvania_ambientes`.
+
+**108 testes passaram**. Capturas de abertura, hipnose, memória, sucção,
+biblioteca e pátio inspecionadas; partida manual e balanceamento ainda pendentes.
+O plano ativo prioriza as correções e mantém a validação final na etapa 11;
+o histórico anterior está em [HISTORICO_DE_EXECUCAO.md](HISTORICO_DE_EXECUCAO.md).

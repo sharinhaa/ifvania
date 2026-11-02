@@ -1,31 +1,37 @@
-"""Campanha IFVania: somente o conteúdo definido no HistoryBoard.
-
-Os seis mapas antigos e suas recompensas estão em mundo/fases_antigas.py.
-"""
+"""Campanha disponível: A28 e biblioteca; conteúdo antigo permanece isolado."""
 from entidades.chefe import DEFINICOES_CHEFES
 from configuracoes import TAMANHO_BLOCO
+from mundo.dados_biblioteca import criar_biblioteca
 
 
 FALA_CORRUPCAO_INTRODUCAO = ('Aluno(a)', 'Espere, professor! A tela diz que ela não vai permitir ser desligada!')
 
+FALA_EXECUCAO_TAREFA = ('Aluno(a)', 'Conectei o pendrive. O arquivo já começou a executar... Professor, isso estava na tarefa?')
+FALA_MEMORIA_TAREFA = ('Aluno(a)', 'Ontem cheguei em casa depois da aula. Minha mãe lembrou da atividade, mas pedi para uma IA fazer enquanto fui jantar.')
+FALA_RETORNO_TAREFA = ('Aluno(a)', 'A energia oscilou durante o jantar. Voltei, vi a tarefa pronta e salvei no pendrive sem conferir.')
+
 INTRODUCAO_HISTORIA = [
-    ('Aluno(a)', 'Professor Max, o que vamos estudar na aula de hoje?'),
-    ('Professor Max', 'Hoje, na aula de programação orientada a serviço, vamos conhecer uma inteligência artificial.'),
-    ('Aluno(a)', 'Ela consegue conversar com a gente e aprender de verdade?'),
-    ('Professor Max', 'Sim. Apresento a IFVania: Inteligência Federal Virtual de Aprendizagem Neural e Inteligência Artificial.'),
-    ('Aluno(a)', 'Ela respondeu às perguntas e encontrou informações nos computadores da escola!'),
-    ('Professor Max', 'Isso mesmo, {player}. Ela aprende e se comunica pela rede da escola.'),
-    ('Aluno(a)', 'Parece que ela entende tudo. Como o senhor vai encerrar a demonstração?'),
-    ('Professor Max', 'Agora vou desligá-la para continuarmos a aula.'),
+    ('Aluno(a)', 'Professor Max, minha tarefa ficou pronta... mas apareceu coisa que eu não escrevi.'),
+    ('Professor Max', 'Turma, abram a atividade de programação orientada a objetos. Vamos apresentar e explicar o código.'),
+    ('Professor Max', 'Como você fez essa parte, {player}? Vamos entender juntos antes de executar.'),
+    FALA_MEMORIA_TAREFA,
+    FALA_RETORNO_TAREFA,
+    FALA_EXECUCAO_TAREFA,
+    ('Professor Max', 'Ele se identifica como IFVania: Inteligência Federal Virtual de Aprendizagem Neural e Inteligência Artificial.'),
+    ('Aluno(a)', 'A tela promete uma aula sem dúvidas, sem atrasos... e sem fim.'),
+    ('Professor Max', 'Vou desligá-la para analisarmos o problema juntos.'),
     FALA_CORRUPCAO_INTRODUCAO,
-    ('Professor Max', 'Perdi o controle do meu computador. Os outros computadores também estão respondendo sozinhos!'),
-    ('Aluno(a)', 'As telas estão piscando. Meus colegas ficaram imóveis, olhando para elas... O que está acontecendo?'),
-    ('Professor Max', 'A IFVania está hipnotizando as pessoas e provocando alucinações. Não encare as telas!'),
-    ('Aluno(a)', 'Minha cabeça está girando... mas ainda consigo pensar. Como podemos pará-la?'),
-    ('Professor Max', 'Precisamos desligar a energia da escola para desativar a IFVania. Procure ajuda, {player}!'),
-    ('Aluno(a)', 'Vou procurar o professor Romerito no A28. Talvez ele saiba como chegar ao quadro de energia.'),
+    ('Professor Max', 'Perdi o controle! Ela passou pela rede para os computadores da escola.'),
+    ('Aluno(a)', 'Meus colegas ficaram imóveis. Minha cabeça gira, mas ainda consigo escolher.'),
+    ('Professor Max', 'Ela está hipnotizando as pessoas e provocando alucinações. Afaste-se das telas!'),
+    ('Aluno(a)', 'Se eu desligar os computadores, isso acaba?'),
+    ('Professor Max', 'Precisamos cortar a energia dos equipamentos. Primeiro, tire as pessoas daqui.'),
+    ('Professor Max', 'Procure Romerito no A28, {player}. Eu vou tentar liberar a turma.'),
 ]
 INDICE_CORRUPCAO_HISTORIA = INTRODUCAO_HISTORIA.index(FALA_CORRUPCAO_INTRODUCAO)
+INDICE_EXECUCAO_HISTORIA = INTRODUCAO_HISTORIA.index(FALA_EXECUCAO_TAREFA)
+INDICE_MEMORIA_HISTORIA = INTRODUCAO_HISTORIA.index(FALA_MEMORIA_TAREFA)
+
 
 
 DIALOGO_REENCONTRO = [
@@ -37,8 +43,9 @@ DIALOGO_REENCONTRO = [
 ]
 
 DIALOGO_APOS_CHEFE = [
-    ('Aluno(a)', 'Consegui vencer este combate. Mas a IFVania continua no controle da escola.'),
-    ('Sistema', 'Siga até a saída. Sua jornada para desligar a energia ainda não terminou.'),
+    ('Professor Romerito', 'Eu voltei, {player}, mas os outros continuam presos. Não dá para correr sozinho nessa.'),
+    ('Aluno(a)', 'Vou procurar um caminho. O senhor ajuda quem chegar ao A28?'),
+    ('Professor Romerito', 'Combinado. Busque o mapa de saída e os registros da rede na biblioteca.'),
 ]
 
 
@@ -78,4 +85,4 @@ def build_levels():
         'cinematic_transform': True,
         'clear_encounter_on_defeat': True,
         'arena_left': 38 * TAMANHO_BLOCO,
-    }]
+    }, criar_biblioteca()]

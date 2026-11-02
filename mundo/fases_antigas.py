@@ -125,7 +125,7 @@ DIALOGOS_INTRODUCAO = [
     [("Aluno(a)", "Aqui cheira a ponteiro solto e memória vazando."),
      ("Prof. C", "Segmentation fault... na sua coragem."),
      ("Aluno(a)", "Eu só queria fazer um free() na minha ansiedade.")],
-    [("Aluno(a)", "A biblioteca de dados está organizada demais. É assustador."),
+    [("Aluno(a)", "A ifrn de dados está organizada demais. É assustador."),
      ("Prof. SQL", "SELECT * FROM alunos WHERE coragem > 0; -- 0 linhas retornadas."),
      ("Aluno(a)", "Vou fazer um JOIN com minha coragem escondida.")],
     [("Aluno(a)", "O núcleo do sistema. É aqui que tudo começou."),

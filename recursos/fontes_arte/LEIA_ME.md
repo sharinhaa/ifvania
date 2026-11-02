@@ -233,3 +233,24 @@ Reutilizadas as artes existentes de avião e medalha. Capturas atuais:
 `previa_romerbug_aviao.png`, `previa_speedbug_medalha.png` e
 `previa_ciclo_investida.png`. Não houve geração de novas artes nesta revisão.
 As capturas anteriores da descarga documentam a mecânica substituída.
+
+
+## Ambientes IFRN e encenação do início — 02/11/2026
+
+Fontes novas: `biblioteca_ifrn.png`, `patio_ifrn.png` e `memoria_tarefa.png`,
+geradas com a ferramenta integrada image_gen. Prompts completos e referências
+em [instrucoes_ambientes_ifrn.json](instrucoes_ambientes_ifrn.json).
+A arte de `laboratorio_detalhado.png` orienta estilo, acabamento e iluminação;
+as capturas em `referencia/ifrn/` orientam biblioteca e espaços externos.
+As fontes e as artes anteriores foram preservadas.
+
+Exportar com `python preparar_ambientes_ifrn.py`, a partir da raiz do projeto.
+Usar `--destino /tmp/ifvania_ambientes` para conferir antes da integração.
+Os três fundos são normalizados para módulos de 960 × 540 sem suavização.
+
+Alunos sentados são compostos em `mundo/turma_laboratorio.py` a partir das
+artes existentes dos protagonistas, sem novas colisões. A sucção ao monitor
+fica em `mundo/succao_computador.py`, com imagens transformadas apenas no desenho.
+Capturas de inspeção desta revisão: `revisao_inicio_*.png`, `revisao_succao_*.png`,
+`revisao_patio.png` e `revisao_biblioteca.png`. São capturas de estados controlados,
+não evidência de partida manual ou homologação final.

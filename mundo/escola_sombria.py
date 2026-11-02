@@ -6,13 +6,13 @@ from mundo.arte_escolar import ArteEscolar
 
 class EscolaSombria:
     def __init__(self, largura, altura, y_piso):
-        self.arte = ArteEscolar('lab', largura)
+        self.arte = ArteEscolar('lab', largura, mostrar_turma=True)
         self.instantes_visuais = 0
         self.y_piso = y_piso
         self.fonte = pygame.font.Font(None, 18)
 
     def draw_background(self, superficie, camera):
-        self.arte.draw(superficie, camera, self.instantes_visuais, True)
+        self.arte.draw(superficie, camera, self.instantes_visuais, True, hipnose=1)
 
     def update(self):
         self.instantes_visuais += 1

@@ -121,7 +121,18 @@ class RomerBug(Chefe):
     def choose_attack(self, jogador):
         return 'medalha' if self.transformado else 'aviao'
 
-    def preparar_ataque(self, jogador, solidos):
+    def preparar_ataque(self, jogador, solidos, permitir_reposicionar=True):
+        direcao = 1 if jogador.rect.centerx >= self.rect.centerx else -1
+        espaco = self.arena.right-self.rect.right if direcao > 0 else self.rect.left-self.arena.left
+        if permitir_reposicionar and espaco < 80:
+            # Na borda da arena, criar espaço antes de anunciar a corrida.
+            # A limitação dos lançamentos (24 px) não se aplica ao recuo.
+            self.estado_ataque = 'reposicionar'
+            self.alvo_reposicionamento = max(self.arena.left, min(
+                self.arena.right-self.largura, self.rect.x-direcao*(160-espaco)))
+            self.temporizador_ataque = 55
+            self.velocidade.x = 0
+            return
         self.estado_ataque = 'preparar'
         self.temporizador_ataque = 36 if self.transformado else 48
         self.direcao_investida = 1 if jogador.rect.centerx >= self.rect.centerx else -1
@@ -184,10 +195,13 @@ class RomerBug(Chefe):
         elif self.estado_ataque == 'intervalo_disparo' and self.transformado:
             alvo = max(self.origem_ciclo-24, min(self.origem_ciclo+24, jogador.rect.x))
             self.velocidade.x = max(-self.VELOCIDADE_DISPARANDO, min(self.VELOCIDADE_DISPARANDO, alvo-self.posicao.x))
+        elif self.estado_ataque == 'reposicionar':
+            diferenca = self.alvo_reposicionamento-self.posicao.x
+            self.velocidade.x = max(-3.2, min(3.2, diferenca))
+            self.direcao_olhar = 1 if diferenca > 0 else -1
         elif self.estado_ataque == 'executar':
             passo = min(6, 160-self.distancia_investida)
             self.velocidade.x = self.direcao_investida*max(0, passo)
-            self.distancia_investida += passo
         else:
             self.velocidade.x = 0
         x_anterior = self.rect.x
@@ -204,6 +218,10 @@ class RomerBug(Chefe):
                 self.alvo_patrulha = self.posicao.x-parede*80
             elif self.estado_ataque == 'executar':
                 self.temporizador_ataque = 1
+        if self.estado_ataque == 'executar':
+            self.distancia_investida += abs(self.rect.x-x_anterior)
+        if self.estado_ataque == 'reposicionar' and (parede or abs(self.rect.x-self.alvo_reposicionamento) < 2):
+            self.temporizador_ataque = 1
         self.apply_gravity()
         self.no_chao = self.move_and_collide_y(solidos)
         if self.no_chao:
@@ -212,7 +230,9 @@ class RomerBug(Chefe):
         self.projeteis.update(solidos)
         self.temporizador_ataque -= 1
         if self.temporizador_ataque <= 0:
-            if self.estado_ataque in ('aproximar', 'intervalo_disparo'):
+            if self.estado_ataque == 'reposicionar':
+                self.preparar_ataque(jogador, solidos, permitir_reposicionar=False)
+            elif self.estado_ataque in ('aproximar', 'intervalo_disparo'):
                 self.preparar_disparo(jogador)
             elif self.estado_ataque == 'preparar_disparo':
                 self.lancar_projetil()
@@ -250,7 +270,7 @@ class RomerBug(Chefe):
             self.quadro_movimento = int(self.distancia_passada / comprimento_passo) % 6
             self.image = self.figuras_movimento[forma][self.direcao_olhar][self.quadro_movimento]
         else:
-            self.image = self.figuras_movimento[forma][self.direcao_olhar][1]
+            self.image = self.figuras_formas[forma][self.direcao_olhar][0]
 
     def get_all_hit_rects(self):
         if (self.temporizador_transformacao > 0 or self.cinematica_pendente

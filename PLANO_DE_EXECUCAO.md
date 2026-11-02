@@ -1,211 +1,189 @@
 # Plano de execução — IFVania
 
-**Data:** 29/10/2026
+**Reorganizado em:** 02/11/2026, após revisão das lacunas do início da história.
 
-Referências: `DOCUMENTO_DE_REQUISITOS.md` versão 3.1 e `ROTEIRO_HISTORIA.md`.
+Referências: [AGENTS.md](AGENTS.md), [ROTEIRO_HISTORIA.md](ROTEIRO_HISTORIA.md), [DOCUMENTO_DE_REQUISITOS.md](DOCUMENTO_DE_REQUISITOS.md) e as seis imagens de `referencia/ifrn/`. O registro anterior foi preservado integralmente em [HISTORICO_DE_EXECUCAO.md](HISTORICO_DE_EXECUCAO.md).
 
-## Estratégia
+## Ordem de trabalho e estado real
 
-Implementar por etapas verificáveis. Preservar as alterações existentes no HistoryBoard e nas referências visuais. A campanha antiga permanece disponível durante a primeira etapa para validar regressões; sua permanência não representa aprovação narrativa das seis fases.
+Priorizar coerência e apresentação do início antes de ampliar a campanha. As etapas 1 a 4 abaixo reúnem correções da base existente; não significam reconstruir os sistemas já prontos. As etapas 5 a 10 preparam e completam a expansão. A **etapa 11 é a última e reúne a validação final**. Testes técnicos e inspeções continuam acontecendo a cada incremento, sem antecipar a homologação final.
 
-## Etapa 1 — Dimensões e arquitetura dos bosses
+Disponível: seleção/nome, conversa com Max e lembrança da tarefa, laboratório com turma, pátio de passagem até o A28, sucção para o computador, RomerBug/SpeedBug e biblioteca com consultas, salto duplo e Indexador. O pátio de passagem usa a arte da futura fase 3, mas não implementa seu resgate, quadra ou chefe. O jogo ainda termina com “A jornada continua” após a biblioteca.
 
-- [x] Definir dimensões corporais comuns em `configuracoes.py`, 40 × 40 pixels, mantendo a altura corporal e aproximando a escala visual de humanos e bugs.
-- [x] Aplicar as dimensões ao jogador, bugs, bosses e às duas formas de RomerBug.
-- [x] Carregar sequências de sprites com escala proporcional compartilhada, alinhamento dos pés e filtro sem suavização; tratar poses de ataque como exceção visual, sem alterar colisão corporal.
-- [x] Adequar pontos de surgimento para manter os pés no piso e evitar sobreposição com blocos.
-- [x] Dar classe própria a cada boss existente, com seleção de ataques própria e registro explícito de tipos, sem fallback para boss genérico.
-- [x] Validar dimensões, transformações, chão das arenas, ataque com chicote e regressões existentes.
+## Lacunas encontradas ao comparar roteiro e jogo
 
-**Aceite:** CA-08 e CA-09 para as entidades disponíveis, junto aos testes existentes de encontro e combate. A validação visual definitiva inclui os personagens que serão criados nas próximas etapas.
+| Trecho do roteiro | Lacuna anterior | Correção e estado |
+|---|---|---|
+| Tarefa em casa, mãe, jantar e energia | Apenas explicação verbal, sem lembrança visual. | Acrescentada lembrança do quarto e jantar, com monitor animado, oscilação visual e registro de continuidade, durante a conversa com Max. Não é uma fase doméstica independente. |
+| Apresentação da atividade | Não mostrava claramente pedido da tarefa e execução do arquivo. | Max pede à turma que abra e explique o exercício; o aluno conecta o pendrive; monitores passam por código, execução e controle da IFVania. |
+| Hipnose coletiva | Havia falas e telas corrompidas, mas nenhum colega visível. | Quatro alunos sentados em computadores, posturas e olhos alterados com a corrupção. A evolução é visual; física e combate seguem suspensos. |
+| Ataque e abdução no A28 | Anéis sobre personagens parados, sem destino aparente. | Investida/recuo seguidos por trajetória curva, redução, rotação e partículas até um monitor; fechamento da imagem antes da fase virtual. |
+| Descoberta do mouse na bolsa | Continua sendo diálogo e liberação da arma; falta encenação da bolsa. | Pendente na etapa 3. Não registrar como animação concluída. |
+| Investida de SpeedBug | Na borda, a direção podia apontar para fora da arena e interromper imediatamente o avanço. | Reposicionamento sem dano antes do anúncio, seguido de direção fixa; distância computada pelo deslocamento real. Regressão nas duas bordas. |
+| Romerito libertado | Diálogo de recuperação mantendo a figura de SpeedBug derrotado. | Forma humana restaurada na posição do chefe antes da conversa posterior. |
+| Biblioteca e pátio | Biblioteca em blocos simples destoava da fase 1; fotos sem aplicação visual ao percurso. | Novos fundos de ambos a partir das fotos e do estilo da fase 1; biblioteca integrada e pátio aplicado ao caminho escolar até o A28. |
+| Fases 3 a 6 | Roteiro definido, conteúdo jogável ausente. | Permanecem pendentes, com entregas separadas nas etapas 7 a 10. |
 
-## Etapa 2 — Menu e seleção do protagonista
+## Etapa 1 — Corrigir e encenar o início da história
 
-- [x] Criar fachada em pixel art baseada em `referencia/fachada_escola.png`.
-- [x] Implementar Jogar e Sair com clique e navegação por teclado.
-- [x] Implementar tela de escolha Menino / Menina e persistência da seleção na campanha.
-- [x] Criar e integrar spritesheet completo da Menina, cobrindo os mesmos estados do Menino e as dimensões comuns.
-- [x] Verificar entrada, encerramento e ambas as opções de personagem: CA-01 e CA-02.
+- [x] Mostrar Max pedindo a apresentação da atividade de programação orientada a objetos.
+- [x] Incluir a origem da tarefa: chegada em casa, lembrete da mãe, IA durante o jantar, oscilação, arquivo pronto e pendrive, por diálogo e lembrança visual.
+- [x] Preservar a abertura iniciada pelo aluno, sem narrador, com o nome escolhido.
+- [x] Mostrar código, execução da tarefa e revolta como estados distintos nos monitores e numa visualização ampliada legível.
+- [x] Mostrar colegas sentados nos computadores e hipnose progressiva por postura, olhos e vínculo com as telas.
+- [x] Preservar a resistência parcial sem revelar antecipadamente a explicação da fase 4.
+- [ ] Homologar manualmente tempo de leitura, enquadramento e compreensão da passagem de casa para a aula com ambas as aparências.
 
-**Dependência:** etapa 1 para o contrato de dimensões e animações. Usar o fluxo de geração de imagens para arte nova; não considerar imagens substitutas como arte concluída.
+**Aceite:** sequência tarefa → execução → tentativa de desligamento → revolta → hipnose → busca por Romerito. Diálogos não avançam física, combate ou caminhada. Animações visuais param na pausa. A lembrança não substitui nem contradiz a revelação da fase 4.
 
-## Etapa 3 — Introdução e percurso escolar
+## Etapa 2 — Corrigir a investida de RomerBug/SpeedBug
 
-- [x] Substituir a introdução de CODIGO.EXE pela aula de Max, apresentação e revolta da IFVania.
-- [x] Integrar representações de Max e Romerito baseadas nas referências, com dimensões comuns.
-- [x] Construir corredores e A28 como adaptação lateral jogável; consulta ao link do Maps tentada, sem planta acessível. O laboratório A28 foi conferido na referência oficial; o traçado interno real continua sem homologação.
-- [x] Implementar gatilhos únicos para encontro, ataque, abdução e transporte ao mundo virtual.
-- [x] Apresentar a descoberta do mouse na bolsa antes de liberar seu uso.
-- [x] Validar ordem narrativa e suspensão da simulação nos diálogos: CA-03 e CA-10.
+- [x] Reproduzir a ausência de avanço ao anunciar investida contra a borda da arena.
+- [x] Criar espaço com reposicionamento antes do anúncio quando houver menos de 80 pixels livres naquela direção.
+- [x] Manter o limite de ±24 pixels apenas nos trechos de lançamento; o reposicionamento e a investida têm movimentos próprios.
+- [x] Contar os até 160 pixels de investida pelo deslocamento efetivo, respeitando paredes e limites.
+- [x] Preservar direção fixa, aviso, recuperação, ausência de dano corporal passivo e transformação com vida compartilhada.
+- [x] Testar SpeedBug nas duas bordas, além dos encontros e ciclos já existentes.
+- [ ] Experimentar sobrevivência e ritmo das duas formas, inclusive recuo junto ao limite da arena.
 
-## Etapa 4 — Primeira fase da nova campanha
+**Aceite:** a corrida anunciada avança quando há espaço; parede real interrompe o avanço e leva à recuperação. Não há perseguição que altere a direção depois do anúncio nem animação correndo contra a borda sem deslocamento.
 
-- [x] Ajustar o percurso virtual para funcionar sem depender das habilidades da campanha antiga.
-- [x] Inserir a fala de Romerito sobre Brasília e corridas e a infecção antes do combate.
-- [x] Revisar aviões, medalhas, perseguição e transformação única a 50%, preservando vida e tamanho.
-- [x] Encerrar ataques e projéteis ao derrotar o boss.
-- [x] Remover recompensas e mensagens antigas sem respaldo no novo roteiro.
-- [x] Separar a campanha antiga do fluxo principal; o fim do conteúdo disponível deve indicar que a jornada continua, sem anunciar a escola salva.
-- [x] Validar CA-04 a CA-07 e repetir CA-08 com os novos personagens.
+## Etapa 3 — Dar continuidade visual aos encontros e ao transporte
 
-## Etapa 5 — Integração e homologação
+**Dependência:** abertura da etapa 1 e controles/combate preservados.
 
-- [ ] Revisar HUD, dicas de comandos, câmera, legibilidade, pausa e fechamento em cada tela.
-- [ ] Executar os testes de regressão e o roteiro CA-01 a CA-10.
-- [ ] Fazer inspeção visual e teste manual da primeira fase com Menino e Menina.
-- [ ] Atualizar README, controles e estado de implementação no documento de requisitos.
-- [ ] Registrar resultados, limitações e parâmetros de balanceamento sem declarar recursos pendentes como implementados.
+- [x] Manter investida de Romerito e recuo do protagonista antes da captura, sem dano narrativo.
+- [x] Usar um monitor real do cenário como destino da sucção dos dois personagens.
+- [x] Reduzir e girar as imagens ao longo da trajetória; ocultar as figuras originais para evitar duplicatas durante a cena.
+- [x] Fechar a imagem antes de carregar a fase virtual e manter o mouse bloqueado até o fim da descoberta.
+- [x] Congelar o transporte na pausa, sem alterar corpos lógicos pelo desenho.
+- [x] Restaurar Romerito humano depois de SpeedBug, com conversa e saída para a biblioteca.
+- [ ] Animar a abertura da bolsa e retirada do mouse durante as falas correspondentes.
+- [ ] Revisar chegada ao mundo virtual, contato pelo terminal e posição de Romerito no reencontro, para que a separação e a recuperação fiquem claras visualmente.
 
-## Decisões de conteúdo ainda necessárias
+**Aceite:** observar aproximação → captura → absorção pelo monitor → chegada virtual → descoberta da arma. Nome e aparência permanecem os mesmos. Uma tecla de diálogo não dispara simultaneamente arma ou interação na cena seguinte.
 
-As fases após RomerBug, recompensas, quantidade final de bosses e sequência de desligamento da energia não foram descritas no HistoryBoard. Sua implementação depende de definição narrativa posterior; as etapas acima podem avançar sem inventar esse conteúdo.
+## Etapa 4 — Unificar cenários com a direção de arte da fase 1
 
-## Registro de execução
+**Dependência:** preservar a geometria dos mapas existentes.
 
-- Etapa 1 implementada: dimensão lógica comum de 40 × 40 pixels, normalização proporcional das sequências, alinhamento dos pés, surgimento em piso livre e classes concretas com estratégias próprias para os seis bosses existentes.
-- `Chefe` passou a ser abstrata para a escolha de ataques; tipos desconhecidos são rejeitados, sem substituição por um boss genérico.
-- Inspeção visual feita com todas as entidades disponíveis lado a lado, incluindo SpeedBug. As silhuetas preservam suas proporções naturais dentro da mesma área; Max, Romerito humano e Menina serão verificados após a criação de suas artes.
-- Validação: 31 testes passaram com Python 3.9.6 e Pygame 2.6.1, incluindo seis novos testes de dimensões, normalização, surgimento e estratégias. Comando: `python -m unittest discover -s testes -v`.
-- O Python 3.15 instalado no sistema não compilou Pygame 2.6.1; a validação usou ambiente temporário com Python 3.9.6, sem mudar as dependências do projeto.
-- Etapa 2 implementada: fachada baseada na fotografia, Jogar/Sair com mouse e teclado, seleção com prévia animada e confirmação, onze quadros da Menina e persistência da escolha entre fases e reaparecimentos.
-- Introdução textual da etapa 3 atualizada: aula de Max, nome completo da IFVania, anúncio de desligamento, revolta, hipnose/alucinações e objetivo de cortar a energia. O percurso escolar e o combate virtual foram concluídos nas etapas 3 e 4 descritas abaixo.
-- Artes geradas com a ferramenta integrada `image_gen`; fontes, prompts e PNG de execução estão no repositório. Exportação reproduzível: `python preparar_recursos_menu.py`.
-- Validação ao concluir a etapa 2: 42 testes passaram com Python 3.9.6 e Pygame 2.6.1. Onze novos testes cobrem menu, ambas as opções, preservação da escolha, reinício de progresso, pausa da simulação e isolamento de eventos entre telas.
-- Inspeção visual feita nas capturas de menu, seleção, introdução, primeira fase com Menina e todos os seus quadros nas duas direções. Também foram atualizadas e desenhadas as doze combinações entre dois protagonistas e seis mapas por 60 quadros cada, sem abrir janela.
-- Etapa 3 implementada em 22/10/2026: aula com Max e mudança visual dos monitores na revolta da IA; corredor navegável com placas e acesso ao A28; encontro com Romerito por E; investida, recuo do protagonista e abdução animada; transporte para o mapa virtual e descoberta do mouse na bolsa antes de liberar o chicote.
-- `FaseEscolar` mantém cenários sem inimigos/boss antecipado e gatilhos únicos. O mesmo protagonista atravessa as cenas. A arma fica bloqueada na escola e durante a descoberta; diálogos e pausa suspendem a simulação, inclusive o transporte.
-- Max e Romerito possuem dois quadros cada, derivados das fotos de `referencia/`, com transparência e corpo comum de 40 × 40. Fontes e prompts salvos no projeto; exportação: `python preparar_recursos_escola.py`.
-- Referência geográfica: o link curto do Maps não abriu uma planta consultável. A página oficial sobre horários dos laboratórios confirma A28: https://portal.ifrn.edu.br/campus/caico/noticias/horarios-laboratorios-de-informatica/ . As portas A25–A27 e as distâncias do corredor são composição de cenário, sem afirmação de posição real.
-- Validação ao concluir a etapa 3: 51 testes passaram com Python 3.9.6 e Pygame 2.6.1. Os nove testes novos percorrem a rota com movimento real para Menino/Menina, conferem a ordem dos eventos, proximidade e tecla E, gatilhos únicos, ataque narrativo, arma bloqueada, pausa, dimensões, câmera e texto.
-- Inspeção visual: aula, corredor, A28, abdução e descoberta do mouse; cenas escolares e transporte também renderizados sem janela com os dois protagonistas.
-- Etapa 4 implementada em 23/10/2026: a campanha principal contém somente o mapa virtual previsto no HistoryBoard. Os seis mapas antigos, seus diálogos e poderes foram isolados em `mundo/fases_antigas.py`, fora do menu.
-- O mapa fixo tem piso contínuo, degraus de 32/64 pixels, quatro bugs e arena plana. O piso mantém os personagens visíveis acima do diálogo. Foi percorrido com movimento e salto básicos, sem poderes, com ambos os protagonistas.
-- Romerito aparece humano, fala de Brasília e corridas e é infectado por um bug em uma sequência de 60 atualizações. Ataques ficam bloqueados até seu término; a pausa suspende a infecção. O corpo e a vida são preservados.
-- RomerBug/SpeedBug conservam a transformação única a 50%, os aviões, as medalhas e a perseguição. Após a derrota, ameaças e projéteis são removidos, sem item ou bônus de vida.
-- A saída permanece bloqueada até a derrota. O fim do conteúdo apresenta “A jornada continua”, informa que a IFVania segue ativa e permite voltar ao menu e reiniciar a campanha.
-- Validação ao concluir a etapa 4: 61 testes passaram com Python 3.9.6/Pygame 2.6.1. Os dez novos testes cobrem a campanha isolada, percurso básico, diálogo/infecção, pausa, dimensões, duas formas, limpeza, ausência de recompensa e encerramento/reinício. O combate por teclado foi verificado para Menino e Menina em condições controladas, sem representar homologação do balanceamento de sobrevivência.
-- Inspeção visual: percurso, Romerito humano, infecção, SpeedBug, derrota e tela de continuação; capturas em `recursos/fontes_arte/virtual_*_preview.png` e `previa_fim_conteudo.png`.
-- Próxima etapa: integração e homologação (etapa 5), incluindo teste manual, revisão integrada e balanceamento. O conteúdo narrativo posterior continua sem definição.
+- [x] Usar `laboratorio_detalhado.png` como referência de acabamento: pixel art detalhada, sombras frias, paredes em ocre e pontos de luz âmbar/ciano.
+- [x] Gerar e integrar biblioteca com estantes metálicas, livros, mesas claras, cadeiras azuis e persianas das fotos internas.
+- [x] Gerar e integrar pátio coberto com pilares amarelos/revestidos, faixa vermelha, telhas, bancos e jardins das fotos externas.
+- [x] Aplicar pátio ao percurso até o A28 sem inventar posições reais de salas; preservar limites, piso e zona de entrada.
+- [x] Trocar o fundo provisório da biblioteca sem alterar plataformas, terminais, portão ou colisões.
+- [x] Preservar fontes e prompts; exportar primeiro para pasta temporária e conferir PNGs em 960 × 540.
+- [ ] Completar variações normal/corrompida/restaurada e continuidade de módulos para a fase 3 e o epílogo.
+- [ ] Conferir legibilidade de estantes e plataformas, escala do mobiliário e repetição dos módulos durante uma partida manual.
 
-## Ajustes solicitados em 25/10/2026
+**Aceite:** laboratório, pátio e biblioteca pertencem à mesma direção visual; mudança de ambiente preserva sinais jogáveis. Bancos, cadeiras e livros decorativos não criam colisões ou falsos apoios. A quadra e os setores técnicos continuam adaptações ficcionais sem foto interna disponível.
 
-- [x] Estilizar menu, seleção, cartões, pausa, diálogos e HUD com uma paleta escura legível.
-- [x] Criar fachada noturna e fundo de laboratório escolar, preservando colisões e percurso.
-- [x] Implementar a transição a 50%: uma perna apoiada, entidade, fala “Ainda não terminou.”, metamorfose e levantamento.
-- [x] Aplicar aproximação/retorno suaves da câmera apenas no desenho; congelar combate e permitir pausa em toda a cena.
-- [x] Preservar vida restante e corpo; limpar ataques/projéteis e oferecer proteção na retomada.
-- [x] Apresentar proposta para substituir aviões/medalhas, sem aplicar mudança mecânica ainda não escolhida.
+### Imagens de referência e aplicação
 
-Artes feitas com a ferramenta integrada image_gen, fontes preservadas em
-`recursos/fontes_arte/`, prompts em `instrucoes_artes_sombrias.json` e exportação reproduzível
-com `python preparar_recursos_sombrios.py`. A entidade permanece de origem indefinida.
+| Arquivo em `referencia/ifrn/` | Observação | Aplicação |
+|---|---|---|
+| [17-24-38](referencia/ifrn/Captura%20de%20tela%20de%202026-11-02%2017-24-38.png) | Biblioteca: leitura, terminais, mesas claras, cadeiras azuis, vidro e persianas. | Área de leitura e consulta do fundo da biblioteca. |
+| [17-24-56](referencia/ifrn/Captura%20de%20tela%20de%202026-11-02%2017-24-56.png) | Estantes metálicas, lombadas e placas de classificação. | Acervo e identidade visual da fase 2. |
+| [17-26-04](referencia/ifrn/Captura%20de%20tela%20de%202026-11-02%2017-26-04.png) | Corredor coberto, pilares revestidos com faixa vermelha, bancos e saída. | Estrutura e materiais do pátio de passagem. |
+| [17-27-22](referencia/ifrn/Captura%20de%20tela%20de%202026-11-02%2017-27-22.png) | Jardim entre blocos, palmeiras, arbustos, vasos e paredes amarelas. | Vegetação e fundo dos blocos no pátio. |
+| [17-27-40](referencia/ifrn/Captura%20de%20tela%20de%202026-11-02%2017-27-40.png) | Área sombreada com árvores, bancos de concreto e caminho pavimentado. | Composição e referência para o futuro ponto de reunião. |
+| [17-27-45](referencia/ifrn/Captura%20de%20tela%20de%202026-11-02%2017-27-45.png) | Outro ângulo dos bancos, árvores e blocos baixos. | Banco e jardim no fundo gerado; futuras variações do pátio. |
 
-Validação da revisão de 25/10: 68 testes passaram. Os sete novos testes cobrem transição,
-pausa e fala, vida/corpo, retomada, zoom visual, poses e legibilidade das dicas.
-Foram inspecionadas capturas do menu, seleção, arena e etapas da transformação;
-prévia animada em `recursos/fontes_arte/previa_transformacao_chefe.gif`.
+As imagens foram inspecionadas individualmente. Não fornecem planta interna, medidas ou identificação do A28; não comprovam continuidade entre todas as vistas. Interface e pessoas fotografadas não foram incorporadas como elementos do jogo.
 
-A proposta está em `PROPOSTA_CHEFE_ROMERBUG.md`. A etapa 5 ainda requer homologação
-manual e balanceamento; esta revisão não a declara concluída.
+## Etapa 5 — Consolidar progressão e infraestrutura da expansão
 
-## Ajuste de proporção — 26/10/2026
+- [x] Preservar nome/aparência/habilidades ao trocar de fase e limpar cargas, golpes e projéteis pendentes.
+- [x] Reiniciar habilidades numa nova campanha; manter a campanha antiga isolada.
+- [x] Especificar e implementar retomada local da biblioteca por R, com módulo e consultas preservados, sem salvamento em disco.
+- [x] Documentar que entrada em fase e retomada recuperam a integridade até a capacidade atual; módulo não cura nem aumenta vida.
+- [x] Separar dados, cenário, objetivos e chefe da biblioteca em módulos próprios.
+- [ ] Definir retomadas e objetivos persistentes das fases 3 a 6, incluindo falha de travessia na ancoragem.
+- [ ] Desdobrar os critérios de aceite de toda a expansão, além dos já definidos para a biblioteca e esta revisão.
 
-Conforme a delimitação do responsável, somente o protagonista (Menino/Menina) e
-os bosses recebem escala visual de 110%, durante toda a partida, incluindo
-exploração, combate e transformação. São desenhados em 44 × 44 com apoio dos pés
-preservado. Professores enquanto NPCs, bugs e entidade permanecem em 40 × 40. Colisões, velocidades, alcance e geometria do mapa permanecem iguais.
-A escala fica centralizada em `configuracoes.ESCALA_VISUAL_PERSONAGEM`.
+## Etapa 6 — Completar a Biblioteca dos arquivos perdidos
 
-## Escala e arte escolar — 27/10/2026
+**Dependência:** etapas 4 e 5; incremento jogável já disponível.
 
-A solicitação atual amplia também os NPCs e substitui a escala da revisão de
-26/10: protagonista, bosses, professores e entidade usam 80 × 80 visuais; bugs
-mantêm 40 × 40. Colisões de todos permanecem em 40 × 40. Os nomes dos NPCs,
-a captura pela IFVania e a saída do chicote acompanham a nova apresentação.
+- [x] Módulo de salto duplo antes da subida obrigatória, com piso seguro e instrução.
+- [x] Três consultas, portão condicionado aos registros, mapa de saída e inventário do nobreak.
+- [x] Indexador concreto, faixas anunciadas, fichas e janelas de contra-ataque.
+- [ ] Criar bugs de arquivo com fichas anunciadas, substituindo os bugs comuns provisórios.
+- [ ] Abrir atalhos de retorno a cada consulta concluída, como previsto no roteiro.
+- [ ] Integrar bilhete opcional de monitoria, sem esconder explicação obrigatória.
+- [ ] Ligar a saída ao pátio quando a fase 3 estiver utilizável.
 
-Os laboratórios e corredores receberam novas fontes em resolução nativa de
-960 × 540 por módulo, sem esticar um único painel para todo o corredor. Móveis,
-portas e computadores recebem detalhes em camadas. Os terminais mudam texto,
-gráficos e estados dentro da tela, acompanham a câmera e refletem a corrupção.
-Seu relógio é visual: funciona em diálogos sem atualizar física/combate e congela
-na pausa. A arena usa o mesmo sistema de monitores.
+**Aceite:** obter módulo sem poderes anteriores, aprender salto duplo antes de precisar dele e concluir percurso/chefe com ambos os protagonistas. Arte detalhada preserva leitura dos apoios.
 
-Artes novas feitas com image_gen e preservadas em `recursos/fontes_arte/`;
-prompts em `instrucoes_escola_detalhada.json`. Exportação:
-`python preparar_escola_detalhada.py`. Prévia animada:
-`recursos/fontes_arte/previa_monitores_animados.gif`.
+## Etapa 7 — Construir Recreio em repetição
 
-Validação atual: 74 testes passaram; seis novos testes cobrem escala, recorte
-dos monitores, câmera, animação em diálogos/pausa e alcance da ponta do chicote.
-Inspeção visual de aula, laboratório, corredor, arena, ataque e transformação.
-A homologação manual e o balanceamento da etapa 5 continuam pendentes.
+**Dependência:** biblioteca e regras de retomada; fundo de pátio pronto na etapa 4.
 
+- [ ] Ampliar o pátio de passagem para o cenário próprio de combate e resgate da fase 3, sem reutilizar seus gatilhos escolares por acidente.
+- [ ] Compor quadra e arquibancadas ficcionais na mesma direção de arte.
+- [ ] Ensinar bolas de trajetória legível e ondas do sinal antes de combiná-las.
+- [ ] Implementar três travas, atalhos, bolsões de silêncio e resgate sem escolta de aliados vulneráveis.
+- [ ] Implementar Inspetor de Intervalo em classe própria, aviso de investida, ondas e recuperação.
+- [ ] Preservar travas e resgates ao repetir o encontro; mostrar Romerito conduzindo o grupo e Max preso numa tela.
 
-## Caminhada e diálogos personalizados — 27/10/2026
+**Aceite:** resgatados fora das áreas de dano, objetivos preservados na retomada e nenhuma habilidade nova nessa fase.
 
-- [x] Criar ciclos de oito quadros para Menino e Menina, preservando as artes anteriores.
-- [x] Sincronizar os quadros com o deslocamento real e interromper a caminhada contra paredes; corrigir a pose de entrada e reaparecimento.
-- [x] Inserir tela de nome entre seleção e aula, com acentos, limite de 20 caracteres, validação, edição e retorno.
-- [x] Reescrever a introdução como diálogo iniciado pelo aluno com Max, sem narrador.
-- [x] Aplicar o nome nas falas do aluno e nas respostas dos professores, preservando-o nas transições.
-- [x] Validar 81 testes automatizados e inspecionar capturas da entrada de nome e dos diálogos.
+## Etapa 8 — Construir Laboratório das cópias
 
-Prévias em `recursos/fontes_arte/previa_nome_jogador.png`,
-`previa_introducao_aluno.png`, `previa_resposta_com_nome.png` e
-`previa_caminhada_jogador.gif`. A homologação manual da etapa 5 permanece pendente.
+**Dependência:** etapa 7 e progresso local consolidado.
 
+- [ ] Construir salas repetidas com os materiais do laboratório da fase 1.
+- [ ] Implementar comparação de arquivos, estabilização de salas e ciclos legíveis de bugs.
+- [ ] Revelar sessão de autoria e identidade da entidade, retomando a lembrança da tarefa sem repetir toda a introdução.
+- [ ] Implementar Max em Loop, cópias, cabo que identifica a origem real e pausa vulnerável de recompilação.
+- [ ] Integrar libertação de Max, responsabilidade do protagonista, interrupção da recriação dos processos e isolamento do pendrive.
+- [ ] Implementar ancoragem em conectores fixos e tutorial seguro, com comando sem conflito com ataque/diálogo.
 
-## Nomenclatura em português e orientações — 28/10/2026
+**Aceite:** luta concluída antes de exigir ancoragem; mesma habilidade disponível nas transições, respeitando pausa, foco e colisões.
 
-- [x] Renomear classes, variáveis, atributos, parâmetros e constantes próprios
-  no jogo, testes e exportadores, preservando interfaces externas.
-- [x] Atualizar importações, herança, callbacks, argumentos nomeados e acessos
-  dinâmicos, sem modificar os caminhos dos módulos e imagens.
-- [x] Criar `AGENTS.md` com convenções e contratos do projeto.
-- [x] Atualizar referências técnicas na documentação.
-- [x] Executar os 81 testes e os oito exportadores em pasta temporária (74 PNGs).
+## Etapa 9 — Construir Rede sem saída
 
-`gerar_recursos.py` passou por conferência estática de sintaxe e referências;
-sua execução não foi realizada porque Pillow não está instalado no ambiente.
-A homologação manual da etapa 5 continua pendente.
+**Dependência:** etapa 8 e tutorial de ancoragem.
 
+- [ ] Criar corredores técnicos e sala de rede ficcionais com materiais do campus.
+- [ ] Introduzir pulsos de dados, combinar ancoragem/salto duplo e recuperar perto do apoio após falhas.
+- [ ] Implementar três ramais, confirmação de Max e efeitos visíveis nos monitores de cada setor isolado.
+- [ ] Implementar Roteador Sentinela, portas sinalizadas, barreira e flancos acessíveis.
+- [ ] Confirmar evacuação, confinamento da IA e preparação do desligamento.
 
-## Arquivos e pastas em português — 28/10/2026
+**Aceite:** ramais concluídos permanecem isolados; nenhum novo poder é concedido; o corpo comum permite as rotas da arena.
 
-- [x] Renomear código, testes, exportadores, documentação, imagens e pastas
-  próprias: 224 caminhos atualizados.
-- [x] Atualizar importações, carregamento de imagens, nomes de quadros gerados,
-  comandos e links locais. Preservar nomes técnicos de descoberta.
-- [x] Conferir os 81 testes, os oito exportadores e a entrada `principal.py`.
-- [x] Conferir todos os links locais e preservar os bytes das 160 imagens/GIFs.
+## Etapa 10 — Construir A última chamada e epílogo
 
-Os comandos atuais são `python principal.py` e
-`python -m unittest discover -s testes -v`; dependências em `dependencias.txt`.
-As fontes de arte ficam em `recursos/fontes_arte/`. A homologação manual
-da etapa 5 continua pendente.
+**Dependência:** etapa 9 e condições de resgate/isolamento registradas.
 
+- [ ] Retomar habilidades em três desafios curtos com descanso, sem comandos novos.
+- [ ] Implementar IFVania em classe própria, reserva única de vida, dois momentos e transição sem dano.
+- [ ] Integrar rompimento do controle e terminal de encerramento, sem ataque residual ou cronômetro surpresa.
+- [ ] Exigir pessoas liberadas, rede isolada e autopreservação encerrada antes do desligamento e retorno ao A28.
+- [ ] Mostrar desligamento dos equipamentos e alimentação de reserva pelos aliados; manter pendrive isolado.
+- [ ] Criar epílogo da tarefa refeita e fachada ao amanhecer; trocar encerramento provisório por “Escola livre. Aula encerrada.”.
 
-## Revisão de controle, combate e plataformas — 28/10/2026
+**Aceite:** vitória final depende da campanha; nome/aparência chegam ao epílogo; nova partida não herda progresso indevido.
 
-- [x] Movimento a 3,2 px/quadro, aceleração/frenagem curtas, tolerância de borda e memória de salto.
-- [x] Corrigir direção e persistência do recuo de dano.
-- [x] Chicote tolerante com alcance 100, carga de 0,6 s/dano 2, cancelamento e efeitos de peso.
-- [x] Esquiva básica com recarga e proteção curta, tutorial e HUD.
-- [x] Sobrecarga anunciada e investida de direção fixa, com recuperação e sem dano de contato passivo.
-- [x] Contorno e faixa nas superfícies de apoio expostas, sem alterar colisões.
-- [x] Atualizar regressões dos ataques substituídos e validar 92 testes.
-- [x] Renderizar e inspecionar carga, mouse reforçado, plataformas e avisos dos ataques.
+## Etapa 11 — Validação final e homologação
 
-Cenários determinísticos sem invulnerabilidade artificial cobrem fuga da descarga
-e salto sobre a investida. Isso não substitui homologação humana de sobrevivência,
-ritmo e dificuldade; a etapa 5 permanece pendente.
+**Dependência:** todas as entregas anteriores. Última etapa do plano; permanece pendente.
 
+- [ ] Executar suíte completa e todos os critérios de aceite da campanha entregue.
+- [ ] Percorrer as seis fases manualmente com Menino e Menina.
+- [ ] Homologar abertura, turma/hipnose, sucção, controles, câmera e perda de foco.
+- [ ] Homologar sobrevivência, dificuldade, avisos e recuperação dos chefes, incluindo SpeedBug nas bordas.
+- [ ] Comparar pátio e biblioteca com as fotos e com a fase 1; revisar escala, emendas, contraste e distinção entre decoração e apoio.
+- [ ] Revisar efeitos/áudio e intensidade visual para não ocultar ameaças ou prejudicar leitura.
+- [ ] Sincronizar documentos, controles, fontes e prompts com o estado entregue.
+- [ ] Registrar separadamente resultados automáticos, inspeções e experiências manuais; listar pendências concretas.
 
-## Ciclo de projéteis e investida — 29/10/2026
+Comandos: `python principal.py` e `python -m unittest discover -s testes -v`. Sem janela/áudio: `SDL_VIDEODRIVER=dummy SDL_AUDIODRIVER=dummy PYGAME_HIDE_SUPPORT_PROMPT=1 python -m unittest discover -s testes -v`.
 
-- [x] Restaurar aviões de RomerBug, com 2,3 s entre lançamentos e aviso prévio.
-- [x] Restaurar medalhas de SpeedBug a cada 1,5 s, com movimento curto limitado.
-- [x] Alternar dois lançamentos, pausa, investida anunciada e recuperação.
-- [x] Esperar os projéteis saírem antes de preparar a investida.
-- [x] Manter transformação, proteção, controles do aluno e plataformas.
-- [x] Validar 95 testes; homologação humana de ritmo/dificuldade segue pendente.
+## Registro desta correção
+
+- **Automático:** 108 testes passaram com Python 3.14.4 e pygame-ce 2.5.8. Seis novos testes cobrem encadeamento visual, hipnose/pausa, sucção dos dois protagonistas, corrida nas duas bordas, recuperação humana de Romerito e preservação de colisões.
+- **Arte:** ferramenta integrada `image_gen`, com fontes preservadas e prompts em [instrucoes_ambientes_ifrn.json](recursos/fontes_arte/instrucoes_ambientes_ifrn.json). Exportador: `python preparar_ambientes_ifrn.py --destino /tmp/ifvania_ambientes`, conferido antes da integração. Sem Pillow ou ffmpeg para jogar/exportar.
+- **Inspeção:** capturas de execução da tarefa, memória doméstica, hipnose, sucção, pátio e biblioteca em `recursos/fontes_arte/revisao_*.png`. Conferidos enquadramento, estilo, destino da absorção e alinhamento à câmera.
+- **Limite:** não houve partida manual de sobrevivência ou homologação de diversão. Artes integradas não significam fase 3 concluída. A etapa 11 continua aberta.

@@ -11,7 +11,7 @@ import configuracoes
 from entidades.jogador import Jogador
 from entidades.projetil import Projetil
 from jogo import (Jogo, ESTADO_JOGANDO, ESTADO_DIALOGO, ESTADO_INFECCAO,
-                  ESTADO_PAUSA, ESTADO_FIM_CONTEUDO, ESTADO_MENU, ESTADO_TRANSFORMACAO_CHEFE)
+                  ESTADO_PAUSA, ESTADO_FIM_CONTEUDO, ESTADO_MENU, ESTADO_TRANSFORMACAO_CHEFE, ESTADO_CARTAO_FASE)
 from mundo.fase import Fase
 from mundo.dados_fases import build_levels, DIALOGO_REENCONTRO, DIALOGO_APOS_CHEFE
 from mundo.fases_antigas import build_legacy_levels
@@ -75,7 +75,7 @@ class TestesCampanhaVirtual(unittest.TestCase):
         self.fail('Transição do boss não terminou')
 
     def test_main_campaign_has_only_defined_content_and_legacy_remains_separate(self):
-        self.assertEqual(len(self.jogo.definicoes_fases), 1)
+        self.assertEqual(len(self.jogo.definicoes_fases), 2)
         self.assertEqual(self.jogo.definicoes_fases[0]['name'], 'Fase 1: Mundo virtual')
         self.assertIsNone(self.jogo.definicoes_fases[0]['ability_reward'])
         self.assertEqual(len(build_legacy_levels()), 6)
@@ -214,9 +214,13 @@ class TestesCampanhaVirtual(unittest.TestCase):
         self.finish_dialogue()
         self.assertEqual(self.jogo.estado, ESTADO_JOGANDO)
         self.jogo._update(self.teclas, [])
-        self.assertEqual(self.jogo.estado, ESTADO_FIM_CONTEUDO)
+        self.assertEqual(self.jogo.estado, ESTADO_CARTAO_FASE)
+        self.assertEqual(self.jogo.indice_fase, 1)
+        self.assertIsNotNone(self.jogo.fase.biblioteca)
         self.assertTrue(fase.concluido)
         self.assertEqual(fase.update(jogador, []), (None, None))
+        self.jogo._advance_level()
+        self.assertEqual(self.jogo.estado, ESTADO_FIM_CONTEUDO)
         self.jogo._draw()
         self.key(pygame.K_RETURN)
         self.assertEqual(self.jogo.estado, ESTADO_MENU)

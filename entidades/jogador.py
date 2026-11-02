@@ -116,8 +116,12 @@ class Jogador(Personagem):
     def has(self, habilidade: Habilidade) -> bool:
         return habilidade in self.habilidades
 
-    def grant_ability(self, habilidade: Habilidade):
+    def grant_ability(self, habilidade: Habilidade, aumentar_vida=True):
+        if habilidade in self.habilidades:
+            return
         self.habilidades.add(habilidade)
+        if not aumentar_vida:
+            return
         if habilidade != Habilidade.ESCUDO:
             self.vida_maxima += 1
         self.vida = self.vida_maxima
