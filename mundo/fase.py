@@ -227,6 +227,9 @@ class Fase:
                 else:
                     superficie.blit(self.imagem_chao, r)
 
+        if self.biblioteca:
+            self.biblioteca.desenhar_interativos(superficie, self.camera)
+
         for retangulo in self.mapa_blocos.perigos:
             # o retângulo de dano é só a metade inferior do bloco; a imagem
             # do espinho ocupa o bloco inteiro (ponta encostando no topo)

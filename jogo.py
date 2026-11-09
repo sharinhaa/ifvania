@@ -422,6 +422,8 @@ class Jogo:
                                              INDICE_MEMORIA_HISTORIA, INDICE_EXECUCAO_HISTORIA)
             if not self.na_introducao:
                 self.painel_informacoes.draw(self.tela, self.jogador, self.fase.nome, self.fase.chefe)
+                if getattr(self.fase, 'biblioteca', None):
+                    self.fase.biblioteca.desenhar_objetivos(self.tela)
                 if self.estado not in (ESTADO_ABDUCAO, ESTADO_INFECCAO) and not (
                         self.estado == ESTADO_PAUSA and self.estado_retorno_pausa in (ESTADO_ABDUCAO, ESTADO_INFECCAO)):
                     self.painel_informacoes.draw_controls_hint(self.tela, self.jogador)

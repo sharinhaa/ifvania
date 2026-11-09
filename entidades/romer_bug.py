@@ -140,7 +140,6 @@ class RomerBug(Chefe):
         self.velocidade.x = 0
         self.distancia_investida = 0
         from sons import tocar
-        tocar('aviso')
 
     def preparar_disparo(self, jogador):
         self.estado_ataque = 'preparar_disparo'
@@ -149,7 +148,6 @@ class RomerBug(Chefe):
         self.direcao_olhar = 1 if self.mira_disparo.x >= self.rect.centerx else -1
         self.velocidade.x = 0
         from sons import tocar
-        tocar('aviso')
 
     def lancar_projetil(self):
         origem = pygame.Vector2(self.rect.centerx+self.direcao_olhar*(self.largura//2+16),
@@ -284,7 +282,6 @@ class RomerBug(Chefe):
     def draw(self, superficie, camera):
         # Os próprios quadros contêm a oscilação do corpo. Não aplicar o bob
         # flutuante de Chefe, que fazia os pés deslizarem acima do chão.
-        self.desenhar_aviso(superficie, camera)
         imagem = self.get_draw_image()
         retangulo = imagem.get_rect(midbottom=camera.apply(self.rect).midbottom)
         superficie.blit(imagem, retangulo)
@@ -300,34 +297,3 @@ class RomerBug(Chefe):
             pygame.draw.circle(superficie, (255, 200, 65), retangulo.center, raio, 3)
             texto = self.fonte_transformacao.render("SpeedBug!", True, (255, 215, 80))
             superficie.blit(texto, texto.get_rect(midbottom=(retangulo.centerx, retangulo.top - 12)))
-
-    def desenhar_aviso(self, superficie, camera):
-        if not self.ativo or not self.vivo or self.cinematica_pendente or self.temporizador_transformacao:
-            return
-        if self.estado_ataque == 'recuperar':
-            texto = self.fonte_transformacao.render('EXPOSTO', True, (176, 205, 181))
-            posicao = camera.apply(self.rect).midbottom
-            superficie.blit(texto, texto.get_rect(midbottom=(posicao[0], posicao[1]-85)))
-        elif self.estado_ataque == 'preparar_disparo':
-            centro = camera.apply(self.rect).center
-            rotulo = 'MEDALHA' if self.transformado else 'AVIÃO'
-            texto = self.fonte_transformacao.render(rotulo, True, (228, 190, 123))
-            superficie.blit(texto, texto.get_rect(midbottom=(centro[0], centro[1]-64)))
-            mira = self.mira_disparo-camera.deslocamento
-            pygame.draw.circle(superficie, (203, 167, 106), (round(mira.x), round(mira.y)), 9, 1)
-        elif self.estado_ataque == 'pausa':
-            texto = self.fonte_transformacao.render('PREPARANDO AVANÇO', True, (188, 194, 179))
-            centro = camera.apply(self.rect).center
-            superficie.blit(texto, texto.get_rect(midbottom=(centro[0], centro[1]-64)))
-        elif self.estado_ataque in ('preparar', 'executar'):
-            origem = camera.apply(self.rect).midbottom
-            destino_x = max(self.arena.left+self.largura//2,
-                min(self.arena.right-self.largura//2, self.rect.centerx+self.direcao_investida*160))
-            fim = (origem[0]+destino_x-self.rect.centerx, origem[1]-3)
-            cor = (226, 172, 109)
-            pygame.draw.line(superficie, cor, (origem[0], origem[1]-3), fim, 3)
-            pygame.draw.lines(superficie, cor, False,
-                [(fim[0]-self.direcao_investida*12, fim[1]-8), fim,
-                 (fim[0]-self.direcao_investida*12, fim[1]+8)], 3)
-            texto = self.fonte_transformacao.render('INVESTIDA' if self.estado_ataque == 'preparar' else 'RUPTURA', True, cor)
-            superficie.blit(texto, texto.get_rect(midbottom=(origem[0], origem[1]-86)))

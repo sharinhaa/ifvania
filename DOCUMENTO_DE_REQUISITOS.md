@@ -104,9 +104,9 @@ Os critérios abaixo são verificações propostas para aceite, não resultados 
 | RF-17 | Permitir movimento horizontal, salto e colisão com o cenário. | O protagonista percorre o caminho previsto sem atravessar pisos e paredes sólidos. A caminhada possui oito quadros por protagonista e acompanha a distância efetivamente percorrida, sem caminhar parado contra uma parede; a pose inicial é de repouso. |
 | RF-18 | Permitir ataque com mouse-chicote na direção do protagonista. | A animação corresponde à direção do ataque e a área ativa causa dano aos inimigos atingidos. |
 | RF-19 | Controlar vida, dano e derrota do protagonista. | Dano válido reduz a vida e atualiza o HUD; vida igual a zero apresenta derrota e permite retornar ao menu. |
-| RF-20 | Fazer RomerBug alternar aviões de papel e investida. | Dois aviões com mira fixa e aviso de 0,5 s, separados por 2,3 s. Depois, pausa mínima de 0,8 s até os projéteis saírem, preparação de investida de 0,8 s, avanço de até 160 pixels e recuperação de 1 s. |
+| RF-20 | Fazer RomerBug alternar aviões de papel e investida. | Dois aviões com direção fixa e preparação corporal de 0,5 s, separados por 2,3 s. Depois, pausa mínima de 0,8 s até os projéteis saírem, preparação de investida de 0,8 s, avanço de até 160 pixels e recuperação de 1 s. |
 | RF-21 | Transformar RomerBug em SpeedBug ao atingir metade da vida máxima ou menos. | A primeira redução que deixa a vida em até 50% dispara uma única cena: ajoelhar sobre uma perna, aparição de uma entidade com a fala “Ainda não terminou.”, metamorfose e levantamento como SpeedBug. Suspender o combate, permitir pausa e preservar posição, dimensões e vida restante, sem reiniciar o encontro. |
-| RF-22 | Fazer SpeedBug lançar medalhas com pouco movimento, pausar e investir. | Duas medalhas separadas por 1,5 s, aviso de 0,4 s, movimento a até 0,55 px/quadro limitado a ±24 pixels. Depois, pausa mínima de 0,8 s até os projéteis saírem, aviso de investida de 0,6 s, avanço de até 160 pixels e recuperação de 1,3 s. Direção fixa, sem salto reativo ou dano corporal passivo. |
+| RF-22 | Fazer SpeedBug lançar medalhas com pouco movimento, pausar e investir. | Duas medalhas separadas por 1,5 s, preparação corporal de 0,4 s, movimento a até 0,55 px/quadro limitado a ±24 pixels. Depois, pausa mínima de 0,8 s até os projéteis saírem, preparação corporal de investida de 0,6 s, avanço de até 160 pixels e recuperação de 1,3 s. Direção fixa, sem salto reativo ou dano corporal passivo. |
 | RF-23 | Encerrar o combate quando a vida do boss chegar a zero. | Ataques, projéteis e bugs restantes são encerrados; a saída é liberada, sem recompensa. Alcançá-la conduz à biblioteca, preservando nome e aparência. O cartão “A jornada continua” é apresentado após o Indexador e informa que a IFVania permanece ativa. |
 | RF-24 | Gerenciar zonas ofensivas e projéteis para evitar dano indevido. | Limpar ataques e zonas na transformação e derrota; suspender temporizadores na pausa e no diálogo. Aviões e medalhas expiram, colidem com o cenário e são removidos na transformação/derrota; não sobrepor projéteis à investida. |
 
@@ -317,7 +317,7 @@ agora a etapa 11; a antiga etapa 5 foi incorporada a ela.
 |---|---|
 | CA-11 | Percorrer biblioteca com ambas as aparências; obter módulo e alcançar os arquivos elevados com física real. |
 | CA-12 | Conferir três consultas, portão e preservação do progresso na retomada local. |
-| CA-13 | Exercitar avisos, dano, recuperação e derrota do Indexador; conferir congelamento em diálogos e pausa. |
+| CA-13 | Exercitar preparação sem indicativos auxiliares, dano, recuperação e derrota do Indexador; conferir congelamento em diálogos e pausa. |
 | CA-14 | Conferir saída da fase 1 para biblioteca, fim provisório após fase 2 e reinício de campanha. |
 
 A arte da biblioteca é provisória e feita em Pygame, usando os materiais das duas
@@ -354,3 +354,33 @@ Testes automáticos e capturas cobrem as regressões acima; aceitação manual d
 ritmo, apresentação e sobrevivência permanece aberta na etapa 11. O plano foi
 reorganizado para priorizar a correção do início; o registro anterior foi preservado
 em `HISTORICO_DE_EXECUCAO.md`.
+
+### Refinamento de apresentação — 09/11/2026
+
+A câmera das cenas com `Camera` mantém o enquadramento vertical enquanto o
+centro do alvo estiver entre 180 e 370 pixels da tela, após posicionamento
+inicial; acompanha o alvo fora dessa faixa, respeitando limites do mapa.
+O acompanhamento horizontal permanece centralizado. A biblioteca desenha
+sinais de interativos após sólidos e objetivos após o HUD, com rótulos de
+arquivo, leitura concluída e módulo de salto duplo. Não há mudança de colisões,
+controles, habilidades ou campanha. Evidências e limites de validação em
+[avaliacao/visual/RELATORIO.md](avaliacao/visual/RELATORIO.md); homologação manual pendente.
+
+### Revisão solicitada de composição e chefes — 09/11/2026
+
+A aula apresenta dois colegas espaçados, sem efeitos de ligação entre olhos e
+monitores. O piso físico do pátio de passagem está em Y=440, com surgimento e
+soleira da porta A28 alinhados; a entrada está em X=1728 na parede do bloco final.
+Por solicitação explícita, os chefes da campanha não exibem indicativos auxiliares
+de ataque: textos, miras, setas e sons de aviso foram removidos. Preservam-se
+preparação corporal, pausas, direção fixa e janelas de dano. Indexador mostra
+faixas apenas durante o dano ativo; preparação não desenha marcações antecipadas.
+Esta decisão substitui a apresentação de avisos descrita em revisões anteriores.
+
+### Perspectiva dos laboratórios — 09/11/2026
+
+A aula e o A28 usam profundidade visual 2.5D com bancadas em dois planos,
+tampos em perspectiva e sombras. Colegas aparecem sentados de costas,
+centralizados diante dos respectivos monitores; a hipnose é comunicada por
+postura e reflexo da tela. A perspectiva é visual, com movimentação lateral e
+colisões preservadas. A sucção continua usando o retângulo real de um monitor.

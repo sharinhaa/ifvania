@@ -22,6 +22,7 @@ class FaseEscolar:
 
     def __init__(self, ambiente):
         self.ambiente = ambiente
+        self.Y_PISO = 440 if ambiente == 'corridor' else 352
         self.nome = self.NOMES[ambiente]
         largura = 1920 if ambiente == 'corridor' else configuracoes.LARGURA_TELA
         self.mapa_blocos = SimpleNamespace(
@@ -37,7 +38,7 @@ class FaseEscolar:
         if ambiente != 'corridor':
             self.professores.add(Professor(700, self.surgimento_jogador[1],
                                   'max' if ambiente == 'classroom' else 'romerito'))
-        self.porta_a28 = pygame.Rect(1664, 218, 80, self.Y_PISO-218)
+        self.porta_a28 = pygame.Rect(1728, self.Y_PISO-134, 80, 134)
         self.interacao_disparada = False
         self.corrompido = ambiente != 'classroom'
         self.instantes = 0
@@ -104,33 +105,51 @@ class FaseEscolar:
         if self.corrompido:
             self.hipnose = min(1, self.hipnose+1/90)
 
-    def _door(self, superficie, x, rotulo, ativo=False):
+    def _door(self, superficie, x, rotulo, ativo=False, deslocamento_y=0):
+        def desenhar(cor, retangulo, largura=0):
+            destino = pygame.Rect(retangulo).move(0, deslocamento_y)
+            self._rect(superficie, cor, destino, largura)
+
         # Porta metálica: caixilho, visor, dobradiças, puxador e chapa inferior.
-        self._rect(superficie, (21, 29, 34), (x-7, 210, 94, 142))
-        self._rect(superficie, (89, 100, 101), (x-4, 213, 88, 139), 2)
-        self._rect(superficie, (43, 57, 63), (x, 218, 80, 134))
-        self._rect(superficie, (71, 85, 89), (x+3, 221, 74, 128), 1)
-        self._rect(superficie, (14, 28, 35), (x+12, 230, 56, 42))
-        self._rect(superficie, (96, 123, 128), (x+12, 230, 56, 42), 2)
-        self._rect(superficie, (26, 47, 56), (x+16, 234, 48, 34))
-        self._rect(superficie, (65, 91, 99), (x+20, 237, 2, 27))
-        self._rect(superficie, (101, 113, 110), (x+61, 290, 10, 21))
-        self._rect(superficie, (164, 173, 163), (x+58, 295, 11, 3))
-        self._rect(superficie, (56, 69, 73), (x+8, 328, 64, 19))
+        desenhar((21, 29, 34), (x-7, 210, 94, 142))
+        desenhar((89, 100, 101), (x-4, 213, 88, 139), 2)
+        desenhar((43, 57, 63), (x, 218, 80, 134))
+        desenhar((71, 85, 89), (x+3, 221, 74, 128), 1)
+        desenhar((14, 28, 35), (x+12, 230, 56, 42))
+        desenhar((96, 123, 128), (x+12, 230, 56, 42), 2)
+        desenhar((26, 47, 56), (x+16, 234, 48, 34))
+        desenhar((65, 91, 99), (x+20, 237, 2, 27))
+        desenhar((101, 113, 110), (x+61, 290, 10, 21))
+        desenhar((164, 173, 163), (x+58, 295, 11, 3))
+        desenhar((56, 69, 73), (x+8, 328, 64, 19))
         for hy in (239, 289, 327):
-            self._rect(superficie, (100, 107, 103), (x+2, hy, 4, 9))
+            desenhar((100, 107, 103), (x+2, hy, 4, 9))
         for sy in (334, 339, 344):
-            self._rect(superficie, (83, 93, 91), (x+15, sy, 46, 1))
-        self._rect(superficie, (13, 27, 33), (x-5, 180, 90, 25))
-        self._rect(superficie, (95, 117, 118), (x-5, 180, 90, 25), 1)
-        self._text(superficie, rotulo, x+20, 185)
+            desenhar((83, 93, 91), (x+15, sy, 46, 1))
+        desenhar((13, 27, 33), (x-5, 180, 90, 25))
+        desenhar((95, 117, 118), (x-5, 180, 90, 25), 1)
+        self._text(superficie, rotulo, x+20, 185+deslocamento_y)
         if ativo:
-            self._rect(superficie, (110, 182, 179), (x+91, 288, 7, 4))
+            desenhar((110, 182, 179), (x+91, 288, 7, 4))
+
+    def _desenhar_fachada_a28(self, superficie):
+        """Bloco de chegada: porta pertence à parede e soleira ao piso."""
+        self._rect(superficie, (30, 38, 41), (1600, 112, 320, 328))
+        self._rect(superficie, (118, 108, 81), (1608, 120, 304, 312))
+        for y in range(128, 420, 24):
+            self._rect(superficie, (106, 98, 76), (1608, y, 304, 1))
+        self._rect(superficie, (59, 67, 66), (1608, 354, 304, 78))
+        self._rect(superficie, (123, 66, 56), (1608, 350, 304, 7))
+        self._rect(superficie, (27, 39, 44), (1592, 100, 328, 14))
+        self._rect(superficie, (151, 148, 119), (1592, 100, 328, 3))
+        self._rect(superficie, (27, 35, 39), (1600, 432, 320, 8))
+        self._rect(superficie, (149, 155, 139), (1718, 438, 100, 2))
 
     def draw(self, superficie, ocultar_professores=False):
         self.arte.draw(superficie, self.camera, self.instantes_visuais, self.corrompido, self.hipnose)
         if self.ambiente == 'corridor':
-            self._door(superficie, self.porta_a28.x, 'A28', True)
+            self._desenhar_fachada_a28(superficie)
+            self._door(superficie, self.porta_a28.x, 'A28', True, self.Y_PISO-352)
             self._rect(superficie, (17, 34, 40), (1280, 95, 250, 30))
             self._text(superficie, 'LABORATÓRIO A28  >', 1295, 102)
         else:
@@ -150,9 +169,9 @@ class FaseEscolar:
         if self.instrucao:
             painel = pygame.Surface((340, 32), pygame.SRCALPHA)
             painel.fill((15, 31, 38, 230))
-            superficie.blit(painel, (310, 365))
+            superficie.blit(painel, (310, self.Y_PISO+13))
             texto = self.fonte.render(self.instrucao.replace('—', ':'), True, (223, 238, 206))
-            superficie.blit(texto, texto.get_rect(center=(480, 381)))
+            superficie.blit(texto, texto.get_rect(center=(480, self.Y_PISO+29)))
 
     def draw_abduction(self, superficie, jogador, progresso):
         if self.succao:

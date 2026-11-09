@@ -6,7 +6,7 @@ from mundo.arte_escolar import ArteEscolar
 
 class EscolaSombria:
     def __init__(self, largura, altura, y_piso):
-        self.arte = ArteEscolar('lab', largura, mostrar_turma=True)
+        self.arte = ArteEscolar('lab', largura)
         self.instantes_visuais = 0
         self.y_piso = y_piso
         self.fonte = pygame.font.Font(None, 18)

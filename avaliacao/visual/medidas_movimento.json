@@ -1,0 +1,36 @@
+{
+  "boy": {
+    "velocidades_iniciais": [
+      0.65,
+      1.3,
+      1.95,
+      2.6,
+      3.2,
+      3.2,
+      3.2,
+      3.2
+    ],
+    "frenagem_quadros": 4,
+    "frenagem_pixels": 4,
+    "altura_salto_pixels": 114,
+    "duracao_salto_quadros": 38,
+    "alcance_salto_pixels": 113
+  },
+  "menina": {
+    "velocidades_iniciais": [
+      0.65,
+      1.3,
+      1.95,
+      2.6,
+      3.2,
+      3.2,
+      3.2,
+      3.2
+    ],
+    "frenagem_quadros": 4,
+    "frenagem_pixels": 4,
+    "altura_salto_pixels": 114,
+    "duracao_salto_quadros": 38,
+    "alcance_salto_pixels": 113
+  }
+}

@@ -65,8 +65,8 @@ class Indexador(Chefe):
         return ataques
 
     def draw(self, superficie, camera):
-        if self.ativo and self.vivo and self.estado_ataque == 'carimbar' and self.relogio_ataque < 60:
-            cor = (236, 88, 93) if self.relogio_ataque >= 48 else (231, 192, 119)
+        if self.ativo and self.vivo and self.estado_ataque == 'carimbar' and 48 <= self.relogio_ataque < 60:
+            cor = (236, 88, 93)
             for faixa in self.faixas:
                 destino = camera.apply(faixa)
                 pygame.draw.rect(superficie, cor, destino, 3)

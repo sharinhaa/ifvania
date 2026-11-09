@@ -24,7 +24,7 @@ class TestesRevisaoInicio(unittest.TestCase):
         self.jogo._start_story()
         fase = self.jogo.fase
         self.assertIsNotNone(fase.arte.turma)
-        self.assertEqual(len(fase.arte.turma.postos), 4)
+        self.assertEqual(len(fase.arte.turma.postos), 2)
         self.assertLess(INDICE_MEMORIA_HISTORIA, INDICE_EXECUCAO_HISTORIA)
         self.assertLess(INDICE_EXECUCAO_HISTORIA, INDICE_CORRUPCAO_HISTORIA)
         for indice, etapa in [(0, 'codigo'), (INDICE_EXECUCAO_HISTORIA, 'execucao'),

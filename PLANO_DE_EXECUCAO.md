@@ -187,3 +187,28 @@ Comandos: `python principal.py` e `python -m unittest discover -s testes -v`. Se
 - **Arte:** ferramenta integrada `image_gen`, com fontes preservadas e prompts em [instrucoes_ambientes_ifrn.json](recursos/fontes_arte/instrucoes_ambientes_ifrn.json). Exportador: `python preparar_ambientes_ifrn.py --destino /tmp/ifvania_ambientes`, conferido antes da integração. Sem Pillow ou ffmpeg para jogar/exportar.
 - **Inspeção:** capturas de execução da tarefa, memória doméstica, hipnose, sucção, pátio e biblioteca em `recursos/fontes_arte/revisao_*.png`. Conferidos enquadramento, estilo, destino da absorção e alinhamento à câmera.
 - **Limite:** não houve partida manual de sobrevivência ou homologação de diversão. Artes integradas não significam fase 3 concluída. A etapa 11 continua aberta.
+
+## Avaliação visual e funcional — 09/11/2026
+
+- Relatório inicial/final, notas ponderadas, prioridades e evidências em [avaliacao/visual/RELATORIO.md](avaliacao/visual/RELATORIO.md). 34 capturas reais do Pygame antes e 34 depois; estados preparados e entrada automatizada, sem partida humana.
+- Corrigida a ordem de desenho da biblioteca: sólidos não ocultam mais faixas do portão; faixas acompanham Y da câmera. Objetivos desenhados após HUD com painel próprio. Arquivos/módulo identificados e fundo discretamente escurecido sem modificar imagens aprovadas ou colisões.
+- Câmera mantém zona vertical estável entre 180 e 370 px depois do enquadramento inicial; acompanha subidas/descidas fora dela e respeita limites. Física e eixo horizontal preservados. Homologação manual desta câmera permanece pendente.
+- Validação: 108 testes iniciais e **110 finais passaram**, Python 3.12.10/Pygame 2.6.1 com SDL dummy; ponto de entrada ficou ativo por 2 s sem erro. Duas regressões novas verificam câmera e renderização do portão. Medidas iguais para ambos: salto básico de 114 px/38 quadros, alcance de 113 px do repouso, aceleração até 3,2 px/quadro em 5 quadros e frenagem em 4 quadros/4 px.
+- Notas provisórias do conteúdo entregue: 6,80 → 7,08. Não representam homologação de sobrevivência, áudio, ritmo ou diversão. Permanecem repetição de fundos, área inferior em grade pouco expressiva, decoração potencialmente confundida com apoios e arte esquemática do Indexador. Próximo ciclo: partida manual com ambos e revisão de marcos regionais.
+- A etapa 11 continua aberta; fases 3–6 não foram implementadas por esta avaliação.
+
+### Ajustes após revisão do responsável — 09/11/2026
+
+- Aula: dois colegas espaçados, ao lado dos monitores e voltados às telas, sem linhas/círculos de hipnose. Olhos alterados preservam a narrativa. Colegas decorativos removidos do fundo repetido da arena virtual.
+- Pátio: piso lógico em Y=440, abaixo dos bancos/mureta, em vez de Y=352. Spawn acompanha esse piso. Porta A28 reposicionada em X=1728, com soleira no piso e parede própria no bloco final; área de interação e dica acompanham a nova posição. Laboratórios e mapas virtuais mantêm seus pisos anteriores.
+- Chefes: removidos textos de ataque/recuperação, mira, seta de investida e sons auxiliares de aviso de RomerBug/SpeedBug. Indexador não desenha faixas durante preparação; o efeito visual existe somente durante a janela real de dano (quadros 48–59). Padrões, preparação corporal, projéteis e temporizadores preservados.
+- Capturas Pygame inspecionadas em `avaliacao/visual/revisao_composicao/`, incluindo aula, pátio, porta e preparação dos dois chefes. Testes automatizados cobrem ausência de marcas fora dos sprites durante preparação e piso/porta alinhados; partida manual permanece pendente.
+
+- Resultado desta revisão: **112 testes passaram** em 5,490 s com SDL dummy. Capturas são offscreen; não houve homologação manual ou audição.
+
+### Laboratório com profundidade 2.5D — 09/11/2026
+
+- Substituída a disposição lateral por duas bancadas em planos diferentes, em escala 80%/100%, com tampos trapezoidais, faces, pernas e sombras. Aplicação na aula e A28; a arena virtual preserva os blocos de plataforma.
+- Colegas agora usam desenho próprio sentado de costas, centralizado no respectivo monitor, com mãos no teclado, encosto e base da cadeira. A hipnose aparece na inclinação da cabeça e reflexo frio, sem olhos desenhados na nuca, raios ou círculos.
+- Fundo dos laboratórios recuado verticalmente em 32 px com continuação inferior do piso para apoiar visualmente a bancada distante. Colisões e faixa de movimento preservadas. Terminais continuam recortados dentro dos novos monitores e sucção usa um desses monitores.
+- Capturas reais em `avaliacao/visual/revisao_profundidade/`: aula, hipnose, A28 e sucção inspecionadas offscreen. Validação manual de apresentação permanece pendente.

@@ -16,13 +16,47 @@ class ArteEscolar:
         self.etapa_aula = 'codigo'
         self.telas_monitores = []
         self.estatico = pygame.Surface((largura, configuracoes.ALTURA_TELA), pygame.SRCALPHA)
-        if ambiente != 'corridor':
+        if ambiente in ('classroom', 'lab') and largura == 960:
+            self._bancada_perspectiva(240, 202, 0.8)
+            self._bancada_perspectiva(490, 222, 1.0)
+        elif ambiente != 'corridor':
             for base in range(0, largura, 960):
                 for x in (112, 272, 432, 592):
                     if base+x+138 < largura:
                         self._workstation(base+x, 240)
 
         self.turma = TurmaLaboratorio(self.telas_monitores) if mostrar_turma else None
+
+    def _bancada_perspectiva(self, x, y, escala):
+        """Tampo recua ao fundo; frente, laterais e sombra marcam volume."""
+        bancada = pygame.Surface((184, 126), pygame.SRCALPHA)
+        pygame.draw.ellipse(bancada, (5, 12, 19, 95), (0, 96, 184, 26))
+        for esquerda in (12, 157):
+            pygame.draw.polygon(bancada, (33, 44, 49),
+                                [(esquerda, 68), (esquerda+7, 68),
+                                 (esquerda+4, 110), (esquerda-2, 110)])
+            pygame.draw.line(bancada, (94, 105, 107), (esquerda, 71), (esquerda-2, 108), 2)
+        pygame.draw.polygon(bancada, (51, 61, 62), [(5, 65), (179, 65), (179, 74), (5, 74)])
+        pygame.draw.polygon(bancada, (114, 109, 87), [(30, 42), (151, 42), (179, 65), (5, 65)])
+        pygame.draw.lines(bancada, (181, 170, 132), False, [(30, 42), (151, 42), (179, 65), (5, 65)], 2)
+        pygame.draw.line(bancada, (28, 40, 44), (6, 73), (178, 73), 2)
+        pygame.draw.rect(bancada, (28, 41, 48), (131, 27, 19, 23))
+        pygame.draw.line(bancada, (79, 99, 102), (134, 31), (146, 31))
+        pygame.draw.circle(bancada, (105, 194, 186), (144, 45), 1)
+        pygame.draw.polygon(bancada, (27, 39, 46), [(64, 52), (113, 52), (122, 59), (56, 59)])
+        for linha in range(3):
+            pygame.draw.line(bancada, (102, 115, 113), (65-linha*2, 53+linha*2), (112+linha*2, 53+linha*2))
+        pygame.draw.ellipse(bancada, (51, 67, 70), (127, 54, 8, 5))
+        pygame.draw.rect(bancada, (41, 57, 64), (85, 43, 8, 9))
+        pygame.draw.rect(bancada, (75, 91, 94), (74, 50, 29, 3))
+        pygame.draw.rect(bancada, (9, 18, 25), (51, 0, 78, 48))
+        pygame.draw.rect(bancada, (78, 100, 107), (51, 0, 78, 48), 2)
+        pygame.draw.line(bancada, (137, 156, 151), (53, 1), (126, 1))
+        pygame.draw.circle(bancada, (107, 192, 175), (123, 44), 1)
+        tamanho = (round(184*escala), round(126*escala))
+        self.estatico.blit(pygame.transform.scale(bancada, tamanho), (x, y))
+        self.telas_monitores.append(pygame.Rect(x+round(55*escala), y+round(4*escala),
+                                               round(70*escala), round(38*escala)))
 
     def _workstation(self, x, y):
         s = self.estatico
@@ -64,7 +98,12 @@ class ArteEscolar:
         deslocamento = round(camera.deslocamento.x)
         # Módulos em resolução nativa: sem esticar uma sala para cobrir todo o corredor.
         for x in range(0, self.largura, self.fundo.get_width()):
-            superficie.blit(self.fundo, (x-deslocamento, -round(camera.deslocamento.y)))
+            recuo = 32 if self.ambiente in ('classroom', 'lab') and self.largura == 960 else 0
+            superficie.blit(self.fundo, (x-deslocamento, -round(camera.deslocamento.y)-recuo))
+            if recuo:
+                # Abre chão atrás da passagem lateral, para apoiar a fileira distante.
+                superficie.blit(self.fundo, (x-deslocamento, 540-recuo-round(camera.deslocamento.y)),
+                                pygame.Rect(0, 540-recuo, self.fundo.get_width(), recuo))
         superficie.blit(self.estatico, (-deslocamento, -round(camera.deslocamento.y)))
         for semente, retangulo in enumerate(self.telas_monitores):
             self.terminais.draw(superficie, camera.apply(retangulo), instante, semente, corrompido, 'revolta' if corrompido else self.etapa_aula)

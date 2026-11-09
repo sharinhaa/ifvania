@@ -1,39 +1,43 @@
-"""Alunos sentados: composição das artes existentes, sem corpos de combate."""
-import math
+"""Colegas de costas, sentados diante dos monitores em planos de profundidade."""
 import pygame
-import recursos
 
 
 class TurmaLaboratorio:
     def __init__(self, postos):
         self.postos = postos
-        self.figuras = recursos.load_character_frames([
-            'jogador/repouso_0.png', 'jogador/menina/repouso_0.png'])
 
     def draw(self, superficie, camera, instante, hipnose=0):
         for indice, posto in enumerate(self.postos):
-            x, y = posto.x-24, posto.y+4
-            destino = camera.apply(pygame.Rect(x, y, 64, 100))
-            if not destino.colliderect(superficie.get_rect()):
-                continue
-            # Encosto, pernas dobradas e torso na mesma escala do protagonista.
-            pygame.draw.rect(superficie, (28, 48, 67), (destino.x+12, destino.y+37, 27, 46), border_radius=3)
-            pygame.draw.line(superficie, (83, 97, 104), (destino.x+16, destino.y+78), (destino.x+10, destino.y+101), 4)
-            pygame.draw.line(superficie, (83, 97, 104), (destino.x+34, destino.y+78), (destino.x+44, destino.y+101), 4)
-            figura = self.figuras[indice % 2]
-            torso = pygame.transform.scale(figura.subsurface((0, 0, 40, 27)), (80, 54))
-            oscilacao = 0 if hipnose else round(math.sin(instante*0.05+indice)*1.2)
-            superficie.blit(torso, (destino.x-6, destino.y+oscilacao))
-            pygame.draw.lines(superficie, (26, 36, 45), False,
-                              [(destino.x+28, destino.y+52), (destino.x+48, destino.y+63),
-                               (destino.x+46, destino.y+91), (destino.x+58, destino.y+91)], 8)
-            mao = (destino.x+49, destino.y+42+oscilacao)
-            pygame.draw.line(superficie, (163, 124, 96), (destino.x+32, destino.y+37), mao, 4)
-            if hipnose > indice*0.12:
-                # Olhos fixos e vínculo na direção da tela, não dano ou projétil.
-                olhos = (destino.x+35, destino.y+13)
-                pygame.draw.line(superficie, (138, 240, 217), (olhos[0]-3, olhos[1]), (olhos[0]+5, olhos[1]), 2)
-                pygame.draw.line(superficie, (75, 148, 157), olhos, camera.apply(posto).center, 1)
-                if hipnose < 1:
-                    raio = 10+round(8*hipnose)
-                    pygame.draw.circle(superficie, (100, 196, 189), (destino.x+32, destino.y+13), raio, 1)
+            figura = pygame.Surface((64, 76), pygame.SRCALPHA)
+            hipnotizado = hipnose > indice*0.12
+            inclinacao = 3 if hipnotizado else 0
+            # Pés e base da cadeira recuam sob o assento.
+            pygame.draw.line(figura, (86, 102, 108), (32, 48), (32, 69), 3)
+            pygame.draw.lines(figura, (67, 85, 94), False, [(10, 72), (32, 66), (54, 72)], 3)
+            for x in (9, 51):
+                pygame.draw.rect(figura, (15, 24, 30), (x, 70, 5, 4))
+            for x in (20, 37):
+                pygame.draw.rect(figura, (29, 38, 51), (x, 44, 8, 20))
+                pygame.draw.rect(figura, (16, 26, 32), (x-2, 60, 11, 5))
+            # Ombros, braços apoiados na mesa e mãos apontam para a tela.
+            pygame.draw.polygon(figura, (28, 93, 67), [(18, 23), (45, 23), (49, 47), (15, 47)])
+            pygame.draw.lines(figura, (37, 118, 78), False, [(20, 25), (13, 18), (18, 9)], 7)
+            pygame.draw.lines(figura, (37, 118, 78), False, [(44, 25), (51, 18), (46, 9)], 7)
+            for x in (16, 44):
+                pygame.draw.rect(figura, (183, 139, 103), (x, 7, 5, 5))
+            pygame.draw.rect(figura, (168, 121, 88), (27, 17+inclinacao, 10, 10))
+            pygame.draw.rect(figura, (50, 37, 33), (21, 0+inclinacao, 22, 22), border_radius=5)
+            pygame.draw.rect(figura, (28, 27, 29), (20, 0+inclinacao, 24, 14), border_radius=4)
+            pygame.draw.line(figura, (77, 56, 42), (25, 3+inclinacao), (36, 3+inclinacao), 2)
+            if indice % 2:
+                pygame.draw.ellipse(figura, (29, 27, 30), (39, 9+inclinacao, 9, 22))
+            # Reflexo de tela e postura, sem olhos frontais ou raios de hipnose.
+            if hipnotizado:
+                pygame.draw.line(figura, (91, 151, 143), (20, 23), (44, 23), 2)
+            pygame.draw.rect(figura, (18, 35, 49), (14, 36, 36, 21), border_radius=4)
+            pygame.draw.rect(figura, (44, 67, 82), (16, 37, 32, 16), border_radius=3)
+            pygame.draw.line(figura, (74, 94, 102), (19, 39), (43, 39))
+            escala = posto.width/70
+            figura = pygame.transform.scale(figura, (round(64*escala), round(76*escala)))
+            destino = figura.get_rect(midtop=(posto.centerx, posto.bottom+round(9*escala)))
+            superficie.blit(figura, camera.apply(destino))

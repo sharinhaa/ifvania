@@ -44,7 +44,7 @@ anteriores usaram Python 3.9.6 e Pygame 2.6.1.
     a saída leva à biblioteca.
 11. Três terminais fornecem o mapa e os registros da rede. E examina o módulo
     que libera salto duplo e consulta os arquivos; o portão exige as três consultas.
-12. Indexador alterna faixas anunciadas e fichas, com pausas para contra-atacar.
+12. Indexador alterna faixas de ataque e fichas, com pausas para contra-atacar.
     A saída após sua derrota encerra o conteúdo disponível.
 
 O prólogo e a fase virtual funcionam com os dois protagonistas, com os mesmos
@@ -118,7 +118,7 @@ lança dois aviões separados por 2,3 s. SpeedBug lança duas medalhas separadas
 por 1,5 s e se desloca no máximo 24 pixels para cada lado durante o ciclo.
 
 Após os lançamentos, há uma pausa e espera pelos projéteis saírem de cena.
-A investida é anunciada, tem direção fixa e respeita paredes. RomerBug prepara
+A investida tem preparação corporal e direção fixa e respeita paredes. RomerBug prepara
 por 0,8 s e recupera por 1 s; SpeedBug prepara por 0,6 s e recupera por 1,3 s.
 Não há dano corporal passivo nem projéteis simultâneos à investida. Os parâmetros
 estão em [PROPOSTA_CHEFE_ROMERBUG.md](PROPOSTA_CHEFE_ROMERBUG.md). A sobrecarga
@@ -297,3 +297,27 @@ recursos: `python preparar_ambientes_ifrn.py --destino /tmp/ifvania_ambientes`.
 biblioteca e pátio inspecionadas; partida manual e balanceamento ainda pendentes.
 O plano ativo prioriza as correções e mantém a validação final na etapa 11;
 o histórico anterior está em [HISTORICO_DE_EXECUCAO.md](HISTORICO_DE_EXECUCAO.md).
+
+## Avaliação visual e funcional — 09/11/2026
+
+A biblioteca recebeu rótulos para arquivos/módulo, painel de objetivo e correção
+na sinalização do portão. O fundo fica discretamente mais escuro para distinguir
+interativos. A câmera usa uma zona vertical estável durante os saltos, mantendo
+acompanhamento de plataformas altas. Física, controles e colisões preservados.
+
+[Relatório com 68 capturas antes/depois, notas e pendências](avaliacao/visual/RELATORIO.md).
+**110 testes passaram** em Python 3.12.10/Pygame 2.6.1 com SDL dummy.
+Avaliação offscreen e automatizada; sobrevivência, áudio e conforto da câmera
+continuam pendentes de partida manual. No ambiente desta revisão, use
+`.venv/bin/python` nos comandos, pois `python` não está disponível no PATH.
+
+Após revisão da composição: turma reduzida a dois colegas espaçados; pátio com
+personagem no piso em primeiro plano e porta A28 integrada à parede de chegada.
+Chefes não têm textos, miras, setas ou sons auxiliares anunciando ataques.
+Preparação corporal e tempos permanecem; as faixas do Indexador só aparecem
+quando o ataque está ativo. Capturas: `avaliacao/visual/revisao_composicao/`.
+
+Os laboratórios da aula e A28 agora têm composição visual 2.5D: bancadas em
+profundidades diferentes e colegas sentados de costas diante dos monitores.
+A movimentação continua lateral, sem mudança de colisões. Capturas desta versão
+em `avaliacao/visual/revisao_profundidade/`.

@@ -5,6 +5,7 @@ O desenho não define colisões; apoios sólidos continuam no mapa de blocos.
 """
 import pygame
 import recursos
+from interface import tema
 from habilidades import Habilidade
 from mundo.dados_biblioteca import DIALOGO_MODULO
 from mundo.escola_sombria import EscolaSombria
@@ -26,37 +27,54 @@ class Biblioteca(EscolaSombria):
         self.ajuda = ''
         self.camada = pygame.Surface((960, altura))
         self.camera_cenario = Camera(largura, altura)
+        self.sombra_fundo = pygame.Surface((960, altura), pygame.SRCALPHA)
+        self.sombra_fundo.fill((8, 17, 25, 45))
 
     def draw_background(self, superficie, camera):
         self.camera_cenario.deslocamento.update(camera.deslocamento.x, 0)
         self._desenhar_ambiente(self.camada, self.camera_cenario)
         superficie.blit(self.camada, (0, -round(camera.deslocamento.y)))
-        rotulo = f'ARQUIVO: {len(self.consultados)}/3  |  E consultar'
-        superficie.blit(self.fonte.render(rotulo, True, (230, 221, 193)), (240, 66))
-        if self.ajuda:
-            superficie.blit(self.fonte.render(self.ajuda, True, (163, 235, 225)), (240, 86))
+
+    def desenhar_objetivos(self, superficie):
+        # Coluna central livre dos painéis de vida, habilidades e chefe.
+        tema.panel(superficie, (240, 61, 330, 27), tema.AMBAR)
+        rotulo = self.ajuda or f'ARQUIVOS {len(self.consultados)}/3  |  E consultar  |  siga os terminais'
+        superficie.blit(self.fonte.render(rotulo, True, (230, 221, 193)), (250, 69))
 
     def _desenhar_ambiente(self, superficie, camera):
         superficie.fill((35, 45, 53))
-        piso = self.y_piso
         for coluna in range(0, self.largura, self.fundo_ifrn.get_width()):
             x = round(coluna-camera.deslocamento.x)
             superficie.blit(self.fundo_ifrn, (x, self.y_piso-352))
+        superficie.blit(self.sombra_fundo, (0, 0))
+
+    def desenhar_interativos(self, superficie, camera):
+        """Sinais no mesmo plano dos sólidos, após desenhar as plataformas."""
         for indice, painel in enumerate(self.paineis):
             destino = camera.apply(painel)
             pygame.draw.rect(superficie, (19, 30, 37), destino)
             cor = (119, 213, 176) if indice in self.consultados else (232, 194, 123)
             pygame.draw.rect(superficie, cor, destino.inflate(-8, -12), 2)
             superficie.blit(self.fonte.render(str(indice+1), True, cor), (destino.x+11, destino.y+12))
+            rotulo = 'LIDO' if indice in self.consultados else f'ARQUIVO {indice+1}'
+            self._rotular(superficie, destino, rotulo, cor)
         if not self.modulo_obtido:
             destino = camera.apply(self.modulo)
             pygame.draw.rect(superficie, (85, 206, 211), destino, 2)
             pygame.draw.line(superficie, (226, 236, 220), destino.midbottom, destino.midtop, 3)
+            self._rotular(superficie, destino, 'SALTO DUPLO', tema.CIANO)
         if len(self.consultados) < 3:
             destino = camera.apply(self.portao)
             pygame.draw.rect(superficie, (102, 83, 70), destino)
-            for y in range(40, piso, 24):
-                pygame.draw.line(superficie, (228, 191, 122), (destino.x, y), (destino.right, y+15), 3)
+            for y in range(destino.top+8, destino.bottom-15, 24):
+                pygame.draw.line(superficie, (228, 191, 122), (destino.x, y), (destino.right-1, y+15), 3)
+            self._rotular(superficie, destino, f'ARQUIVOS {len(self.consultados)}/3', tema.AMBAR)
+
+    def _rotular(self, superficie, destino, texto, cor):
+        imagem = self.fonte.render(texto, True, cor)
+        rotulo = imagem.get_rect(midbottom=(destino.centerx, destino.top-6))
+        pygame.draw.rect(superficie, (14, 24, 30), rotulo.inflate(10, 6))
+        superficie.blit(imagem, rotulo)
 
     def interagir(self, jogador, eventos, solidos):
         self.ajuda = ''
