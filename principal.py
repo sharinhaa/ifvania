@@ -1,9 +1,9 @@
-"""Ponto de entrada do jogo 'Escola dos Bugs'.
+"""Ponto de entrada do IFVania.
 
 Execute com:  python principal.py
-Requer:       pip install pygame
+Requer:       pip install -r configuracao/dependencias.txt
 """
-from jogo import Jogo
+from sistema.jogo import Jogo
 
 
 def principal():

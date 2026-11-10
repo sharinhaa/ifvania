@@ -1,7 +1,7 @@
 """Primeiro professor-chefe: RomerBug se transforma em SpeedBug a 50% de vida."""
 import pygame
 
-import recursos
+from sistema import recursos
 from entidades.chefe import Chefe
 from entidades.projetil import Projetil
 
@@ -139,7 +139,7 @@ class RomerBug(Chefe):
         self.direcao_olhar = self.direcao_investida
         self.velocidade.x = 0
         self.distancia_investida = 0
-        from sons import tocar
+        from sistema.sons import tocar
 
     def preparar_disparo(self, jogador):
         self.estado_ataque = 'preparar_disparo'
@@ -147,7 +147,7 @@ class RomerBug(Chefe):
         self.mira_disparo = pygame.Vector2(jogador.rect.center)
         self.direcao_olhar = 1 if self.mira_disparo.x >= self.rect.centerx else -1
         self.velocidade.x = 0
-        from sons import tocar
+        from sistema.sons import tocar
 
     def lancar_projetil(self):
         origem = pygame.Vector2(self.rect.centerx+self.direcao_olhar*(self.largura//2+16),

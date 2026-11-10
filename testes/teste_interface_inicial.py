@@ -8,10 +8,10 @@ import unittest
 from pathlib import Path
 
 import pygame
-import configuracoes
+from sistema import configuracoes
 from entidades.jogador import Jogador
 from entidades.inimigo import Inimigo
-from jogo import (Jogo, ESTADO_MENU, ESTADO_SELECAO_PERSONAGEM, ESTADO_DIALOGO,
+from sistema.jogo import (Jogo, ESTADO_MENU, ESTADO_SELECAO_PERSONAGEM, ESTADO_DIALOGO,
                   ESTADO_CARTAO_FASE, ESTADO_JOGANDO, ESTADO_PAUSA, ESTADO_DERROTA,
                   ESTADO_FIM_CONTEUDO, ESTADO_ENTRADA_NOME)
 
@@ -92,7 +92,7 @@ class TestesInterfaceInicial(unittest.TestCase):
         self.jogo.personagem_escolhido = 'menina'
         self.jogo._start_story()
         jogador = self.jogo.jogador
-        from habilidades import Habilidade
+        from sistema.habilidades import Habilidade
         jogador.grant_ability(Habilidade.SALTO_DUPLO)
         jogador.respawn(*self.jogo.fase.surgimento_jogador)
         from mundo.fases_antigas import build_legacy_levels

@@ -1,0 +1,2748 @@
+[
+  {
+    "caminho": ".gitignore",
+    "sha256": "34128145df2a4d8beac53794444d8e16073b90290ded05396aa2e318f594832d",
+    "bytes": 124
+  },
+  {
+    "caminho": "AGENTS.md",
+    "sha256": "add9819e9ec9783c89ae28614f85bfa3e723210562030c1613a1adca9dc45da3",
+    "bytes": 10880
+  },
+  {
+    "caminho": "ANALISE_JOGABILIDADE_COMBATE.md",
+    "sha256": "c5aa7a77779ed49d1d96f395f7e4f71dde11bf93b6cec0aac4dc7b394485971a",
+    "bytes": 17672
+  },
+  {
+    "caminho": "DOCUMENTO_DE_REQUISITOS.md",
+    "sha256": "a8c8eb82af12ad75efc6388d83552809c4f5d12b88bac735ddbcf323e6ae10f3",
+    "bytes": 40078
+  },
+  {
+    "caminho": "HISTORICO_DE_EXECUCAO.md",
+    "sha256": "8dcaa3d0fe61887f43b8c307ca2b354e6465ff59d8b0800e1480442b1bd59350",
+    "bytes": 37014
+  },
+  {
+    "caminho": "LEIA_ME.md",
+    "sha256": "c3b550ec20b720462559fe31e510ef4b9629631b86e900cd77fd87b30113b576",
+    "bytes": 18871
+  },
+  {
+    "caminho": "PLANO_DE_EXECUCAO.md",
+    "sha256": "f5666fd97ad368761ec7e557f90c1b376dfbdbc5f4dc1e23ea1cb00890806fe9",
+    "bytes": 21223
+  },
+  {
+    "caminho": "PROPOSTA_CHEFE_ROMERBUG.md",
+    "sha256": "0dee6604b1826d3665982e67c39be996ae069e2d09f190feb60e8d5cd1584678",
+    "bytes": 2718
+  },
+  {
+    "caminho": "ROTEIRO_HISTORIA.md",
+    "sha256": "7ca5549c2312db5058bfae0c80d0eb38c5cf6632db3c31bcef9a066b51aa26e8",
+    "bytes": 25028
+  },
+  {
+    "caminho": "avaliacao/visual/RELATORIO.md",
+    "sha256": "e2ae29b0b814739e2b6f25f24cf55a24bf098a269eb9902a00c3c1d5b3de5109",
+    "bytes": 11568
+  },
+  {
+    "caminho": "avaliacao/visual/antes/01_menu.png",
+    "sha256": "8f25e416690d33eb066c59321c8b629c44e54c34d2897ac7e3e14f2e18075e66",
+    "bytes": 242632
+  },
+  {
+    "caminho": "avaliacao/visual/antes/02_selecao.png",
+    "sha256": "b86e608be129cac7112d6b3e561c2bfbf361e120df5204dd3a4b3752e0acf815",
+    "bytes": 145013
+  },
+  {
+    "caminho": "avaliacao/visual/antes/03_nome.png",
+    "sha256": "17ac1089cc22da001825a8c1abdf4f0419bcbc417c8d82e028cfa27608b157c9",
+    "bytes": 148767
+  },
+  {
+    "caminho": "avaliacao/visual/antes/04_aula.png",
+    "sha256": "decf97828ed6525e50b2889be98ecea0651829d59df362b58d56db25cab8a141",
+    "bytes": 452701
+  },
+  {
+    "caminho": "avaliacao/visual/antes/05_memoria.png",
+    "sha256": "becab509627d28e1225b5f5420c301df248c660cf5b91ad5af0399ac986aa4b5",
+    "bytes": 609557
+  },
+  {
+    "caminho": "avaliacao/visual/antes/06_hipnose.png",
+    "sha256": "02cad0ca86f80a5603e7a0848bf41a7b6cc5ddd7ea29865b5d3f08a6ae0e67f1",
+    "bytes": 459348
+  },
+  {
+    "caminho": "avaliacao/visual/antes/07_corridor_inicio.png",
+    "sha256": "7c35d91d2973ff5b5cbfa21849fea9f64e65f7815bf74340869d44e766bc6dd5",
+    "bytes": 821819
+  },
+  {
+    "caminho": "avaliacao/visual/antes/07_lab_inicio.png",
+    "sha256": "9a2b752813b2a196631ce17a5ab9cfcb2594cf3d7e72000366f5791e91a8e088",
+    "bytes": 612196
+  },
+  {
+    "caminho": "avaliacao/visual/antes/08_corridor_destino.png",
+    "sha256": "2e6f04e85bd2128a9f314299d1c5fe38133b55c4f19fc056d0723a1462ac4bff",
+    "bytes": 783750
+  },
+  {
+    "caminho": "avaliacao/visual/antes/08_lab_destino.png",
+    "sha256": "7eb5502407a54112415f10b3ee287a931327944973154d03e8469bd61413136b",
+    "bytes": 612168
+  },
+  {
+    "caminho": "avaliacao/visual/antes/09_succao.png",
+    "sha256": "f0650ba61eb4b245bdc1ec0ca0204ffde623189ae4316196ffe33fcbba2115b3",
+    "bytes": 506732
+  },
+  {
+    "caminho": "avaliacao/visual/antes/cartao.png",
+    "sha256": "1f63054c00c617ec631070d85fe35dacb12bf08bbf2e5ce6fd0b61efa7ab9c4e",
+    "bytes": 10979
+  },
+  {
+    "caminho": "avaliacao/visual/antes/derrota.png",
+    "sha256": "60d5429d2ac4b957c9704de0b49ed79037ae2bba04be9c1335eee7cc718aee58",
+    "bytes": 9300
+  },
+  {
+    "caminho": "avaliacao/visual/antes/fase1_andando.png",
+    "sha256": "3671fcb79041657df9107ecc8cb558b742b5c7ffc056989f281599e6d1f98a39",
+    "bytes": 368098
+  },
+  {
+    "caminho": "avaliacao/visual/antes/fase1_ataque.png",
+    "sha256": "ab390d829da388098f30e1cdc2a634ab40534c851804943f3eb179b9e2cdd5da",
+    "bytes": 370575
+  },
+  {
+    "caminho": "avaliacao/visual/antes/fase1_combate.png",
+    "sha256": "88e4548941e64edd86274166c8588acc226d06ef0749bba69c49909462c753f4",
+    "bytes": 324059
+  },
+  {
+    "caminho": "avaliacao/visual/antes/fase1_inicio.png",
+    "sha256": "9791cb2f5e814592fe9dc09b800b508ec61229510388bda1cb71aaece19fb1db",
+    "bytes": 367017
+  },
+  {
+    "caminho": "avaliacao/visual/antes/fase1_pausa.png",
+    "sha256": "96ecea206022054d30bae9574177ee9269f051a691b6db1474a0361a737a136d",
+    "bytes": 179634
+  },
+  {
+    "caminho": "avaliacao/visual/antes/fase1_regiao_1400.png",
+    "sha256": "968cd589ebe9f2b352e1a4ade677988a3b76688d9ce6e5968119cca5eb8a6386",
+    "bytes": 362421
+  },
+  {
+    "caminho": "avaliacao/visual/antes/fase1_regiao_2050.png",
+    "sha256": "65811c3d18457732ed641b086ca1d089e4c6879639dde4d2d56c9c09bf38fd7f",
+    "bytes": 360031
+  },
+  {
+    "caminho": "avaliacao/visual/antes/fase1_regiao_500.png",
+    "sha256": "510e2f6572c1f8b8a8af29965796b4e035b2fbb13e177bfec032589ddb4ea7a9",
+    "bytes": 378567
+  },
+  {
+    "caminho": "avaliacao/visual/antes/fase1_regiao_900.png",
+    "sha256": "2e4f41973889b8fb42aebd22766d752f4429dcb135c049cf396c97db34a63459",
+    "bytes": 378709
+  },
+  {
+    "caminho": "avaliacao/visual/antes/fase1_salto.png",
+    "sha256": "d59262e5b0fa1b83f43564bf5cb29a6e07a141c93dc54fb7eba7b6c77d2cbb49",
+    "bytes": 370224
+  },
+  {
+    "caminho": "avaliacao/visual/antes/fase2_andando.png",
+    "sha256": "a48af9417bdc7073299264aafde87cc835d339bbdc2cb54dabbee47b3459af26",
+    "bytes": 465664
+  },
+  {
+    "caminho": "avaliacao/visual/antes/fase2_ataque.png",
+    "sha256": "b3926d435be27f45c8fbf45ae3b8cd8657c6406e34da61ba7e2ed93ea42153c0",
+    "bytes": 491522
+  },
+  {
+    "caminho": "avaliacao/visual/antes/fase2_combate.png",
+    "sha256": "ec82bb54e16e0bec6ca101d918dbaad4e19e308bf75b823eb0d09ed9d4ab17ca",
+    "bytes": 423543
+  },
+  {
+    "caminho": "avaliacao/visual/antes/fase2_inicio.png",
+    "sha256": "01e714ec641b973cd8392468bc3072abd3097994c1a8837728ab9c098d6e0541",
+    "bytes": 465717
+  },
+  {
+    "caminho": "avaliacao/visual/antes/fase2_pausa.png",
+    "sha256": "3de2de08125cc91f66f6388990b96ce79da40daf56538af5c6a6ebeb4da0e46c",
+    "bytes": 216421
+  },
+  {
+    "caminho": "avaliacao/visual/antes/fase2_regiao_1400.png",
+    "sha256": "1d64549c6632e21c955782685d04aea0131b4734109268be4324102ad26dd161",
+    "bytes": 474323
+  },
+  {
+    "caminho": "avaliacao/visual/antes/fase2_regiao_2050.png",
+    "sha256": "e76e09f9e438d97ac866cfa230d12f178df3f85bd83fe1d6a7085a1fbf09b761",
+    "bytes": 452270
+  },
+  {
+    "caminho": "avaliacao/visual/antes/fase2_regiao_500.png",
+    "sha256": "893686b6550565333b826477564e7d105029e13dc2a11240e84c76cf28050317",
+    "bytes": 479919
+  },
+  {
+    "caminho": "avaliacao/visual/antes/fase2_regiao_900.png",
+    "sha256": "92f394ab8b5f4ffbb40e7dc08a40edd8b84564098b65efa4754ae02469385360",
+    "bytes": 474964
+  },
+  {
+    "caminho": "avaliacao/visual/antes/fase2_salto.png",
+    "sha256": "203b3c7706e79a47cd010b84e77779e1eabdb6327a877b0d4f3b07111d511ab9",
+    "bytes": 491474
+  },
+  {
+    "caminho": "avaliacao/visual/antes/fim_conteudo.png",
+    "sha256": "ef433dc0af47b04a477c53cb63d190884d7c645fa5b8b4ca1f2cec1b79fec31f",
+    "bytes": 12995
+  },
+  {
+    "caminho": "avaliacao/visual/capturar_cenas.py",
+    "sha256": "476d94503898625e13d0e1f3f854f6065297190fe51108ec2343adcd10f9ba52",
+    "bytes": 3863,
+    "importacoes": [
+      "import os",
+      "import sys",
+      "from pathlib import Path",
+      "from collections import defaultdict",
+      "import pygame",
+      "from jogo import *",
+      "from mundo.dados_fases import INDICE_MEMORIA_HISTORIA, INDICE_CORRUPCAO_HISTORIA"
+    ],
+    "referencias_literais": [
+      ".png",
+      "*.png"
+    ]
+  },
+  {
+    "caminho": "avaliacao/visual/contato_antes.png",
+    "sha256": "a786810ed6b20f1638db32d26f45729ff8d4b8883dfcbd1be421d9d7c05e7f63",
+    "bytes": 1786774
+  },
+  {
+    "caminho": "avaliacao/visual/contato_depois.png",
+    "sha256": "9dac741a7bda4577cfccbc4d7144a6ae2cdb86da4c97616e34bbf4b67adf3065",
+    "bytes": 1644507
+  },
+  {
+    "caminho": "avaliacao/visual/depois/01_menu.png",
+    "sha256": "8f25e416690d33eb066c59321c8b629c44e54c34d2897ac7e3e14f2e18075e66",
+    "bytes": 242632
+  },
+  {
+    "caminho": "avaliacao/visual/depois/02_selecao.png",
+    "sha256": "b86e608be129cac7112d6b3e561c2bfbf361e120df5204dd3a4b3752e0acf815",
+    "bytes": 145013
+  },
+  {
+    "caminho": "avaliacao/visual/depois/03_nome.png",
+    "sha256": "17ac1089cc22da001825a8c1abdf4f0419bcbc417c8d82e028cfa27608b157c9",
+    "bytes": 148767
+  },
+  {
+    "caminho": "avaliacao/visual/depois/04_aula.png",
+    "sha256": "6717f5ddc63acbc7a70e26288bb29666d27affbd6a16ad8c42afa72e0f827448",
+    "bytes": 458864
+  },
+  {
+    "caminho": "avaliacao/visual/depois/05_memoria.png",
+    "sha256": "becab509627d28e1225b5f5420c301df248c660cf5b91ad5af0399ac986aa4b5",
+    "bytes": 609557
+  },
+  {
+    "caminho": "avaliacao/visual/depois/06_hipnose.png",
+    "sha256": "02cad0ca86f80a5603e7a0848bf41a7b6cc5ddd7ea29865b5d3f08a6ae0e67f1",
+    "bytes": 459348
+  },
+  {
+    "caminho": "avaliacao/visual/depois/07_corridor_inicio.png",
+    "sha256": "7c35d91d2973ff5b5cbfa21849fea9f64e65f7815bf74340869d44e766bc6dd5",
+    "bytes": 821819
+  },
+  {
+    "caminho": "avaliacao/visual/depois/07_lab_inicio.png",
+    "sha256": "9a2b752813b2a196631ce17a5ab9cfcb2594cf3d7e72000366f5791e91a8e088",
+    "bytes": 612196
+  },
+  {
+    "caminho": "avaliacao/visual/depois/08_corridor_destino.png",
+    "sha256": "2e6f04e85bd2128a9f314299d1c5fe38133b55c4f19fc056d0723a1462ac4bff",
+    "bytes": 783750
+  },
+  {
+    "caminho": "avaliacao/visual/depois/08_lab_destino.png",
+    "sha256": "7eb5502407a54112415f10b3ee287a931327944973154d03e8469bd61413136b",
+    "bytes": 612168
+  },
+  {
+    "caminho": "avaliacao/visual/depois/09_succao.png",
+    "sha256": "f0650ba61eb4b245bdc1ec0ca0204ffde623189ae4316196ffe33fcbba2115b3",
+    "bytes": 506732
+  },
+  {
+    "caminho": "avaliacao/visual/depois/cartao.png",
+    "sha256": "1f63054c00c617ec631070d85fe35dacb12bf08bbf2e5ce6fd0b61efa7ab9c4e",
+    "bytes": 10979
+  },
+  {
+    "caminho": "avaliacao/visual/depois/derrota.png",
+    "sha256": "60d5429d2ac4b957c9704de0b49ed79037ae2bba04be9c1335eee7cc718aee58",
+    "bytes": 9300
+  },
+  {
+    "caminho": "avaliacao/visual/depois/fase1_andando.png",
+    "sha256": "3671fcb79041657df9107ecc8cb558b742b5c7ffc056989f281599e6d1f98a39",
+    "bytes": 368098
+  },
+  {
+    "caminho": "avaliacao/visual/depois/fase1_ataque.png",
+    "sha256": "a661036efaa409132fb4a5d406e622cf81ca3646e87e75df6d9806f7a3a54bc7",
+    "bytes": 368248
+  },
+  {
+    "caminho": "avaliacao/visual/depois/fase1_combate.png",
+    "sha256": "88e4548941e64edd86274166c8588acc226d06ef0749bba69c49909462c753f4",
+    "bytes": 324059
+  },
+  {
+    "caminho": "avaliacao/visual/depois/fase1_inicio.png",
+    "sha256": "9791cb2f5e814592fe9dc09b800b508ec61229510388bda1cb71aaece19fb1db",
+    "bytes": 367017
+  },
+  {
+    "caminho": "avaliacao/visual/depois/fase1_pausa.png",
+    "sha256": "96ecea206022054d30bae9574177ee9269f051a691b6db1474a0361a737a136d",
+    "bytes": 179634
+  },
+  {
+    "caminho": "avaliacao/visual/depois/fase1_regiao_1400.png",
+    "sha256": "968cd589ebe9f2b352e1a4ade677988a3b76688d9ce6e5968119cca5eb8a6386",
+    "bytes": 362421
+  },
+  {
+    "caminho": "avaliacao/visual/depois/fase1_regiao_2050.png",
+    "sha256": "65811c3d18457732ed641b086ca1d089e4c6879639dde4d2d56c9c09bf38fd7f",
+    "bytes": 360031
+  },
+  {
+    "caminho": "avaliacao/visual/depois/fase1_regiao_500.png",
+    "sha256": "510e2f6572c1f8b8a8af29965796b4e035b2fbb13e177bfec032589ddb4ea7a9",
+    "bytes": 378567
+  },
+  {
+    "caminho": "avaliacao/visual/depois/fase1_regiao_900.png",
+    "sha256": "2e4f41973889b8fb42aebd22766d752f4429dcb135c049cf396c97db34a63459",
+    "bytes": 378709
+  },
+  {
+    "caminho": "avaliacao/visual/depois/fase1_salto.png",
+    "sha256": "a66e5d1093a5e89838921b28373e53d2c1e75591844921fcbe90e8a096781c47",
+    "bytes": 367890
+  },
+  {
+    "caminho": "avaliacao/visual/depois/fase2_andando.png",
+    "sha256": "7801dda8c9dae94304c1a120e9ed3dc5d8897e1c146c4a64da216b16843b879a",
+    "bytes": 429863
+  },
+  {
+    "caminho": "avaliacao/visual/depois/fase2_ataque.png",
+    "sha256": "2fe6d5ddd42fd6a88b02af45ce53b49a8af79c843cd3421a099d54bfcd8ecf78",
+    "bytes": 429980
+  },
+  {
+    "caminho": "avaliacao/visual/depois/fase2_combate.png",
+    "sha256": "e3df40bf205817adf0ece7639f1a4205a34bf15dc3b79616423d35601986ef52",
+    "bytes": 392901
+  },
+  {
+    "caminho": "avaliacao/visual/depois/fase2_inicio.png",
+    "sha256": "9f1f3ba2cca618f35415e3122aef6dbfce48fb0cef9d876393777b31fc23b4c4",
+    "bytes": 429824
+  },
+  {
+    "caminho": "avaliacao/visual/depois/fase2_pausa.png",
+    "sha256": "70ea8ee8fe61795a8f1eef2f8ef9abfb1d57a3b778657fed8ee75d3c753c5a3e",
+    "bytes": 196555
+  },
+  {
+    "caminho": "avaliacao/visual/depois/fase2_regiao_1400.png",
+    "sha256": "cd146414109a53a8c38ca53489d1d44fa03f994734b8333e0fa771c2e3b9f47b",
+    "bytes": 438299
+  },
+  {
+    "caminho": "avaliacao/visual/depois/fase2_regiao_2050.png",
+    "sha256": "3c384dae3dd3723d91fbbef5437f61855c673e1743bd67b668f408bf67a5861b",
+    "bytes": 419414
+  },
+  {
+    "caminho": "avaliacao/visual/depois/fase2_regiao_500.png",
+    "sha256": "fd23f4e8abcc6e9e4dcae6f0abd2d8db46706e8913b38803343ebf0159b7c9f8",
+    "bytes": 443669
+  },
+  {
+    "caminho": "avaliacao/visual/depois/fase2_regiao_900.png",
+    "sha256": "2e3351da208443d2d6d5f84999e504e040fd116445578b6562074a4777d0d086",
+    "bytes": 437938
+  },
+  {
+    "caminho": "avaliacao/visual/depois/fase2_salto.png",
+    "sha256": "3fb880722b06e4f6581fafe435e963385263075307eb8144512f30f7d2288dd5",
+    "bytes": 429976
+  },
+  {
+    "caminho": "avaliacao/visual/depois/fim_conteudo.png",
+    "sha256": "ef433dc0af47b04a477c53cb63d190884d7c645fa5b8b4ca1f2cec1b79fec31f",
+    "bytes": 12995
+  },
+  {
+    "caminho": "avaliacao/visual/medidas_movimento.json",
+    "sha256": "73620b64751a145fd9ad42dc174b584e0e487d70136cbafef56f8b61e2ca5607",
+    "bytes": 590
+  },
+  {
+    "caminho": "avaliacao/visual/medir_movimento.py",
+    "sha256": "94fe0765b73ad5fd4da295315e9268fe11b4dba757db1b26295f9c5c8800865a",
+    "bytes": 1823,
+    "importacoes": [
+      "import os",
+      "import sys",
+      "from pathlib import Path",
+      "import json",
+      "from collections import defaultdict",
+      "import pygame",
+      "from entidades.jogador import Jogador"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/01_menu.png",
+    "sha256": "8f25e416690d33eb066c59321c8b629c44e54c34d2897ac7e3e14f2e18075e66",
+    "bytes": 242632
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/02_selecao.png",
+    "sha256": "b86e608be129cac7112d6b3e561c2bfbf361e120df5204dd3a4b3752e0acf815",
+    "bytes": 145013
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/03_nome.png",
+    "sha256": "17ac1089cc22da001825a8c1abdf4f0419bcbc417c8d82e028cfa27608b157c9",
+    "bytes": 148767
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/04_aula.png",
+    "sha256": "9963eea4a2a12c074e1a822bbf9cb3a4be56bff75ee38f66272a3db6b0bcec93",
+    "bytes": 455012
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/05_memoria.png",
+    "sha256": "d5f5c36a9c0cd7287dfae26825f8481c2b64f68ea02a8a14b3d328854c987c5d",
+    "bytes": 609662
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/06_hipnose.png",
+    "sha256": "f22d28d934b4b851dd393d2f5cb36255fb328645f2b1755aca8cbd9c5f072470",
+    "bytes": 457005
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/07_corridor_inicio.png",
+    "sha256": "fdf07a3e6c3e9991694ad12f51a0e1b92a218a6f15751c017161ce973ed088bc",
+    "bytes": 824091
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/07_lab_inicio.png",
+    "sha256": "9a2b752813b2a196631ce17a5ab9cfcb2594cf3d7e72000366f5791e91a8e088",
+    "bytes": 612196
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/08_corridor_destino.png",
+    "sha256": "ff54cd3e0e0c028ac43119dbe532ccfe7adb740162cde351dd24b7efcd006ef8",
+    "bytes": 627900
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/08_lab_destino.png",
+    "sha256": "7eb5502407a54112415f10b3ee287a931327944973154d03e8469bd61413136b",
+    "bytes": 612168
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/09_succao.png",
+    "sha256": "f0650ba61eb4b245bdc1ec0ca0204ffde623189ae4316196ffe33fcbba2115b3",
+    "bytes": 506732
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/cartao.png",
+    "sha256": "1f63054c00c617ec631070d85fe35dacb12bf08bbf2e5ce6fd0b61efa7ab9c4e",
+    "bytes": 10979
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/derrota.png",
+    "sha256": "60d5429d2ac4b957c9704de0b49ed79037ae2bba04be9c1335eee7cc718aee58",
+    "bytes": 9300
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/fase1_andando.png",
+    "sha256": "3ccdc628fa679bfb73fab2e757c4a582ccee46b272ad13dde70df18b14250f62",
+    "bytes": 366018
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/fase1_ataque.png",
+    "sha256": "d4f5576ecc947f5e998b26dfc9e0beadabde1b1e4e63e818dac488a1459942c6",
+    "bytes": 366149
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/fase1_combate.png",
+    "sha256": "7337864b9d91668a466228454d75a485285e098662ab79350159545f862833f3",
+    "bytes": 322589
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/fase1_inicio.png",
+    "sha256": "f155a273adb45a1ef8f89157e6e8c917a8095bb8c6f21674271014e96965daae",
+    "bytes": 365018
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/fase1_pausa.png",
+    "sha256": "9000546f6ede9511b89fd4f43cca6749c4d6a20d95d07e8b8b121b9c2f2ce815",
+    "bytes": 179554
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/fase1_regiao_1400.png",
+    "sha256": "6c4a9e73a7aa30ecaa7d655f5d53b0f388ff1055e37177f689c2a132daf22415",
+    "bytes": 360364
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/fase1_regiao_2050.png",
+    "sha256": "d306b08fcab1bcb53587b792ebbcdab82ff62b51d9aeed60ae903d129e30f922",
+    "bytes": 358161
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/fase1_regiao_500.png",
+    "sha256": "b4b4da712c20e28f92698d7a6298e17fbd1cb82df87f5470ea02785821ed6403",
+    "bytes": 376928
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/fase1_regiao_900.png",
+    "sha256": "47990cef0c4153a6db0a298305793f80480bee1f7b851ada4f0a48cdc109aa94",
+    "bytes": 376485
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/fase1_salto.png",
+    "sha256": "7a51163e621126aff3537d86c0bcd117bd3569eeeea3db62c2348be9ffec30b7",
+    "bytes": 365793
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/fase1_sem_indicativos.png",
+    "sha256": "48e0efaba7237099460ce1347b8685dc9ccc7897d4ac05926630fc955ad26d08",
+    "bytes": 323550
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/fase2_andando.png",
+    "sha256": "7801dda8c9dae94304c1a120e9ed3dc5d8897e1c146c4a64da216b16843b879a",
+    "bytes": 429863
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/fase2_ataque.png",
+    "sha256": "2fe6d5ddd42fd6a88b02af45ce53b49a8af79c843cd3421a099d54bfcd8ecf78",
+    "bytes": 429980
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/fase2_combate.png",
+    "sha256": "e3df40bf205817adf0ece7639f1a4205a34bf15dc3b79616423d35601986ef52",
+    "bytes": 392901
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/fase2_inicio.png",
+    "sha256": "9f1f3ba2cca618f35415e3122aef6dbfce48fb0cef9d876393777b31fc23b4c4",
+    "bytes": 429824
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/fase2_pausa.png",
+    "sha256": "70ea8ee8fe61795a8f1eef2f8ef9abfb1d57a3b778657fed8ee75d3c753c5a3e",
+    "bytes": 196555
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/fase2_regiao_1400.png",
+    "sha256": "cd146414109a53a8c38ca53489d1d44fa03f994734b8333e0fa771c2e3b9f47b",
+    "bytes": 438299
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/fase2_regiao_2050.png",
+    "sha256": "3c384dae3dd3723d91fbbef5437f61855c673e1743bd67b668f408bf67a5861b",
+    "bytes": 419414
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/fase2_regiao_500.png",
+    "sha256": "fd23f4e8abcc6e9e4dcae6f0abd2d8db46706e8913b38803343ebf0159b7c9f8",
+    "bytes": 443669
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/fase2_regiao_900.png",
+    "sha256": "2e3351da208443d2d6d5f84999e504e040fd116445578b6562074a4777d0d086",
+    "bytes": 437938
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/fase2_salto.png",
+    "sha256": "3fb880722b06e4f6581fafe435e963385263075307eb8144512f30f7d2288dd5",
+    "bytes": 429976
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/fase2_sem_indicativos.png",
+    "sha256": "cb15bd07923e7a75327fd8426e058e77df7cab80c2e05e09a63df54f55ac9aa5",
+    "bytes": 393158
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_composicao/fim_conteudo.png",
+    "sha256": "ef433dc0af47b04a477c53cb63d190884d7c645fa5b8b4ca1f2cec1b79fec31f",
+    "bytes": 12995
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/01_menu.png",
+    "sha256": "8f25e416690d33eb066c59321c8b629c44e54c34d2897ac7e3e14f2e18075e66",
+    "bytes": 242632
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/02_selecao.png",
+    "sha256": "b86e608be129cac7112d6b3e561c2bfbf361e120df5204dd3a4b3752e0acf815",
+    "bytes": 145013
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/03_nome.png",
+    "sha256": "17ac1089cc22da001825a8c1abdf4f0419bcbc417c8d82e028cfa27608b157c9",
+    "bytes": 148767
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/04_aula.png",
+    "sha256": "36288bc5dd6860cdb8a3bbca3e587827a855977932780cb0198cc1ab5ff25160",
+    "bytes": 511140
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/05_memoria.png",
+    "sha256": "5fe7ef769e17cb19eb68d00070cd5c20896014ed37624f6ddbc5d33feacfbca7",
+    "bytes": 630569
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/06_hipnose.png",
+    "sha256": "a54f1dc1640355eaa9da8d29b5c802f2fdf63d6f6bd0d2b0f3e908779a2e268e",
+    "bytes": 513037
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/07_corridor_inicio.png",
+    "sha256": "fdf07a3e6c3e9991694ad12f51a0e1b92a218a6f15751c017161ce973ed088bc",
+    "bytes": 824091
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/07_lab_inicio.png",
+    "sha256": "ffc58c3cf4a3025e1c1ebc85231a52c5a4b68d0ec61bf924d2ace0f1282c3dea",
+    "bytes": 664126
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/08_corridor_destino.png",
+    "sha256": "ff54cd3e0e0c028ac43119dbe532ccfe7adb740162cde351dd24b7efcd006ef8",
+    "bytes": 627900
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/08_lab_destino.png",
+    "sha256": "83e8c318923470dc34cec34bf32f767ee689c2fb172b2b67ca3a2422aae12be0",
+    "bytes": 665316
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/09_succao.png",
+    "sha256": "66875daeb9da6cfced80264e67d6c25264d738584e443a8350f663b132dec6cd",
+    "bytes": 546046
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/cartao.png",
+    "sha256": "1f63054c00c617ec631070d85fe35dacb12bf08bbf2e5ce6fd0b61efa7ab9c4e",
+    "bytes": 10979
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/derrota.png",
+    "sha256": "60d5429d2ac4b957c9704de0b49ed79037ae2bba04be9c1335eee7cc718aee58",
+    "bytes": 9300
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/fase1_andando.png",
+    "sha256": "3ccdc628fa679bfb73fab2e757c4a582ccee46b272ad13dde70df18b14250f62",
+    "bytes": 366018
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/fase1_ataque.png",
+    "sha256": "d4f5576ecc947f5e998b26dfc9e0beadabde1b1e4e63e818dac488a1459942c6",
+    "bytes": 366149
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/fase1_combate.png",
+    "sha256": "7337864b9d91668a466228454d75a485285e098662ab79350159545f862833f3",
+    "bytes": 322589
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/fase1_inicio.png",
+    "sha256": "f155a273adb45a1ef8f89157e6e8c917a8095bb8c6f21674271014e96965daae",
+    "bytes": 365018
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/fase1_pausa.png",
+    "sha256": "9000546f6ede9511b89fd4f43cca6749c4d6a20d95d07e8b8b121b9c2f2ce815",
+    "bytes": 179554
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/fase1_regiao_1400.png",
+    "sha256": "6c4a9e73a7aa30ecaa7d655f5d53b0f388ff1055e37177f689c2a132daf22415",
+    "bytes": 360364
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/fase1_regiao_2050.png",
+    "sha256": "d306b08fcab1bcb53587b792ebbcdab82ff62b51d9aeed60ae903d129e30f922",
+    "bytes": 358161
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/fase1_regiao_500.png",
+    "sha256": "b4b4da712c20e28f92698d7a6298e17fbd1cb82df87f5470ea02785821ed6403",
+    "bytes": 376928
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/fase1_regiao_900.png",
+    "sha256": "47990cef0c4153a6db0a298305793f80480bee1f7b851ada4f0a48cdc109aa94",
+    "bytes": 376485
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/fase1_salto.png",
+    "sha256": "7a51163e621126aff3537d86c0bcd117bd3569eeeea3db62c2348be9ffec30b7",
+    "bytes": 365793
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/fase2_andando.png",
+    "sha256": "7801dda8c9dae94304c1a120e9ed3dc5d8897e1c146c4a64da216b16843b879a",
+    "bytes": 429863
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/fase2_ataque.png",
+    "sha256": "2fe6d5ddd42fd6a88b02af45ce53b49a8af79c843cd3421a099d54bfcd8ecf78",
+    "bytes": 429980
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/fase2_combate.png",
+    "sha256": "e3df40bf205817adf0ece7639f1a4205a34bf15dc3b79616423d35601986ef52",
+    "bytes": 392901
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/fase2_inicio.png",
+    "sha256": "9f1f3ba2cca618f35415e3122aef6dbfce48fb0cef9d876393777b31fc23b4c4",
+    "bytes": 429824
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/fase2_pausa.png",
+    "sha256": "70ea8ee8fe61795a8f1eef2f8ef9abfb1d57a3b778657fed8ee75d3c753c5a3e",
+    "bytes": 196555
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/fase2_regiao_1400.png",
+    "sha256": "cd146414109a53a8c38ca53489d1d44fa03f994734b8333e0fa771c2e3b9f47b",
+    "bytes": 438299
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/fase2_regiao_2050.png",
+    "sha256": "3c384dae3dd3723d91fbbef5437f61855c673e1743bd67b668f408bf67a5861b",
+    "bytes": 419414
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/fase2_regiao_500.png",
+    "sha256": "fd23f4e8abcc6e9e4dcae6f0abd2d8db46706e8913b38803343ebf0159b7c9f8",
+    "bytes": 443669
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/fase2_regiao_900.png",
+    "sha256": "2e3351da208443d2d6d5f84999e504e040fd116445578b6562074a4777d0d086",
+    "bytes": 437938
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/fase2_salto.png",
+    "sha256": "3fb880722b06e4f6581fafe435e963385263075307eb8144512f30f7d2288dd5",
+    "bytes": 429976
+  },
+  {
+    "caminho": "avaliacao/visual/revisao_profundidade/fim_conteudo.png",
+    "sha256": "ef433dc0af47b04a477c53cb63d190884d7c645fa5b8b4ca1f2cec1b79fec31f",
+    "bytes": 12995
+  },
+  {
+    "caminho": "configuracoes.py",
+    "sha256": "cbe705acfd59c1aa6802b62189556e9d5766a09e17f7784c5d503cf390de0b70",
+    "bytes": 1952,
+    "importacoes": [],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "dependencias.txt",
+    "sha256": "7a0d435a848ecf61b598c34a5913e9ccec72ac3aa3af6c8fd915b0c9052a2ddd",
+    "bytes": 14
+  },
+  {
+    "caminho": "entidades/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "importacoes": [],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "entidades/chefe.py",
+    "sha256": "4a6c9962a4cc14150c90f0286e44ad3363047b9855b98b51e9237af8ee5a266b",
+    "bytes": 7460,
+    "importacoes": [
+      "import pygame",
+      "from abc import abstractmethod",
+      "import configuracoes",
+      "import recursos",
+      "from entidades.personagem import Personagem",
+      "from entidades.projetil import Projetil"
+    ],
+    "referencias_literais": [
+      "chefes/prof_scratch.png",
+      "chefes/romerbug_0.png",
+      "chefes/prof_python.png",
+      "chefes/prof_java.png",
+      "chefes/prof_c.png",
+      "chefes/prof_sql.png",
+      "chefes/prof_assembly.png"
+    ]
+  },
+  {
+    "caminho": "entidades/chefes_professores.py",
+    "sha256": "bc062e40ec1258c7d43bba81172204f495afce21dc50704b603151702bdd5883",
+    "bytes": 1789,
+    "importacoes": [
+      "from entidades.chefe import Chefe",
+      "from entidades.romer_bug import RomerBug",
+      "from entidades.indexador import Indexador"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "entidades/chicote_mouse.py",
+    "sha256": "8ca271a55ea389726f6da60b314bc9dc333432e44eab3fc99ed5635d4356efae",
+    "bytes": 8405,
+    "importacoes": [
+      "import math",
+      "import pygame",
+      "import configuracoes",
+      "from sons import tocar"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "entidades/indexador.py",
+    "sha256": "42ecea6e526f14822d6541a81b08560432fac41df841ab556956cce3969d0638",
+    "bytes": 3645,
+    "importacoes": [
+      "import pygame",
+      "from entidades.chefe import Chefe",
+      "from entidades.projetil import Projetil"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "entidades/inimigo.py",
+    "sha256": "3a5c887049e4bba88a604b58a461f4ce8baa06a88ba1a3e9138b3466507d8cee",
+    "bytes": 2355,
+    "importacoes": [
+      "import pygame",
+      "import configuracoes",
+      "import recursos",
+      "from entidades.personagem import Personagem"
+    ],
+    "referencias_literais": [
+      ".png"
+    ]
+  },
+  {
+    "caminho": "entidades/jogador.py",
+    "sha256": "d1480b01178df7be16988e71fc2ea3197279a4144e5511d821a1505ed6ba2dd1",
+    "bytes": 18970,
+    "importacoes": [
+      "import pygame",
+      "import configuracoes",
+      "import recursos",
+      "from entidades.personagem import Personagem",
+      "from habilidades import Habilidade",
+      "from entidades.projetil import Projetil",
+      "from entidades.chicote_mouse import ChicoteMouse",
+      "from sons import tocar"
+    ],
+    "referencias_literais": [
+      ".png",
+      ".png",
+      "/salto.png",
+      "/arrancada.png",
+      ".png"
+    ]
+  },
+  {
+    "caminho": "entidades/personagem.py",
+    "sha256": "09cc1d977f836cc5ad6f9c4d849049ea5def12413d8eea7685b2c065f809023e",
+    "bytes": 5471,
+    "importacoes": [
+      "from abc import ABC, abstractmethod",
+      "import pygame",
+      "import configuracoes"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "entidades/professor.py",
+    "sha256": "47d9ab0b7e5f3f6f198d9930558415384e5572abc1c40ac2c5d826d9ccddc85c",
+    "bytes": 828,
+    "importacoes": [
+      "import recursos",
+      "import configuracoes",
+      "from entidades.personagem import Personagem"
+    ],
+    "referencias_literais": [
+      ".png"
+    ]
+  },
+  {
+    "caminho": "entidades/projetil.py",
+    "sha256": "6d45f0f74e0e04c54450c83f65ca73f2e651d87dabf06ea4bb869094d4b103cd",
+    "bytes": 1462,
+    "importacoes": [
+      "import pygame",
+      "import configuracoes"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "entidades/romer_bug.py",
+    "sha256": "ace893f16cc8da1edcb66e717989dce79a7dd01e69c13ed2434ffcb0c22f3a74",
+    "bytes": 14863,
+    "importacoes": [
+      "import pygame",
+      "import recursos",
+      "from entidades.chefe import Chefe",
+      "from entidades.projetil import Projetil",
+      "from sons import tocar",
+      "from sons import tocar"
+    ],
+    "referencias_literais": [
+      "chefes/romerbug_0.png",
+      "aviao_papel.png",
+      "medalha.png",
+      ".png",
+      ".png",
+      ".png",
+      ".png",
+      ".png",
+      ".png"
+    ]
+  },
+  {
+    "caminho": "gerar_recursos.py",
+    "sha256": "deaa80c3a96ae535dde73bb7937271c3ee826f6838b05fa04d4b1866bfc89d23",
+    "bytes": 14147,
+    "importacoes": [
+      "import os",
+      "import random",
+      "from PIL import Image, ImageDraw"
+    ],
+    "referencias_literais": [
+      "Gera as imagens (pixel art) usadas pelo jogo, em recursos/imagens/.\n\nEste script NÃO é necessário para jogar - as imagens já ficam prontas na pasta\nrecursos/. Ele existe para que professores/alunos entendam como as imagens foram\nfeitas e possam regenerá-las ou usá-lo como base para desenhar as próprias artes\ne substituir os arquivos em recursos/imagens/.\n\nEstilo: pixel art de baixa resolução (sem suavização), no espírito de\npersonagens de Castlevania/Metroid - silhueta com contorno escuro, poucas\ncores por material e sombreamento em blocos sólidos (sem gradiente).\n\nO(a) aluno(a) protagonista veste farda do IFRN (camisa polo verde institucional,\ncalça e mochila) e tem quadros de animação separados para parado(a), andando\n(4 quadros), pulando e dando dash - a virada para a esquerda é feita em tempo\nde execução por recursos.py (espelhamento), então só desenhamos virado(a) para a\ndireita aqui.\n\nRequer Pillow:  pip install pillow\nExecutar:        python gerar_recursos.py\n",
+      "/jogador/repouso_0.png",
+      "/jogador/repouso_1.png",
+      "/jogador/caminhada_0.png",
+      "/jogador/caminhada_1.png",
+      "/jogador/caminhada_2.png",
+      "/jogador/caminhada_3.png",
+      "/jogador/salto.png",
+      "/jogador/arrancada.png",
+      "/inimigos/bug_0.png",
+      "/inimigos/bug_1.png",
+      "/blocos/chao.png",
+      "/blocos/espinho.png",
+      "/interface/item_habilidade.png",
+      "/cenarios/painel.png",
+      ".png"
+    ]
+  },
+  {
+    "caminho": "habilidades.py",
+    "sha256": "4424b014fb2ff67eb74f805bebf2c038ee63a8d11a74b0569fb683df221bd840",
+    "bytes": 1545,
+    "importacoes": [
+      "from enum import Enum, auto",
+      "import pygame",
+      "import configuracoes",
+      "import recursos"
+    ],
+    "referencias_literais": [
+      "interface/item_habilidade.png"
+    ]
+  },
+  {
+    "caminho": "interface/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "importacoes": [],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "interface/dialogo.py",
+    "sha256": "8016e86de663e63624312c7ede658bd226c676ab29381690595dfb751b9dfab2",
+    "bytes": 3880,
+    "importacoes": [
+      "import pygame",
+      "import configuracoes",
+      "from interface import tema"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "interface/interface_inicial.py",
+    "sha256": "eb62fe88bfb2f4598d56d81f3a069b88c5daf94ec0c53892dab5800032aeabcd",
+    "bytes": 7898,
+    "importacoes": [
+      "import pygame",
+      "import recursos",
+      "import configuracoes",
+      "from entidades.jogador import Jogador",
+      "from interface import tema"
+    ],
+    "referencias_literais": [
+      "menu/escola_noturna.png"
+    ]
+  },
+  {
+    "caminho": "interface/painel.py",
+    "sha256": "be71f2c9764294a80973964f15f21cdbaf67621ea310a5d30d4744797ce31827",
+    "bytes": 6375,
+    "importacoes": [
+      "import pygame",
+      "import configuracoes",
+      "from habilidades import Habilidade, NOMES_HABILIDADES",
+      "from interface import tema"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "interface/tema.py",
+    "sha256": "5d4fae4c9a8a625be358154d1a20d627bf002ea7725cda35d135195ed69c4c1c",
+    "bytes": 1327,
+    "importacoes": [
+      "import pygame"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "jogo.py",
+    "sha256": "d126b6014b0fd4a864be9918bf91bee90a585748341568836b2fda324b52f223",
+    "bytes": 21794,
+    "importacoes": [
+      "import sys",
+      "import unicodedata",
+      "import pygame",
+      "import configuracoes",
+      "from entidades.jogador import Jogador",
+      "from mundo.fase import Fase",
+      "from mundo.dados_fases import build_levels, INTRODUCAO_HISTORIA, INDICE_CORRUPCAO_HISTORIA, INDICE_EXECUCAO_HISTORIA, INDICE_MEMORIA_HISTORIA",
+      "from mundo.escola import FaseEscolar",
+      "from mundo.dados_escola import DIALOGO_ENCONTRO, DESCOBERTA_MOUSE",
+      "from mundo.transicao_chefe import TransicaoChefe",
+      "from mundo.succao_computador import SuccaoComputador",
+      "from interface.dialogo import CaixaDialogo",
+      "from interface.painel import PainelInformacoes",
+      "from interface.interface_inicial import InterfaceInicial"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "mundo/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "importacoes": [],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "mundo/arte_escolar.py",
+    "sha256": "a851ed01e5d355ad2cd40568609102b1c3a24187c805a665ede549897147db1c",
+    "bytes": 6754,
+    "importacoes": [
+      "import pygame",
+      "import recursos",
+      "import configuracoes",
+      "from mundo.terminal import TelaTerminal",
+      "from mundo.turma_laboratorio import TurmaLaboratorio"
+    ],
+    "referencias_literais": [
+      "patio_ifrn.png",
+      "laboratorio_detalhado.png"
+    ]
+  },
+  {
+    "caminho": "mundo/biblioteca.py",
+    "sha256": "984ec45b220c1b995843ee38ceeb7b135c3291de3eb4625fea8148bb3c40c525",
+    "bytes": 5572,
+    "importacoes": [
+      "import pygame",
+      "import recursos",
+      "from interface import tema",
+      "from habilidades import Habilidade",
+      "from mundo.dados_biblioteca import DIALOGO_MODULO",
+      "from mundo.escola_sombria import EscolaSombria",
+      "from mundo.camera import Camera"
+    ],
+    "referencias_literais": [
+      "cenarios/biblioteca_ifrn.png"
+    ]
+  },
+  {
+    "caminho": "mundo/camera.py",
+    "sha256": "884048a74f97569b18915b595ca916c353c82744a452f11ca4d2e591429050ec",
+    "bytes": 1339,
+    "importacoes": [
+      "import pygame",
+      "import configuracoes"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "mundo/dados_biblioteca.py",
+    "sha256": "37e49f58ca907f4303ec8616007a51331f995d738bac153c5499335631b51442",
+    "bytes": 2095,
+    "importacoes": [
+      "from configuracoes import TAMANHO_BLOCO"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "mundo/dados_escola.py",
+    "sha256": "3bbb966737cad0025873025854d28d0d96f391669ae8b328ecca91b889bc83b5",
+    "bytes": 1339,
+    "importacoes": [],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "mundo/dados_fases.py",
+    "sha256": "830196fe9402e71d41fb7b2f78cc6bfc989dba0c46e1ee4a9cf8046eaebe114b",
+    "bytes": 4669,
+    "importacoes": [
+      "from entidades.chefe import DEFINICOES_CHEFES",
+      "from configuracoes import TAMANHO_BLOCO",
+      "from mundo.dados_biblioteca import criar_biblioteca"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "mundo/escola.py",
+    "sha256": "d10c6478eb86820556bc24a24a8214d8aaedf087d66da5d59abdfe8235b57047",
+    "bytes": 12151,
+    "importacoes": [
+      "from types import SimpleNamespace",
+      "import pygame",
+      "import recursos",
+      "import configuracoes",
+      "from entidades.professor import Professor",
+      "from mundo.camera import Camera",
+      "from mundo.arte_escolar import ArteEscolar",
+      "from interface import tema",
+      "from mundo.succao_computador import SuccaoComputador"
+    ],
+    "referencias_literais": [
+      "MONITOR DO ALUNO / tarefa.py",
+      "cenarios/memoria_tarefa.png",
+      "Abrindo tarefa.py...",
+      "> python tarefa.py"
+    ]
+  },
+  {
+    "caminho": "mundo/escola_sombria.py",
+    "sha256": "02d9fa7f64092e7eedc944290a5f27d67276a06c8a5669874d1923bd1438f0f4",
+    "bytes": 3594,
+    "importacoes": [
+      "import pygame",
+      "from interface import tema",
+      "from mundo.arte_escolar import ArteEscolar"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "mundo/fase.py",
+    "sha256": "5f31de04e8560ee2190865d9864927929df13be6ef35c4da33cdbb4c1f69ed15",
+    "bytes": 13819,
+    "importacoes": [
+      "import pygame",
+      "import configuracoes",
+      "import recursos",
+      "from mundo.mapa_blocos import MapaBlocos",
+      "from mundo.camera import Camera",
+      "from entidades.inimigo import Inimigo",
+      "from entidades.chefes_professores import CLASSES_CHEFES",
+      "from entidades.romer_bug import RomerBug",
+      "from entidades.professor import Professor",
+      "from habilidades import ItemHabilidade",
+      "from mundo.escola_sombria import EscolaSombria",
+      "from mundo.biblioteca import Biblioteca"
+    ],
+    "referencias_literais": [
+      "blocos/chao.png",
+      "blocos/espinho.png",
+      "cenarios/painel.png",
+      "inimigos/bug_0.png"
+    ]
+  },
+  {
+    "caminho": "mundo/fases_antigas.py",
+    "sha256": "ecf21e8d8e32e32818dbea83fa5a076dc21eccde70ce6884dd2ce52a285b69e0",
+    "bytes": 7389,
+    "importacoes": [
+      "import random",
+      "from entidades.chefe import DEFINICOES_CHEFES",
+      "from habilidades import Habilidade"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "mundo/mapa_blocos.py",
+    "sha256": "ef6838cb6021743da10416be93fec2e8d7512ac35882eca87edaf149fb1b354b",
+    "bytes": 2160,
+    "importacoes": [
+      "import pygame",
+      "import configuracoes"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "mundo/succao_computador.py",
+    "sha256": "d70e40f3a04cb186be97d038e9eaeaf545c14f06c1918bd89df72ceccc786859",
+    "bytes": 3514,
+    "importacoes": [
+      "import math",
+      "import pygame"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "mundo/terminal.py",
+    "sha256": "8f850a7e1d4a12313f5327858f29381da5a5f1bc4f97373ed40b846c94268342",
+    "bytes": 3037,
+    "importacoes": [
+      "import math",
+      "import pygame"
+    ],
+    "referencias_literais": [
+      "salvo: tarefa.py",
+      "USB: tarefa.py",
+      "> python tarefa.py"
+    ]
+  },
+  {
+    "caminho": "mundo/transicao_chefe.py",
+    "sha256": "dc4c51648f1f52ed1bc0408b466f1f163ac1b268376e8665885e04f9d4421141",
+    "bytes": 6348,
+    "importacoes": [
+      "import math",
+      "import pygame",
+      "import recursos",
+      "import configuracoes",
+      "from interface import tema"
+    ],
+    "referencias_literais": [
+      ".png",
+      "chefes/transicao/entidade.png"
+    ]
+  },
+  {
+    "caminho": "mundo/turma_laboratorio.py",
+    "sha256": "750d2af43d8df2dbaf7dd7cc013cf2f3209ca3ebe54a1b71f35221aadf64c49d",
+    "bytes": 2615,
+    "importacoes": [
+      "import pygame"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "preparar_ambientes_ifrn.py",
+    "sha256": "a94652c671ad8fb071915804b7ee025767a2e49d4964ebd21b0a8ada7ec9833a",
+    "bytes": 1025,
+    "importacoes": [
+      "from pathlib import Path",
+      "import argparse",
+      "import os",
+      "import pygame"
+    ],
+    "referencias_literais": [
+      ".png",
+      ".png"
+    ]
+  },
+  {
+    "caminho": "preparar_caminhada_jogador.py",
+    "sha256": "ea6a40524c0f992f69d94500080e3ff67b8cfb5ceb9f80a7a26175b8e80fe734",
+    "bytes": 687,
+    "importacoes": [
+      "import pygame",
+      "import configuracoes",
+      "from preparar_figuras_personagens import extract_figures, export_frames"
+    ],
+    "referencias_literais": [
+      "ciclo_caminhada_jogador.png",
+      ".png"
+    ]
+  },
+  {
+    "caminho": "preparar_escola_detalhada.py",
+    "sha256": "117a36fe1f624830033848ee5cb661937cf782b85c7875bb1afef0f2869b1258",
+    "bytes": 743,
+    "importacoes": [
+      "import os",
+      "import pygame",
+      "from preparar_figuras_personagens import ORIGENS, DESTINO"
+    ],
+    "referencias_literais": [
+      "laboratorio_detalhado.png",
+      "corredor_detalhado.png"
+    ]
+  },
+  {
+    "caminho": "preparar_figuras_chefes.py",
+    "sha256": "8c37bf96f5ba6c3904b96e1c66750657e1b4ec191719677417009f798a42d37f",
+    "bytes": 792,
+    "importacoes": [
+      "from preparar_figuras_personagens import extract_figures, export_frames",
+      "import pygame"
+    ],
+    "referencias_literais": [
+      "romerbug_speedbug.png",
+      "projeteis_romerbug.png",
+      "romerbug_0.png",
+      "romerbug_1.png",
+      "speedbug_0.png",
+      "speedbug_1.png",
+      "aviao_papel.png",
+      "medalha.png"
+    ]
+  },
+  {
+    "caminho": "preparar_figuras_movimento.py",
+    "sha256": "32bd081562ec795919bcb9c53630619118df79ddf679d9350132fd84b2347f76",
+    "bytes": 808,
+    "importacoes": [
+      "from preparar_figuras_personagens import extract_figures, export_frames",
+      "import pygame"
+    ],
+    "referencias_literais": [
+      "movimento_chefe.png",
+      "aluno_chicote.png",
+      ".png",
+      ".png",
+      ".png"
+    ]
+  },
+  {
+    "caminho": "preparar_figuras_personagens.py",
+    "sha256": "c502c3caae30ce983472c0302ab5fa6aa51065679b4642a3cd36177b4157acc1",
+    "bytes": 3294,
+    "importacoes": [
+      "from pathlib import Path",
+      "import os",
+      "import pygame"
+    ],
+    "referencias_literais": [
+      "Exporta as artes aprovadas para os dez PNG usados pelo jogo.\n\nNão desenha personagens: apenas separa as figuras do atlas transparente,\nredimensiona sem suavização e alinha os pés. Requer somente Pygame.\nExecute novamente após gerar_recursos.py para restaurar esta arte.\n",
+      "aluno_ifrn_caico.png",
+      "bugs_microbios.png",
+      "repouso_0.png",
+      "repouso_1.png",
+      "caminhada_0.png",
+      "caminhada_1.png",
+      "caminhada_2.png",
+      "caminhada_3.png",
+      "salto.png",
+      "arrancada.png",
+      "bug_0.png",
+      "bug_1.png"
+    ]
+  },
+  {
+    "caminho": "preparar_recursos_escola.py",
+    "sha256": "b8e6fb37f898395a3b128df8af131e6fed81583e207551b3407a49b5673d884f",
+    "bytes": 772,
+    "importacoes": [
+      "import pygame",
+      "import configuracoes",
+      "from preparar_figuras_personagens import extract_figures, export_frames"
+    ],
+    "referencias_literais": [
+      "professores.png",
+      "max_0.png",
+      "max_1.png",
+      "romerito_0.png",
+      "romerito_1.png"
+    ]
+  },
+  {
+    "caminho": "preparar_recursos_menu.py",
+    "sha256": "5dab1fe2be0a98585cc383713753488db3c88ecc9a8f44145550542db296deb2",
+    "bytes": 1372,
+    "importacoes": [
+      "import pygame",
+      "import configuracoes",
+      "from preparar_figuras_personagens import ORIGENS, DESTINO, extract_figures, export_frames"
+    ],
+    "referencias_literais": [
+      "repouso_0.png",
+      "repouso_1.png",
+      "caminhada_0.png",
+      "caminhada_1.png",
+      "caminhada_2.png",
+      "caminhada_3.png",
+      "salto.png",
+      "arrancada.png",
+      "ataque_0.png",
+      "ataque_1.png",
+      "ataque_2.png",
+      "aluna.png",
+      "fachada_escola.png",
+      "fachada_escola.png"
+    ]
+  },
+  {
+    "caminho": "preparar_recursos_sombrios.py",
+    "sha256": "494d254ee3f5e8f10de36d0ed6d2a18f07367e4b748737977acce75d049247a1",
+    "bytes": 1291,
+    "importacoes": [
+      "import pygame",
+      "import configuracoes",
+      "from preparar_figuras_personagens import ORIGENS, DESTINO, extract_figures, export_frames"
+    ],
+    "referencias_literais": [
+      "transicao_chefe.png",
+      "entidade.png",
+      "escola_noturna.png",
+      "menu/escola_noturna.png",
+      "laboratorio_sombrio.png",
+      "cenarios/laboratorio_sombrio.png",
+      ".png",
+      "entidade_chefe.png"
+    ]
+  },
+  {
+    "caminho": "principal.py",
+    "sha256": "ccdd6da45d045c8a166699cc20a8fcab8d2faaa81a23227d0b7ef611b63cf486",
+    "bytes": 222,
+    "importacoes": [
+      "from jogo import Jogo"
+    ],
+    "referencias_literais": [
+      "Ponto de entrada do jogo 'Escola dos Bugs'.\n\nExecute com:  python principal.py\nRequer:       pip install pygame\n"
+    ]
+  },
+  {
+    "caminho": "recursos.py",
+    "sha256": "33d25cc4ee5e8714ae3106fdf2ce0bf5d5b9ae6585d669b12f45a54d8e3c52e1",
+    "bytes": 4217,
+    "importacoes": [
+      "import os",
+      "import pygame",
+      "import configuracoes"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "recursos/fontes_arte/LEIA_ME.md",
+    "sha256": "9ab6988caa6e7c99e0c773db43e49af188658348797585bfaba6d67559ab268f",
+    "bytes": 12972
+  },
+  {
+    "caminho": "recursos/fontes_arte/aluna.png",
+    "sha256": "86a81547f920dcf990cc8678fa2d106e1af72cfb6875c08221d429e29dfb9ea0",
+    "bytes": 1337019
+  },
+  {
+    "caminho": "recursos/fontes_arte/aluno_chicote.png",
+    "sha256": "5fadd8227bd4ec2a74f7774a5a8610e9c75bfb53c015dbb9bfcffadf813b6efb",
+    "bytes": 773749
+  },
+  {
+    "caminho": "recursos/fontes_arte/aluno_ifrn_caico.png",
+    "sha256": "05e07ffa44b9e37034e73794eaca0b26ebd8704e3a966edaaa49c485ae5103dc",
+    "bytes": 1011916
+  },
+  {
+    "caminho": "recursos/fontes_arte/biblioteca_ifrn.png",
+    "sha256": "828d00b8e8fdf1a88caaa893c3f45754ff14ab60c393138aef55fcd96ffad5a1",
+    "bytes": 2037911
+  },
+  {
+    "caminho": "recursos/fontes_arte/bugs_microbios.png",
+    "sha256": "61df23c07ff97ae08f9e9ab62a7b8c949ebd93dd570792bed30e68bab4eef336",
+    "bytes": 563044
+  },
+  {
+    "caminho": "recursos/fontes_arte/ciclo_caminhada_jogador.png",
+    "sha256": "72e1c516838641f9ab3a45f496833b479609aca78fbb2b4d327ac7a02e94f928",
+    "bytes": 1366652
+  },
+  {
+    "caminho": "recursos/fontes_arte/corredor_detalhado.png",
+    "sha256": "625840977f7ff44730e2a91a6ab4179bfd4f68bbd9e5e93a799d7be24469d768",
+    "bytes": 2164680
+  },
+  {
+    "caminho": "recursos/fontes_arte/entidade_chefe.png",
+    "sha256": "42dfcfe8a6f6a9e8a23ad8319ec3449382d8811791c0f0f2720df889b1e34d16",
+    "bytes": 941425
+  },
+  {
+    "caminho": "recursos/fontes_arte/escola_noturna.png",
+    "sha256": "68a24ed5ea7105c8aab446876efba8ff916f20a27b9354d03d1d1c8f6d4ee463",
+    "bytes": 1897259
+  },
+  {
+    "caminho": "recursos/fontes_arte/fachada_escola.png",
+    "sha256": "667030289cd16b33c06fd10febd53c52dca534b2ba81f90698d109029706efed",
+    "bytes": 2067511
+  },
+  {
+    "caminho": "recursos/fontes_arte/instrucoes_ambientes_ifrn.json",
+    "sha256": "4a018faaa0abe239fb16de2bfe2ee177ff11a904b0103d7a34d4c43423bd10c7",
+    "bytes": 4759
+  },
+  {
+    "caminho": "recursos/fontes_arte/instrucoes_artes_sombrias.json",
+    "sha256": "c2b5cfb8d1175e04acad3c263a7d0bde38f31c3ad66de6130b14c56ec4d6851a",
+    "bytes": 5496
+  },
+  {
+    "caminho": "recursos/fontes_arte/instrucoes_caminhada_jogador.json",
+    "sha256": "26f1f0bd6036b7dfb8518da591c90fa84267dd4a5f9a9cecce03af6a0950f2f6",
+    "bytes": 2163
+  },
+  {
+    "caminho": "recursos/fontes_arte/instrucoes_escola.json",
+    "sha256": "7a08104d0acbcf7b5292d4836bdeca60679209696d1ffe996b40e4f8a890e102",
+    "bytes": 2081
+  },
+  {
+    "caminho": "recursos/fontes_arte/instrucoes_escola_detalhada.json",
+    "sha256": "b1b420a3bef309d122c9618e0c7661391919fba5b3a9b59d03413d11e3d1fffc",
+    "bytes": 3292
+  },
+  {
+    "caminho": "recursos/fontes_arte/instrucoes_geracao.json",
+    "sha256": "e7d7fed74d3a600ba73127ac9a2de44a1f0f86ef7a9af64983aa1f2a89a14294",
+    "bytes": 5446
+  },
+  {
+    "caminho": "recursos/fontes_arte/instrucoes_interface_inicial.json",
+    "sha256": "ad20803cbb4525faaaa9b84092608eb941dba8b4853c00cac3e989327d1501e1",
+    "bytes": 3232
+  },
+  {
+    "caminho": "recursos/fontes_arte/instrucoes_movimento.json",
+    "sha256": "f9351ee6f54325c800d7e1d2df0d734d5682afb573c5c75c3dda1b08b60daaf1",
+    "bytes": 4415
+  },
+  {
+    "caminho": "recursos/fontes_arte/instrucoes_romerbug.json",
+    "sha256": "86dee66ab293613c2d07d9d1f022d9a4a37cb943e441b117f05a4b7f7605b354",
+    "bytes": 2204
+  },
+  {
+    "caminho": "recursos/fontes_arte/jogo_romerbug.png",
+    "sha256": "1e3f1e27ed418d45133a0193518c818e0062b50abbcb1d5f5152ce008d3e73ba",
+    "bytes": 19504
+  },
+  {
+    "caminho": "recursos/fontes_arte/jogo_speedbug.png",
+    "sha256": "b012c19a6523980893ab5c7f77a66bc4cb1b76763eb0f498a015a39fd259d6ef",
+    "bytes": 20284
+  },
+  {
+    "caminho": "recursos/fontes_arte/laboratorio_detalhado.png",
+    "sha256": "4e5e2dafda626ff390f2136655c0cbfbc9331ee0b26ff36ae26979542cdab204",
+    "bytes": 2031613
+  },
+  {
+    "caminho": "recursos/fontes_arte/laboratorio_sombrio.png",
+    "sha256": "45cbf858c5be8fb62a02962100c489b3c24c0f2f663dada6d779339d8d349994",
+    "bytes": 1879057
+  },
+  {
+    "caminho": "recursos/fontes_arte/memoria_tarefa.png",
+    "sha256": "da47d830be02b544440b1fb8ebb839d5e1264b1848af887be3ef67ff6fc071a1",
+    "bytes": 2284002
+  },
+  {
+    "caminho": "recursos/fontes_arte/movimento_chefe.png",
+    "sha256": "66681083092f8976949cd46430f19116fb9f2b589282c59b8e70dbd6b0bac66b",
+    "bytes": 1133928
+  },
+  {
+    "caminho": "recursos/fontes_arte/originais/inimigos/bug_0.png",
+    "sha256": "5d7dfd6578d812fee9c81e890bb941aaceeaeb921f1031eb3ed14eb177aa11b0",
+    "bytes": 343
+  },
+  {
+    "caminho": "recursos/fontes_arte/originais/inimigos/bug_1.png",
+    "sha256": "b40de16ceb21872841583a0ea33995ce2496f10f68fa4dfb187a7148b6805280",
+    "bytes": 360
+  },
+  {
+    "caminho": "recursos/fontes_arte/originais/jogador/arrancada.png",
+    "sha256": "945096d8d83c7da07f8aced0cb728eba5c00f937a861bdf500c18fcfbb056263",
+    "bytes": 470
+  },
+  {
+    "caminho": "recursos/fontes_arte/originais/jogador/caminhada_0.png",
+    "sha256": "c7c9f97830d24b1f2e37cda45f7f8aa7b7862819342f19faef9d187676f17656",
+    "bytes": 455
+  },
+  {
+    "caminho": "recursos/fontes_arte/originais/jogador/caminhada_1.png",
+    "sha256": "864c29e53c85cc414632786c5562667a2b79fab8767bb93bfe41a5862864af91",
+    "bytes": 454
+  },
+  {
+    "caminho": "recursos/fontes_arte/originais/jogador/caminhada_2.png",
+    "sha256": "9a05d1cd247c6aec230d5bb9fd4f2d51c6acf66fbdfc947a3d072921f5ba9708",
+    "bytes": 461
+  },
+  {
+    "caminho": "recursos/fontes_arte/originais/jogador/caminhada_3.png",
+    "sha256": "789bdfb1f55ff2927d62676926a12424541efe6d0f86cdfe9867a6d285e4ac67",
+    "bytes": 446
+  },
+  {
+    "caminho": "recursos/fontes_arte/originais/jogador/repouso_0.png",
+    "sha256": "3f8db0e41469b50cfa74cddcbe975e4bce201a0c9c5a1f952f2f6275222dae67",
+    "bytes": 459
+  },
+  {
+    "caminho": "recursos/fontes_arte/originais/jogador/repouso_1.png",
+    "sha256": "f719241fce4461a14b564f0e69d874149ba0f6534e6ed7ebdf1af4b1b70a282f",
+    "bytes": 453
+  },
+  {
+    "caminho": "recursos/fontes_arte/originais/jogador/salto.png",
+    "sha256": "8a9cc52fcd1f56727d2a37699eaa8102160c2cfe0b9f7544e8dfad5299728fa6",
+    "bytes": 449
+  },
+  {
+    "caminho": "recursos/fontes_arte/patio_ifrn.png",
+    "sha256": "42b1c021c4d84104ffe798b64ba6ad5ab4901b21beda00e37682c3c8c1ea3194",
+    "bytes": 2473624
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_abducao_escolar.png",
+    "sha256": "dac63395c68d3b234ee9760909552fad5a551b88e18157a0f83a9df060f0b4f9",
+    "bytes": 18495
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_animacao_menina.png",
+    "sha256": "63956ef3b7b19096d47b8861f8cba1d815f647628613ada6244d1a337af9a41f",
+    "bytes": 51120
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_ataque_carregado.png",
+    "sha256": "94d58726a869ac5aeacc0e1773753f54ca627a96687a9bfab3ce345bec7979ac",
+    "bytes": 366361
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_aviso_descarga.png",
+    "sha256": "86417b4453eb05e5f35594eeb250e6b521d5198dc18a136dd9c2ec2e11ff64b2",
+    "bytes": 324381
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_aviso_investida.png",
+    "sha256": "b7784954b78c42cee29c503c0c699bfe994e0e76065c12620f12653443bf2243",
+    "bytes": 324615
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_batalha_detalhada.png",
+    "sha256": "b36afccbb65853da270d76cae85e5c04afc628fcaba7827ee76b7d0f628a5125",
+    "bytes": 331171
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_batalha_sombria.png",
+    "sha256": "185da1b44f5e53e68a3c4c4e4cf6e2b48d148d522e90ff51f95906128083d614",
+    "bytes": 153174
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_caminhada_jogador.gif",
+    "sha256": "0e1df497e50540df640234f96857dd12a705d0ad94c4574627540c5d690e81ed",
+    "bytes": 2816862
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_chefe_ajoelhado.png",
+    "sha256": "cdf67cf60cd6a26d73e18a93fb77c615fdc1985473041e8930b2103052c83b8a",
+    "bytes": 61426
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_chefe_levantando.png",
+    "sha256": "c1e03317783a893612db12f47b7dc02fe3c1c83ee3c5dfaba07980fbdb35febc",
+    "bytes": 57743
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_chicote_ampliado_0.png",
+    "sha256": "e69bb80fd02fa959d6929e1edce1854bbe51ac885a11e5d5905fbaccb37045a6",
+    "bytes": 331649
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_chicote_ampliado_10.png",
+    "sha256": "42d0485aa0579fdfe199231e1841998e54fef214ba0c051e8f7279eed83ba0a2",
+    "bytes": 331320
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_chicote_ampliado_20.png",
+    "sha256": "2b26aa076638949463ed9003d59d3565695a7f56ba7f7f8c8131e83ce3a37cff",
+    "bytes": 331516
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_chicote_mouse.png",
+    "sha256": "e715c7c70598f1f4f6acbfcba1af486d396dc01dd51a5effd6599579b8c06cba",
+    "bytes": 22789
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_ciclo_investida.png",
+    "sha256": "a998760bc3e888e558f64e00602e2311bd0de9b76d0416af18729a26d14893cb",
+    "bytes": 322848
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_corredor_detalhado.png",
+    "sha256": "fc3288e998923677039e9e31983d79d57622025365b84dac6c569efa01c6e10f",
+    "bytes": 643662
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_corredor_escolar.png",
+    "sha256": "2b175bd99b4cf46fbed40fbf3fdc9997b0c06714a60615666334cddcdecb0a2b",
+    "bytes": 16225
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_derrota_virtual.png",
+    "sha256": "f13a45b1f8996828308312fbe5495d2650b6b8735c997603fcf0a88365b73eac",
+    "bytes": 22562
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_descoberta_mouse.png",
+    "sha256": "72c96a33fc24e769ea25a5b0cd2590ca6939242c5469ace809d17b88e3d2cd40",
+    "bytes": 19584
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_entidade_ampliada.png",
+    "sha256": "f87d18ae1da8327d097747e0a5a1454f7c1be7de2afe8cb6a9dc59a8bbcc1f2f",
+    "bytes": 102194
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_escala_110.png",
+    "sha256": "064874674a18f256c8f0eee5b2ef15d0ae485af4fc4ea6679cf96b7b5dfaea8a",
+    "bytes": 153231
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_fala_entidade.png",
+    "sha256": "1f4afac8fac30db7358ad430e3ad34ad19ebfc9ee7ca136297a86a4864793a8d",
+    "bytes": 60761
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_figuras.png",
+    "sha256": "3ca9794b713479dfb6a133cfb576ae6e97c2d9782a451dda46948bfe9c85936d",
+    "bytes": 28319
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_fim_conteudo.png",
+    "sha256": "b3d243761adf44dd6d88b7abaef8abea057e6a857257135cccc9e263d914d9b0",
+    "bytes": 9129
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_infeccao_virtual.png",
+    "sha256": "8bdece269f23ac82a9efe7b2f803ebfe5b583a9c2c7e6a3a19738c5e65495375",
+    "bytes": 20571
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_introducao.png",
+    "sha256": "d84a4feaf3e8932843db511862213439c56a5053480ab5c00243cfa1a4574c01",
+    "bytes": 209975
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_introducao_aluno.png",
+    "sha256": "4d0acdb67a1e0794a7ff4efcf9113aff72868cf58b71a1eea2645569cb94a992",
+    "bytes": 520127
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_jogo.png",
+    "sha256": "f4d46a65d5d73392cf506bc8e3764e3eadb83905ae6d4c6c4e1d49583d6fb58e",
+    "bytes": 14257
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_jogo_menina.png",
+    "sha256": "43cefb728085674d611ce21bbb2350c1e78c854b76a68ed7593507144c0173f4",
+    "bytes": 14918
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_laboratorio_detalhado.png",
+    "sha256": "04cc3ffde604192bc95dec714f71192f15e35c26c036679c1910c08b1e32c4a2",
+    "bytes": 607222
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_laboratorio_escolar.png",
+    "sha256": "9c49c3fc856aaf1a436949773818092beb037d97f2b8deaee2e57f3133b99925",
+    "bytes": 19414
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_menu.png",
+    "sha256": "09cde05285d8eb27cca29fa27f7c478d88cba3c4489304cfeb65cfc4bd0a1805",
+    "bytes": 278669
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_menu_sombrio.png",
+    "sha256": "8f25e416690d33eb066c59321c8b629c44e54c34d2897ac7e3e14f2e18075e66",
+    "bytes": 242632
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_metamorfose_chefe.png",
+    "sha256": "ce004a8e5116f5b57d0c3253acb9aca016dba010d0100aa6439fa78720620e77",
+    "bytes": 59231
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_monitores_animados.gif",
+    "sha256": "5172edc76bc49258b31a8f889f65ed711b4382f734109e7d8c33062c1c02c492",
+    "bytes": 171096
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_mouse_reforcado.png",
+    "sha256": "695069ee6d464c82d504fed22d61c7a501a30da8d8a05e7c14c3abd84e67cfeb",
+    "bytes": 366697
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_movimento_combate.gif",
+    "sha256": "a1db9fc669ca61958c9495240ec87362469adfff5af42a1c67d0bd144cf82198",
+    "bytes": 1245991
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_nome_jogador.png",
+    "sha256": "3b779f823451d0b27bff0c910a88356d88105abdccb36aad5fe6749a2debc46f",
+    "bytes": 147329
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_percurso_virtual.png",
+    "sha256": "d5d5cb8f19f607178fdd8477920ac1366bd53d478a174c154829b4a103bc1432",
+    "bytes": 13996
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_plataformas_legiveis.png",
+    "sha256": "84954f8ec988198174d938489fb3f3331f491a4201bee32daf50204e0667df54",
+    "bytes": 365425
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_reencontro_virtual.png",
+    "sha256": "97b67aab452ace794e6487f7572f5e7813ba9901c340598d2073ea5de9234f3c",
+    "bytes": 25119
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_resposta_com_nome.png",
+    "sha256": "46f9e8fa62a6ffcce17c34379958168485f6139f0dccac68dffbdc63ea4df539",
+    "bytes": 520724
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_romerbug.png",
+    "sha256": "86b2a8b33686d74a2c07085db10fe2c6535bd0176e8d88fa992c41ba1ed9a4e4",
+    "bytes": 29271
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_romerbug_aviao.png",
+    "sha256": "130ab9a6a29391afccbc427f9d1ff3d4cf48c6930f6ef7b96391bb1554518527",
+    "bytes": 321779
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_sala_aula.png",
+    "sha256": "da2896aa89de17572f506e35c4e597ecac90173b05a1e5bd66ce274d33a3c574",
+    "bytes": 20966
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_sala_aula_detalhada.png",
+    "sha256": "d89dad2288530538c9bf9b18f12362fe6c315db22ac9d5ecb7046ecceaccd5d2",
+    "bytes": 521998
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_selecao.png",
+    "sha256": "6fd52d35683aa9b91102bbd7ec1da84874b48e8985165486ff08482f55b9202c",
+    "bytes": 140063
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_selecao_sombria.png",
+    "sha256": "c2aa3b791ef5960e2973640ab60693f9d236dc39724157129d5b4571b6fa6943",
+    "bytes": 145032
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_speedbug_medalha.png",
+    "sha256": "6f0446c88c8058559c69251e93fab471fbbdda4c6cecdea949deff7e9036eb49",
+    "bytes": 322053
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_speedbug_virtual.png",
+    "sha256": "94be88f535485d4b82c8dc6a76f9f4755cfb4957b55daf34d2fd360e9f5a78d1",
+    "bytes": 16792
+  },
+  {
+    "caminho": "recursos/fontes_arte/previa_transformacao_chefe.gif",
+    "sha256": "2f624f51d1889fabb022fb556e2b4b2ad3a0acd5c5bd69d5352e80729781d7cc",
+    "bytes": 1702271
+  },
+  {
+    "caminho": "recursos/fontes_arte/professores.png",
+    "sha256": "860c788f46c50a159a83b70a37ca8e673add99d75b169fce1c1af32cbaf8d3ee",
+    "bytes": 660932
+  },
+  {
+    "caminho": "recursos/fontes_arte/projeteis_romerbug.png",
+    "sha256": "d3a8682da46a4e1ed83e69bcd613fc88d56ffb1cacbe6aafd887414752948274",
+    "bytes": 377783
+  },
+  {
+    "caminho": "recursos/fontes_arte/quadro_movimento_combate.png",
+    "sha256": "1e025b1466f53b7a6bac348c8a31ef291b4d87dc78a7da27d23a6b91f91575a1",
+    "bytes": 24213
+  },
+  {
+    "caminho": "recursos/fontes_arte/revisao_biblioteca.png",
+    "sha256": "5164758b67376b4ed851d16fcc292fd925a34507c4e59e102fb4ffb037f6d8b7",
+    "bytes": 486184
+  },
+  {
+    "caminho": "recursos/fontes_arte/revisao_fase1_laboratorio.png",
+    "sha256": "fbc43c88e996282fba478fadf6c0ccc9b530598edd032468a4d9ba0769de7117",
+    "bytes": 357655
+  },
+  {
+    "caminho": "recursos/fontes_arte/revisao_inicio_execucao.png",
+    "sha256": "c6146590d2106278c5592b36efdc64bc49f4b631b21d314c7cb394eb80b19165",
+    "bytes": 447891
+  },
+  {
+    "caminho": "recursos/fontes_arte/revisao_inicio_execucao_menina.png",
+    "sha256": "b1b4e4d5c212d24687a43063006fa798c825cc08a51f9e5279cbaaa97c0cec37",
+    "bytes": 447459
+  },
+  {
+    "caminho": "recursos/fontes_arte/revisao_inicio_hipnose.png",
+    "sha256": "290420c1e08c6ff44b4fd219047338f46b9deb54005c2ae248d4ad2a9d31dcee",
+    "bytes": 448903
+  },
+  {
+    "caminho": "recursos/fontes_arte/revisao_inicio_hipnose_menina.png",
+    "sha256": "85e26917dae1079d505a04cbe8f71a03b5f7ae9e3d2d9d3c8e4dff70b1c62bcb",
+    "bytes": 448852
+  },
+  {
+    "caminho": "recursos/fontes_arte/revisao_inicio_memoria.png",
+    "sha256": "907dc85f5c0ac8936e4eec8c6487bdd01313c344f47c1a8998c1184932065663",
+    "bytes": 596024
+  },
+  {
+    "caminho": "recursos/fontes_arte/revisao_inicio_memoria_menina.png",
+    "sha256": "e4eb6372db654d82dd4f3857b98e9c4289ccaa4aa1f02414671ad421067df534",
+    "bytes": 595642
+  },
+  {
+    "caminho": "recursos/fontes_arte/revisao_patio.png",
+    "sha256": "947c2345eac8a354263aa4bbe2aedd4ca764b6d4e5199db71414894988e081af",
+    "bytes": 803859
+  },
+  {
+    "caminho": "recursos/fontes_arte/revisao_succao_115.png",
+    "sha256": "125ab6ed9b9dfef79119a8fc27c12f244a8d5157fcaca298edee2b7bfa8e74a0",
+    "bytes": 498632
+  },
+  {
+    "caminho": "recursos/fontes_arte/revisao_succao_115_menina.png",
+    "sha256": "33fbf79ebd055ce04e3547c3ee4e787156d18236d8db63c5c6fbc26d6d750be2",
+    "bytes": 498401
+  },
+  {
+    "caminho": "recursos/fontes_arte/revisao_succao_35.png",
+    "sha256": "b71272555ecc07b2baae4110d5017dddfb2fcc1b2b9edbce6a6059d29dbd6aef",
+    "bytes": 594317
+  },
+  {
+    "caminho": "recursos/fontes_arte/revisao_succao_35_menina.png",
+    "sha256": "1f2151133d632d44e8787227be83606f711d9547f768352441dd21ba18686732",
+    "bytes": 594484
+  },
+  {
+    "caminho": "recursos/fontes_arte/revisao_succao_75.png",
+    "sha256": "94bb39f1b17eddccf75291f133e53eeba4feceef2f2c14b1494a47f3cb00d434",
+    "bytes": 501184
+  },
+  {
+    "caminho": "recursos/fontes_arte/revisao_succao_75_menina.png",
+    "sha256": "126198fc9859b2e6d78a6dc7258f7a9bc69dd3778617ad48e9217fb8a390779e",
+    "bytes": 501154
+  },
+  {
+    "caminho": "recursos/fontes_arte/romerbug_speedbug.png",
+    "sha256": "3ac7032a8dbc7113baca6a7b9fe8a43eac63f394ee4eb14a4d135f07bfc311da",
+    "bytes": 839324
+  },
+  {
+    "caminho": "recursos/fontes_arte/transformacao_speedbug.png",
+    "sha256": "b8f5ec2aa53af7c7c436cb73a42f8b08997d7534c8fa7227e2ba4033376a11fe",
+    "bytes": 21391
+  },
+  {
+    "caminho": "recursos/fontes_arte/transicao_chefe.png",
+    "sha256": "c6960d1044c8d4920a971ae31e4ae8395ac33c0a8d50b1d96c21b588a386dbd9",
+    "bytes": 1699878
+  },
+  {
+    "caminho": "recursos/imagens/blocos/chao.png",
+    "sha256": "4098710bc6a428c3d134a4062804b2f6f30402f136d6556c41495c8e16ed3175",
+    "bytes": 218
+  },
+  {
+    "caminho": "recursos/imagens/blocos/espinho.png",
+    "sha256": "0d6ee3b4d0bc92a4df054f31bad8b201a347cb8267ee8063c89db789acc9a2b4",
+    "bytes": 213
+  },
+  {
+    "caminho": "recursos/imagens/cenarios/biblioteca_ifrn.png",
+    "sha256": "84848b2be6b96b7381730ecc6538562c60f4a43cd9f4db100d8cd5425e6f4373",
+    "bytes": 731041
+  },
+  {
+    "caminho": "recursos/imagens/cenarios/corredor_detalhado.png",
+    "sha256": "dac9bdb8e38396a7bb9ab3b6b2605e6aab14ab63bfd8d93196c8d1c570a95252",
+    "bytes": 774503
+  },
+  {
+    "caminho": "recursos/imagens/cenarios/laboratorio_detalhado.png",
+    "sha256": "0a1a10aee5afd1c611dfc68d3c4e7e4f24329db7588e90e4eb07fe4bb29e8e50",
+    "bytes": 736666
+  },
+  {
+    "caminho": "recursos/imagens/cenarios/laboratorio_sombrio.png",
+    "sha256": "c288cbd95f137577eae0cd44c3260b46d1895cad83c2c8ca2f2c914bb8dfbf34",
+    "bytes": 340591
+  },
+  {
+    "caminho": "recursos/imagens/cenarios/memoria_tarefa.png",
+    "sha256": "36ceb5e75895ac88fa05d5177a21da3492afe49eb092872b09d2ecab0f832dbd",
+    "bytes": 821123
+  },
+  {
+    "caminho": "recursos/imagens/cenarios/painel.png",
+    "sha256": "19b0fb9a701c8c7e75d121980f86d69955697d52661b7d6bbc8fca20e87db9b0",
+    "bytes": 688
+  },
+  {
+    "caminho": "recursos/imagens/cenarios/patio_ifrn.png",
+    "sha256": "db4a4240024405af07d5e3ed49920713af41c4d1b207bc6cbb7d1983da2d5c89",
+    "bytes": 878796
+  },
+  {
+    "caminho": "recursos/imagens/chefes/prof_assembly.png",
+    "sha256": "5c0620f3f9fb31c6f8323d81ec9fdede966f6178a8647ad42f0cb7acf181a046",
+    "bytes": 794
+  },
+  {
+    "caminho": "recursos/imagens/chefes/prof_c.png",
+    "sha256": "2fcf53355a339f34a7a9a93090bef58e3ab591da8ebe072c696608bb70e69c12",
+    "bytes": 673
+  },
+  {
+    "caminho": "recursos/imagens/chefes/prof_java.png",
+    "sha256": "be13f10e96fd486b898dcec95f05d484ff2e89c708476c28c71ade1e0cf68672",
+    "bytes": 715
+  },
+  {
+    "caminho": "recursos/imagens/chefes/prof_python.png",
+    "sha256": "008ebc3ee5c2b20b3dd54bda07b8e07f0d54aed9d3a9d6fe7b1ac9f4df8b21f2",
+    "bytes": 611
+  },
+  {
+    "caminho": "recursos/imagens/chefes/prof_scratch.png",
+    "sha256": "e8335fbc68d67ca5d30219b0e95edb405ac1b72938c12bc40d63a4eef002853e",
+    "bytes": 624
+  },
+  {
+    "caminho": "recursos/imagens/chefes/prof_sql.png",
+    "sha256": "5c0bdeb0a8f9a21b9ac47266be169daa29b06dd4ba9f347f7ed6134ae33988d2",
+    "bytes": 628
+  },
+  {
+    "caminho": "recursos/imagens/chefes/romerbug_0.png",
+    "sha256": "1063ede1201c325791379ac2ad6dbae69ce2512ebcc3cbbb2f1f8a4cb61a8d10",
+    "bytes": 4383
+  },
+  {
+    "caminho": "recursos/imagens/chefes/romerbug_1.png",
+    "sha256": "fd1261090d23240e1f5f7f17600318eda65469f15b8bd996334aa5734fbdf380",
+    "bytes": 4103
+  },
+  {
+    "caminho": "recursos/imagens/chefes/romerbug_caminhada_0.png",
+    "sha256": "9ba7e32438bd527b84180987b7461e90ed47e8d6986e9c3d4ce0c87e32c1e371",
+    "bytes": 4139
+  },
+  {
+    "caminho": "recursos/imagens/chefes/romerbug_caminhada_1.png",
+    "sha256": "0fa37bb0a9aee3dd1543727b01df6df72e55a4b5077d2e73a22d13e57da64be2",
+    "bytes": 3598
+  },
+  {
+    "caminho": "recursos/imagens/chefes/romerbug_caminhada_2.png",
+    "sha256": "966753f89f3b8eb2603c6606350981d13b1734e04527ca59bd418aae3d236faf",
+    "bytes": 3598
+  },
+  {
+    "caminho": "recursos/imagens/chefes/romerbug_caminhada_3.png",
+    "sha256": "a387bcbc9b57237be043d928b9565c1af5cd7a4635e1342f802db0b4faf2a522",
+    "bytes": 4153
+  },
+  {
+    "caminho": "recursos/imagens/chefes/romerbug_caminhada_4.png",
+    "sha256": "1469ab41e25cd93e9a126f3fe0b51681bd792226a4031f7d0fc9c3ab2e3a2887",
+    "bytes": 3557
+  },
+  {
+    "caminho": "recursos/imagens/chefes/romerbug_caminhada_5.png",
+    "sha256": "4743d26d92b0c23603c492e62d226b3871963d6884a7620710fa89b469f01513",
+    "bytes": 3811
+  },
+  {
+    "caminho": "recursos/imagens/chefes/speedbug_0.png",
+    "sha256": "99f820e2e6beb83b97968b863da407fe9530c6e5724f1d5dd37667e78a6a3e13",
+    "bytes": 4172
+  },
+  {
+    "caminho": "recursos/imagens/chefes/speedbug_1.png",
+    "sha256": "df230784bca41734f8a6f826d31f67150e520d08e9a4c39195164bca6a708b59",
+    "bytes": 4144
+  },
+  {
+    "caminho": "recursos/imagens/chefes/speedbug_corrida_0.png",
+    "sha256": "dc4ddb41f42a7983d13f492d27697e419127681f66022cc792b5d03e4c8f5d78",
+    "bytes": 4424
+  },
+  {
+    "caminho": "recursos/imagens/chefes/speedbug_corrida_1.png",
+    "sha256": "819b209ad42e790e4d292228e9f5814af75a50790068599c5d6ea9b0c8334d94",
+    "bytes": 4344
+  },
+  {
+    "caminho": "recursos/imagens/chefes/speedbug_corrida_2.png",
+    "sha256": "16bac302e34a4317c620321328bb2f2e3fe35ea0546d81ad8a05172e4b44c724",
+    "bytes": 4423
+  },
+  {
+    "caminho": "recursos/imagens/chefes/speedbug_corrida_3.png",
+    "sha256": "128ba44b5f249ed8398e19a8a1dc14a7fe5ad4886e647387a697ffa2c6f1abf3",
+    "bytes": 4557
+  },
+  {
+    "caminho": "recursos/imagens/chefes/speedbug_corrida_4.png",
+    "sha256": "2a63ac3a030b2b387e8e9e9afd718a60e585c0d03f7f92f1aa2bddbb9fb60ad9",
+    "bytes": 4191
+  },
+  {
+    "caminho": "recursos/imagens/chefes/speedbug_corrida_5.png",
+    "sha256": "b07e7ddaadeb97d805417b88c028e5d593a90e2994e22c8074baa81dadcdc6a1",
+    "bytes": 4340
+  },
+  {
+    "caminho": "recursos/imagens/chefes/transicao/entidade.png",
+    "sha256": "1e3ff761874645e238ed2d44b8f84cbc05fc8d7c37fa1f0e30436c324fc4f9ca",
+    "bytes": 1999
+  },
+  {
+    "caminho": "recursos/imagens/chefes/transicao/pose_0.png",
+    "sha256": "d71d749b75724530a2efded4248d323ada7f45221c20f1fe9a15851da9b9366e",
+    "bytes": 2267
+  },
+  {
+    "caminho": "recursos/imagens/chefes/transicao/pose_1.png",
+    "sha256": "c0ac6371d19b76f5e280dc1e2b5cdf8dd28d3c83f6279cf4f7649816ad456292",
+    "bytes": 1940
+  },
+  {
+    "caminho": "recursos/imagens/chefes/transicao/pose_2.png",
+    "sha256": "ea623d3edf5cc7e052cd128873fcac0f5a7eebc4e03c6e31114ea2400035b6e4",
+    "bytes": 2053
+  },
+  {
+    "caminho": "recursos/imagens/chefes/transicao/pose_3.png",
+    "sha256": "32556f2656f1ccefbd98eba25c81bb84e29998b5b3700bcde4d9fb9c3af07747",
+    "bytes": 2140
+  },
+  {
+    "caminho": "recursos/imagens/chefes/transicao/pose_4.png",
+    "sha256": "64cf6b59129cdaaabe603004eda98d7d0e6c641601ec054f422f503ea316acc7",
+    "bytes": 2332
+  },
+  {
+    "caminho": "recursos/imagens/chefes/transicao/pose_5.png",
+    "sha256": "b978f52b37ba2f48b7fea3dafb72411f61b971a7ab997356d53d0cc244a4a7fe",
+    "bytes": 2254
+  },
+  {
+    "caminho": "recursos/imagens/inimigos/bug_0.png",
+    "sha256": "fe30114a338ef6d544e71cdffa73b10d845db7d78b5e38328ba21b927aa74d09",
+    "bytes": 1155
+  },
+  {
+    "caminho": "recursos/imagens/inimigos/bug_1.png",
+    "sha256": "4d6eaf1c22554ec92e46db98b2aa15eb5c62f50f8b1e47c37d7d90922a79d5eb",
+    "bytes": 1150
+  },
+  {
+    "caminho": "recursos/imagens/interface/item_habilidade.png",
+    "sha256": "c29b04d4cf237b0a85dce5772c9d69b28a62961d909ce552636b6d13c9ba9370",
+    "bytes": 337
+  },
+  {
+    "caminho": "recursos/imagens/jogador/arrancada.png",
+    "sha256": "f7e995afe99fdc4c0428d1a3c3bba60123147f1d4004b308e39d9bba37b99b79",
+    "bytes": 1440
+  },
+  {
+    "caminho": "recursos/imagens/jogador/ataque_0.png",
+    "sha256": "d9bf94b85e8a9d64b94eccebba8af58d155cbe7f68f974660219ed50013387e2",
+    "bytes": 2109
+  },
+  {
+    "caminho": "recursos/imagens/jogador/ataque_1.png",
+    "sha256": "0c4fae828483b44a7f1574594163627e2911ba44ce1eacd7a453e5bbb9b08639",
+    "bytes": 2003
+  },
+  {
+    "caminho": "recursos/imagens/jogador/ataque_2.png",
+    "sha256": "53511ac8939c1ae649604dd299ad97bea62a2ab599c8d49c05b7298b81327316",
+    "bytes": 1966
+  },
+  {
+    "caminho": "recursos/imagens/jogador/caminhada_0.png",
+    "sha256": "d7161e821295bd32195fcebc3ae6b9e1cc4bd9684d2b9b199fcc916874e8171e",
+    "bytes": 1706
+  },
+  {
+    "caminho": "recursos/imagens/jogador/caminhada_1.png",
+    "sha256": "6389110ca2821e63941709d103c7676ebd892c880ae4bde73ccfc80dc73fd444",
+    "bytes": 1618
+  },
+  {
+    "caminho": "recursos/imagens/jogador/caminhada_2.png",
+    "sha256": "f3470c5769f27e473591dcb0babc769e644c09dbeece2e7645d4da0fe753d6af",
+    "bytes": 1558
+  },
+  {
+    "caminho": "recursos/imagens/jogador/caminhada_3.png",
+    "sha256": "25fc14bc31564711db6dd8f822e81d58c47a5ead1f18a88556de4043be8bc5d7",
+    "bytes": 1515
+  },
+  {
+    "caminho": "recursos/imagens/jogador/ciclo_caminhada/caminhada_0.png",
+    "sha256": "e8660c680b3af0e58d3368a8fa8e6e6ed8c40247f31a0240c144b03f959f3836",
+    "bytes": 2017
+  },
+  {
+    "caminho": "recursos/imagens/jogador/ciclo_caminhada/caminhada_1.png",
+    "sha256": "9c8c4f14d9d0c7606985a46bc5d2d871be032f10d699b4d0f3cba83a476e6cec",
+    "bytes": 1990
+  },
+  {
+    "caminho": "recursos/imagens/jogador/ciclo_caminhada/caminhada_2.png",
+    "sha256": "90ac67fad278e14f959ae402b961dcfbfaa54dc6052fb7dddabede49ebfe2ff3",
+    "bytes": 1982
+  },
+  {
+    "caminho": "recursos/imagens/jogador/ciclo_caminhada/caminhada_3.png",
+    "sha256": "96a8698f178485654e9746f43c9359caf3ccb1e452c4a05f3d7b11451f1d4f1f",
+    "bytes": 2043
+  },
+  {
+    "caminho": "recursos/imagens/jogador/ciclo_caminhada/caminhada_4.png",
+    "sha256": "d20d03dcc003d1c67278d6275ddc52c7c5d1a3ce48be686e22b3c8772452af1f",
+    "bytes": 2044
+  },
+  {
+    "caminho": "recursos/imagens/jogador/ciclo_caminhada/caminhada_5.png",
+    "sha256": "7d20d42195502b51274d0dff06c1eb30d3e10d6eee3c4a7ffab5c1d754a6af24",
+    "bytes": 1943
+  },
+  {
+    "caminho": "recursos/imagens/jogador/ciclo_caminhada/caminhada_6.png",
+    "sha256": "385ceb3b25f41da66dcb43990c873a46d8bb3973ecfbeaa102cd2dbe4ef500b6",
+    "bytes": 1983
+  },
+  {
+    "caminho": "recursos/imagens/jogador/ciclo_caminhada/caminhada_7.png",
+    "sha256": "ed52f9035c5edaeb04d72c1d68a6507bf846b9724f6191bd6041a211b3a71aed",
+    "bytes": 1945
+  },
+  {
+    "caminho": "recursos/imagens/jogador/menina/arrancada.png",
+    "sha256": "7f0949435e19b21206ca3e2f23a5f50a9940c7427bb625db75ae9c321daf7ec7",
+    "bytes": 1744
+  },
+  {
+    "caminho": "recursos/imagens/jogador/menina/ataque_0.png",
+    "sha256": "fed1e5431323d91da789ec9f25c0a82719a5323c3abc7a1236daffefa1d3e37e",
+    "bytes": 1929
+  },
+  {
+    "caminho": "recursos/imagens/jogador/menina/ataque_1.png",
+    "sha256": "779738b8cd89430925a373e5cc96f4d1b6b34f0b3445b4d6dabf0a077f4e6463",
+    "bytes": 1958
+  },
+  {
+    "caminho": "recursos/imagens/jogador/menina/ataque_2.png",
+    "sha256": "a61081aae72a9988aac8c3fc87d1202f04b351780fc28984a9de74754aef1df7",
+    "bytes": 1916
+  },
+  {
+    "caminho": "recursos/imagens/jogador/menina/caminhada_0.png",
+    "sha256": "1b86ba3eae2649cff694a3f236025d0799e29a0786f43ff079b69d3a98e4b63f",
+    "bytes": 2093
+  },
+  {
+    "caminho": "recursos/imagens/jogador/menina/caminhada_1.png",
+    "sha256": "45ddea492b7aa2d212cc202e3b0d1b32651a674cfeba5a0ba423905241efd6b4",
+    "bytes": 1913
+  },
+  {
+    "caminho": "recursos/imagens/jogador/menina/caminhada_2.png",
+    "sha256": "ec214f6b50c32c9285978c3fa8f0a52d7c88a5e85cc80b1d6aec09b04fcfe64f",
+    "bytes": 1943
+  },
+  {
+    "caminho": "recursos/imagens/jogador/menina/caminhada_3.png",
+    "sha256": "938d3a2b618d36c0e6f3530c579149d983339f2433644bdb350814dab5d6181d",
+    "bytes": 1831
+  },
+  {
+    "caminho": "recursos/imagens/jogador/menina/ciclo_caminhada/caminhada_0.png",
+    "sha256": "ceb7815728f07d23351efafe1cd5c62b97d3d6ec8047ec3067f4d62f231c4f30",
+    "bytes": 2177
+  },
+  {
+    "caminho": "recursos/imagens/jogador/menina/ciclo_caminhada/caminhada_1.png",
+    "sha256": "c150b6070164d02edc728a63a9c1df42176a0987c25d2e39171cbff5b6aaa05f",
+    "bytes": 2176
+  },
+  {
+    "caminho": "recursos/imagens/jogador/menina/ciclo_caminhada/caminhada_2.png",
+    "sha256": "ba20f3e65f0211218b5e9a1f8455ef0a9260db9b5e1e18804f7728e939ccfb2f",
+    "bytes": 2104
+  },
+  {
+    "caminho": "recursos/imagens/jogador/menina/ciclo_caminhada/caminhada_3.png",
+    "sha256": "a1eeda057bcd7816fb79159fe1ae2621493a4162987508849480a46a60c98a9d",
+    "bytes": 2229
+  },
+  {
+    "caminho": "recursos/imagens/jogador/menina/ciclo_caminhada/caminhada_4.png",
+    "sha256": "b6aba819442fa9709b33f10aef826795659c5cb012271caf1323541a99d2ee3e",
+    "bytes": 2253
+  },
+  {
+    "caminho": "recursos/imagens/jogador/menina/ciclo_caminhada/caminhada_5.png",
+    "sha256": "5b1f645f8f8ddc9fb72fcbb1130399b1732f5eaddb3adf295d8e804515a3acdf",
+    "bytes": 2068
+  },
+  {
+    "caminho": "recursos/imagens/jogador/menina/ciclo_caminhada/caminhada_6.png",
+    "sha256": "30dc1887c625a30eadb33967f740de9f0486fee59794f44422981ab5ae245c0d",
+    "bytes": 2152
+  },
+  {
+    "caminho": "recursos/imagens/jogador/menina/ciclo_caminhada/caminhada_7.png",
+    "sha256": "f461b3203f68a66ef1356bff3428ebb60a70d99028df4b2df486badfb85ffba0",
+    "bytes": 2135
+  },
+  {
+    "caminho": "recursos/imagens/jogador/menina/repouso_0.png",
+    "sha256": "7983f3cc8f4086dd24476465356fd3d07dd96ea1e842b43623f9f4ec61c8dbce",
+    "bytes": 1913
+  },
+  {
+    "caminho": "recursos/imagens/jogador/menina/repouso_1.png",
+    "sha256": "8fb09e35fc719a954de464fa195b998320a8d43165be4271c0ee284efb822256",
+    "bytes": 1883
+  },
+  {
+    "caminho": "recursos/imagens/jogador/menina/salto.png",
+    "sha256": "44ec71b0fc64f8b060c15b4f04419ebd4e7443c7eff81ceea832841eaf7a0983",
+    "bytes": 1955
+  },
+  {
+    "caminho": "recursos/imagens/jogador/repouso_0.png",
+    "sha256": "10f7b3918104dff66ab2ce2a2980182ec67d666ecb1988cb59d757c25af8feec",
+    "bytes": 1644
+  },
+  {
+    "caminho": "recursos/imagens/jogador/repouso_1.png",
+    "sha256": "6d848f2736823f3c51fe648e0e86c53aa80ac4fdc0313c797222098707ee8a23",
+    "bytes": 1627
+  },
+  {
+    "caminho": "recursos/imagens/jogador/salto.png",
+    "sha256": "73e25723e65fbe4d82343ef30352e02ac3c0c74437ade80a01f9fe9db61a1b7a",
+    "bytes": 1701
+  },
+  {
+    "caminho": "recursos/imagens/menu/escola_noturna.png",
+    "sha256": "e1f1c2cf4cce203503f30b530b9fcfa26043b049a72aceaedaeb4f3aa4162300",
+    "bytes": 215457
+  },
+  {
+    "caminho": "recursos/imagens/menu/fachada_escola.png",
+    "sha256": "72adffd173512e2ec4b629361824ff1677bedc569e537516ef0eccf57d03306c",
+    "bytes": 236537
+  },
+  {
+    "caminho": "recursos/imagens/professores/max_0.png",
+    "sha256": "fdc32c2a05e63b707a2d1f9fbbb2301325fe3bd99aa9113def5cb6f3688529a8",
+    "bytes": 1798
+  },
+  {
+    "caminho": "recursos/imagens/professores/max_1.png",
+    "sha256": "2762d6d1e1e27612a6fdb5a03704fe3cdccd5aff2625fedea2eea1d2a3a39dca",
+    "bytes": 1779
+  },
+  {
+    "caminho": "recursos/imagens/professores/romerito_0.png",
+    "sha256": "56b5f82b989870fff1f263929e552a3bcd37d5b079013516438fdd19cbce3baf",
+    "bytes": 1677
+  },
+  {
+    "caminho": "recursos/imagens/professores/romerito_1.png",
+    "sha256": "7902a2a584d0414ccee391bf3aead5160a12af7bace029e35bcd177e9a368eb8",
+    "bytes": 1677
+  },
+  {
+    "caminho": "recursos/imagens/projeteis/aviao_papel.png",
+    "sha256": "c319e62f9b2afb272ae72b8fbc289cc3883477eba52fa7e39367591e8c5344b4",
+    "bytes": 675
+  },
+  {
+    "caminho": "recursos/imagens/projeteis/medalha.png",
+    "sha256": "31b0850c8f3ba47c46cd09c7c66529b22dee23fd036ec112192c8acd97d09af4",
+    "bytes": 963
+  },
+  {
+    "caminho": "referencia/fachada_escola.png",
+    "sha256": "c66fdf6228c6f5d08b549c506ef9a31377ddd0790b570a0f7a29fec5b9afcb55",
+    "bytes": 818381
+  },
+  {
+    "caminho": "referencia/ifrn/Captura de tela de 2026-11-02 17-24-38.png",
+    "sha256": "880cd1a8e7ed37dee80efc28fb31232b61ca480e9e2b85df053a7f7cf312cb52",
+    "bytes": 1105881
+  },
+  {
+    "caminho": "referencia/ifrn/Captura de tela de 2026-11-02 17-24-56.png",
+    "sha256": "4cd9c23504612c45368f4819f5c94a22761a1e22b9c310c1e15a3d66e4714334",
+    "bytes": 1200322
+  },
+  {
+    "caminho": "referencia/ifrn/Captura de tela de 2026-11-02 17-26-04.png",
+    "sha256": "684589f83eb8b8920dd2451d31a7b8a86659654499432e251f2a37030d748d78",
+    "bytes": 1346000
+  },
+  {
+    "caminho": "referencia/ifrn/Captura de tela de 2026-11-02 17-27-22.png",
+    "sha256": "b8c7340b5ae2f00de09a0f729546010904257437f3e10f038b0b1ddf6d1ccb63",
+    "bytes": 1269001
+  },
+  {
+    "caminho": "referencia/ifrn/Captura de tela de 2026-11-02 17-27-40.png",
+    "sha256": "0d5b8d261e7767d6ecb8c263f4c9de43b911af8bec0feb9c725cfeda41ac1090",
+    "bytes": 1102077
+  },
+  {
+    "caminho": "referencia/ifrn/Captura de tela de 2026-11-02 17-27-45.png",
+    "sha256": "4e4988231726b360ae3db76c17a9d4c5c403aaba63675047cd1a0ec2e70b776f",
+    "bytes": 1200835
+  },
+  {
+    "caminho": "referencia/professor_max.png",
+    "sha256": "7c43ae0667d22f7a966fdc99a0ef9414e27233cd568c1b37039bdb4c37bcca6d",
+    "bytes": 421309
+  },
+  {
+    "caminho": "referencia/professor_romerito.png",
+    "sha256": "a3a5fd5672ec2d7c4bad82df0c9ddb7913c7aac717f0052eadcd83859c0b1e4c",
+    "bytes": 351675
+  },
+  {
+    "caminho": "sons.py",
+    "sha256": "e94a587863614f896e9f230ed5308b0cf45502550ed1a4ca17e1ff592fc857fb",
+    "bytes": 892,
+    "importacoes": [
+      "from array import array",
+      "import math",
+      "import pygame"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "testes/teste_avaliacao_visual.py",
+    "sha256": "73e26aec2ea39aaebbf323ad9e0c9362ca35414a3b8d2b731da135fd30d1f0ba",
+    "bytes": 4049,
+    "importacoes": [
+      "import os",
+      "import unittest",
+      "import pygame",
+      "from mundo.camera import Camera",
+      "from jogo import Jogo",
+      "from collections import defaultdict"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "testes/teste_biblioteca.py",
+    "sha256": "ba04feae3c20cc6ec0629e8d49052d003d0398b05e3bdcf6a70735c516847c95",
+    "bytes": 8533,
+    "importacoes": [
+      "import os",
+      "from collections import defaultdict",
+      "import unittest",
+      "import pygame",
+      "from jogo import Jogo, ESTADO_JOGANDO, ESTADO_DIALOGO, ESTADO_PAUSA, ESTADO_DERROTA",
+      "from habilidades import Habilidade",
+      "from jogo import ESTADO_FIM_CONTEUDO"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "testes/teste_campanha_virtual.py",
+    "sha256": "aaac743ee2af6fe0d6bf263103e4c3b96b279dc931f5a53f5037f4bd4440466a",
+    "bytes": 13256,
+    "importacoes": [
+      "import os",
+      "from collections import defaultdict",
+      "import unittest",
+      "import pygame",
+      "import configuracoes",
+      "from entidades.jogador import Jogador",
+      "from entidades.projetil import Projetil",
+      "from jogo import Jogo, ESTADO_JOGANDO, ESTADO_DIALOGO, ESTADO_INFECCAO, ESTADO_PAUSA, ESTADO_FIM_CONTEUDO, ESTADO_MENU, ESTADO_TRANSFORMACAO_CHEFE, ESTADO_CARTAO_FASE",
+      "from mundo.fase import Fase",
+      "from mundo.dados_fases import build_levels, DIALOGO_REENCONTRO, DIALOGO_APOS_CHEFE",
+      "from mundo.fases_antigas import build_legacy_levels"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "testes/teste_chicote_mouse.py",
+    "sha256": "a3c972940fcb1d8c58699903be0bfb5bbcc9f8fec85126f4018a2eb3cf2da50e",
+    "bytes": 5371,
+    "importacoes": [
+      "import os",
+      "import unittest",
+      "import pygame",
+      "from entidades.jogador import Jogador",
+      "from entidades.inimigo import Inimigo",
+      "from entidades.romer_bug import RomerBug"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "testes/teste_contrato_personagem.py",
+    "sha256": "fb5e76cb2807a4ef4af93fa0527534d46b8b025f9af7d7ed45c043c86e9c1239",
+    "bytes": 5087,
+    "importacoes": [
+      "import os",
+      "import unittest",
+      "from unittest.mock import patch",
+      "from types import SimpleNamespace",
+      "import pygame",
+      "import recursos",
+      "import configuracoes",
+      "from entidades.chefe import Chefe",
+      "from entidades.jogador import Jogador",
+      "from mundo.fase import Fase",
+      "from mundo.fases_antigas import build_legacy_levels"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "testes/teste_controle_combate.py",
+    "sha256": "dd7f440bc84244a6d11c33903494d2ba5564a327759a6a2b767434eb91008c18",
+    "bytes": 10040,
+    "importacoes": [
+      "import os",
+      "import unittest",
+      "from collections import defaultdict",
+      "import pygame",
+      "import configuracoes",
+      "from entidades.jogador import Jogador",
+      "from entidades.inimigo import Inimigo",
+      "from entidades.romer_bug import RomerBug",
+      "from jogo import Jogo, ESTADO_JOGANDO, ESTADO_PAUSA, ESTADO_DIALOGO",
+      "from mundo.escola_sombria import EscolaSombria",
+      "from mundo.camera import Camera"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "testes/teste_encontro_chefe.py",
+    "sha256": "cc00744c2f78c73309b54283a0bd1d6964f00eecb25510586bbf1aaa6fa72ada",
+    "bytes": 4873,
+    "importacoes": [
+      "import os",
+      "import unittest",
+      "import pygame",
+      "from entidades.jogador import Jogador",
+      "from jogo import Jogo, ESTADO_JOGANDO, ESTADO_DIALOGO",
+      "from mundo.fase import Fase",
+      "from mundo.fases_antigas import build_legacy_levels"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "testes/teste_historia_escolar.py",
+    "sha256": "966b2efed4b072fe5c115477bfb6af9075d6c37a5de328635e73b718794b7609",
+    "bytes": 10447,
+    "importacoes": [
+      "import os",
+      "from collections import defaultdict",
+      "import unittest",
+      "import pygame",
+      "import configuracoes",
+      "from entidades.professor import Professor",
+      "from jogo import Jogo, ESTADO_JOGANDO, ESTADO_DIALOGO, ESTADO_CARTAO_FASE, ESTADO_ABDUCAO, ESTADO_PAUSA",
+      "from mundo.escola import FaseEscolar",
+      "from mundo.dados_escola import DESCOBERTA_MOUSE",
+      "from mundo.dados_fases import INDICE_CORRUPCAO_HISTORIA",
+      "from mundo.dados_fases import INTRODUCAO_HISTORIA",
+      "from mundo.dados_escola import DIALOGO_ENCONTRO"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "testes/teste_identidade_caminhada_jogador.py",
+    "sha256": "726ae8ed955d946902b80b1c36cbd2e129ba80a755238926f64f5171fad40b3e",
+    "bytes": 7774,
+    "importacoes": [
+      "import os",
+      "from collections import defaultdict",
+      "import unittest",
+      "import pygame",
+      "from entidades.jogador import Jogador",
+      "from jogo import Jogo, ESTADO_MENU, ESTADO_SELECAO_PERSONAGEM, ESTADO_ENTRADA_NOME, ESTADO_DIALOGO, ESTADO_DERROTA",
+      "from mundo.dados_fases import INTRODUCAO_HISTORIA, DIALOGO_REENCONTRO, DIALOGO_APOS_CHEFE",
+      "from mundo.dados_escola import DIALOGO_ENCONTRO, DESCOBERTA_MOUSE"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "testes/teste_interface_inicial.py",
+    "sha256": "1760004b4a9ea43874939dbdfd1b8d0576686a1cf391b95a15a37a476cefbf87",
+    "bytes": 8992,
+    "importacoes": [
+      "import os",
+      "import unittest",
+      "from pathlib import Path",
+      "import pygame",
+      "import configuracoes",
+      "from entidades.jogador import Jogador",
+      "from entidades.inimigo import Inimigo",
+      "from jogo import Jogo, ESTADO_MENU, ESTADO_SELECAO_PERSONAGEM, ESTADO_DIALOGO, ESTADO_CARTAO_FASE, ESTADO_JOGANDO, ESTADO_PAUSA, ESTADO_DERROTA, ESTADO_FIM_CONTEUDO, ESTADO_ENTRADA_NOME",
+      "from habilidades import Habilidade",
+      "from mundo.fases_antigas import build_legacy_levels"
+    ],
+    "referencias_literais": [
+      "*.png"
+    ]
+  },
+  {
+    "caminho": "testes/teste_revisao_inicio.py",
+    "sha256": "60963f35270c9eb1fd8919080030398db6fab6324a9d79b43e402502c1c10039",
+    "bytes": 6494,
+    "importacoes": [
+      "import os",
+      "from collections import defaultdict",
+      "import unittest",
+      "import pygame",
+      "from jogo import Jogo, ESTADO_DIALOGO, ESTADO_PAUSA, ESTADO_ABDUCAO",
+      "from mundo.dados_fases import INTRODUCAO_HISTORIA, INDICE_CORRUPCAO_HISTORIA, INDICE_EXECUCAO_HISTORIA, INDICE_MEMORIA_HISTORIA",
+      "from mundo.succao_computador import SuccaoComputador",
+      "from mundo.escola import FaseEscolar"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "testes/teste_romer_bug.py",
+    "sha256": "ed112d63d0dfee818d321f95a27f9b9fc8ea512440d8f5bcb22a1b962f1e11f9",
+    "bytes": 11011,
+    "importacoes": [
+      "import os",
+      "import unittest",
+      "from types import SimpleNamespace",
+      "import pygame",
+      "from entidades.chefe import Chefe",
+      "from entidades.chefes_professores import CLASSES_CHEFES",
+      "from entidades.romer_bug import RomerBug, ProjetilProfessor",
+      "from entidades.jogador import Jogador",
+      "from habilidades import Habilidade",
+      "from mundo.fase import Fase",
+      "from mundo.fases_antigas import build_legacy_levels"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "testes/teste_transicao_chefe.py",
+    "sha256": "549e0ccfa4e78c6ec7d49847e12e065546060a4754092c84a20b6b6ec7ad8d0c",
+    "bytes": 7984,
+    "importacoes": [
+      "import os",
+      "from collections import defaultdict",
+      "import unittest",
+      "import pygame",
+      "import configuracoes",
+      "from jogo import Jogo, ESTADO_JOGANDO, ESTADO_TRANSFORMACAO_CHEFE, ESTADO_PAUSA",
+      "from habilidades import Habilidade",
+      "from entidades.projetil import Projetil",
+      "from interface import tema"
+    ],
+    "referencias_literais": []
+  },
+  {
+    "caminho": "testes/teste_visual_escolar.py",
+    "sha256": "c02df2496d05202144e01f37c44502bd9afd3e5b27f6d1acafdfcc74ea920a2d",
+    "bytes": 5582,
+    "importacoes": [
+      "import os",
+      "from collections import defaultdict",
+      "import unittest",
+      "import pygame",
+      "from jogo import Jogo, ESTADO_DIALOGO, ESTADO_PAUSA, ESTADO_JOGANDO",
+      "from entidades.professor import Professor",
+      "from entidades.inimigo import Inimigo",
+      "from entidades.jogador import Jogador",
+      "from mundo.terminal import TelaTerminal",
+      "from mundo.camera import Camera",
+      "from mundo.arte_escolar import ArteEscolar"
+    ],
+    "referencias_literais": []
+  }
+]

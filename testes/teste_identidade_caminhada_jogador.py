@@ -8,7 +8,7 @@ from collections import defaultdict
 import unittest
 import pygame
 from entidades.jogador import Jogador
-from jogo import (Jogo, ESTADO_MENU, ESTADO_SELECAO_PERSONAGEM, ESTADO_ENTRADA_NOME,
+from sistema.jogo import (Jogo, ESTADO_MENU, ESTADO_SELECAO_PERSONAGEM, ESTADO_ENTRADA_NOME,
                   ESTADO_DIALOGO, ESTADO_DERROTA)
 from mundo.dados_fases import INTRODUCAO_HISTORIA, DIALOGO_REENCONTRO, DIALOGO_APOS_CHEFE
 from mundo.dados_escola import DIALOGO_ENCONTRO, DESCOBERTA_MOUSE

@@ -1,7 +1,7 @@
 """PainelInformacoes com integridade segmentada, identificação da área e estado do boss."""
 import pygame
-import configuracoes
-from habilidades import Habilidade, NOMES_HABILIDADES
+from sistema import configuracoes
+from sistema.habilidades import Habilidade, NOMES_HABILIDADES
 from interface import tema
 
 

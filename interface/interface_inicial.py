@@ -1,7 +1,7 @@
 """Telas de acesso à escola, com navegação por mouse e teclado."""
 import pygame
-import recursos
-import configuracoes
+from sistema import recursos
+from sistema import configuracoes
 from entidades.jogador import Jogador
 from interface import tema
 

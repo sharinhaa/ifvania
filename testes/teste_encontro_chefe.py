@@ -7,7 +7,7 @@ os.environ.setdefault("PYGAME_HIDE_SUPPORT_PROMPT", "1")
 import unittest
 import pygame
 from entidades.jogador import Jogador
-from jogo import Jogo, ESTADO_JOGANDO, ESTADO_DIALOGO
+from sistema.jogo import Jogo, ESTADO_JOGANDO, ESTADO_DIALOGO
 from mundo.fase import Fase
 from mundo.fases_antigas import build_legacy_levels
 

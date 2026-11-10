@@ -24,16 +24,16 @@ Respeite instruções explícitas do usuário. Peça esclarecimento quando houve
 
 Antes de modificar a campanha ou sistemas relacionados, consulte:
 
-- `LEIA_ME.md`
-- `DOCUMENTO_DE_REQUISITOS.md`
-- `ROTEIRO_HISTORIA.md`
-- `PLANO_DE_EXECUCAO.md`
+- `documentacao/LEIA_ME.md`
+- `documentacao/DOCUMENTO_DE_REQUISITOS.md`
+- `documentacao/ROTEIRO_HISTORIA.md`
+- `documentacao/PLANO_DE_EXECUCAO.md`
 
 Use esses documentos para entender a intenção do projeto, sua implementação e suas pendências. Diferencie requisitos explícitos de descrições da versão atual: escolhas anteriores de implementação podem evoluir.
 
 Instruções atuais do usuário prevalecem sobre estas orientações e sobre os documentos do projeto. Quando uma mudança autorizada alterar uma decisão documentada, atualize a documentação correspondente.
 
-Use `PLANO_DE_EXECUCAO.md` para registrar progresso, pendências e decisões relevantes, com informações suficientes para permitir a continuidade do trabalho.
+Use `documentacao/PLANO_DE_EXECUCAO.md` para registrar progresso, pendências e decisões relevantes, com informações suficientes para permitir a continuidade do trabalho.
 
 ## Direção criativa
 
@@ -97,15 +97,18 @@ Use efeitos, partículas, sons, tremores de câmera e pausas de impacto quando a
 A organização atual serve como ponto de partida:
 
 - `principal.py`: entrada do jogo.
-- `jogo.py`: classe `Jogo` e máquina de estados.
-- `configuracoes.py`: dimensões, física, escala e cores.
+- `sistema/jogo.py`: classe `Jogo` e máquina de estados.
+- `sistema/configuracoes.py`: dimensões, física, escala e cores.
 - `entidades/`: personagens, inimigos, chefes, armas e projéteis.
 - `mundo/`: mapas, cenas, câmera, monitores e transições.
 - `interface/`: menus, diálogos, painéis e tema.
 - `mundo/dados_fases.py`: campanha atual.
 - `mundo/fases_antigas.py`: conteúdo antigo isolado.
-- `recursos.py`: carregamento e normalização de recursos.
-- `preparar_*.py`: exportadores de arte.
+- `sistema/recursos.py`: carregamento e normalização de recursos.
+- `ferramentas/preparar_*.py`: exportadores de arte, executados com `python -m ferramentas.nome_do_modulo`.
+- `documentacao/`: apresentação, roteiro, requisitos, plano e inventários.
+- `configuracao/dependencias.txt`: dependências de execução.
+- `avaliacao/visual/`: evidências e métricas; scripts ficam em `ferramentas/`.
 
 Você pode criar módulos e reorganizar responsabilidades quando houver benefício concreto. Evite concentrar sistemas independentes em arquivos extensos ou introduzir abstrações sem necessidade.
 
@@ -149,13 +152,13 @@ Você pode criar recursos provisórios para testar uma ideia e refiná-los confo
 - Evite sobrescrever artes aprovadas durante experimentos.
 - Gere variações em arquivos ou diretórios separados até verificar o resultado.
 - Confira transparência, alinhamento, ancoragem, recorte e tamanho dos quadros.
-- Considere que `gerar_recursos.py` é o gerador original e pode sobrescrever imagens.
+- Considere que `ferramentas/gerar_recursos.py` é o gerador original e pode sobrescrever imagens.
 
 Pillow é necessário apenas para o gerador original. ffmpeg é opcional para prévias e não deve ser exigido para jogar.
 
 ## Validação
 
-Com as dependências de `dependencias.txt`, execute o jogo com:
+Com as dependências de `configuracao/dependencias.txt`, execute o jogo com:
 
 ```bash
 python principal.py

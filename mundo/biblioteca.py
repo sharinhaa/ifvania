@@ -4,9 +4,9 @@ Materiais inspirados nas capturas 17-24-38 e 17-24-56 de referencia/ifrn.
 O desenho não define colisões; apoios sólidos continuam no mapa de blocos.
 """
 import pygame
-import recursos
+from sistema import recursos
 from interface import tema
-from habilidades import Habilidade
+from sistema.habilidades import Habilidade
 from mundo.dados_biblioteca import DIALOGO_MODULO
 from mundo.escola_sombria import EscolaSombria
 from mundo.camera import Camera

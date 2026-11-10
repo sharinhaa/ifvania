@@ -7,9 +7,9 @@ os.environ.setdefault('PYGAME_HIDE_SUPPORT_PROMPT', '1')
 from collections import defaultdict
 import unittest
 import pygame
-import configuracoes
-from jogo import Jogo, ESTADO_JOGANDO, ESTADO_TRANSFORMACAO_CHEFE, ESTADO_PAUSA
-from habilidades import Habilidade
+from sistema import configuracoes
+from sistema.jogo import Jogo, ESTADO_JOGANDO, ESTADO_TRANSFORMACAO_CHEFE, ESTADO_PAUSA
+from sistema.habilidades import Habilidade
 from entidades.projetil import Projetil
 from interface import tema
 

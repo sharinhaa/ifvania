@@ -6,7 +6,7 @@ os.environ.setdefault('PYGAME_HIDE_SUPPORT_PROMPT', '1')
 from collections import defaultdict
 import unittest
 import pygame
-from jogo import Jogo, ESTADO_DIALOGO, ESTADO_PAUSA, ESTADO_ABDUCAO
+from sistema.jogo import Jogo, ESTADO_DIALOGO, ESTADO_PAUSA, ESTADO_ABDUCAO
 from mundo.dados_fases import (INTRODUCAO_HISTORIA, INDICE_CORRUPCAO_HISTORIA,
                                INDICE_EXECUCAO_HISTORIA, INDICE_MEMORIA_HISTORIA)
 from mundo.succao_computador import SuccaoComputador

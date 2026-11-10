@@ -1,6 +1,6 @@
 """Professores da sequência escolar, sem comportamento de inimigo."""
-import recursos
-import configuracoes
+from sistema import recursos
+from sistema import configuracoes
 from entidades.personagem import Personagem
 
 

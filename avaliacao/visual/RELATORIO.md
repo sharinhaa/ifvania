@@ -6,7 +6,7 @@ Data: 09/11/2026. Escopo: conteúdo disponível, prólogo e fases 1 e 2.
 
 Capturas reais de `Jogo._draw()`, com superfícies, sprites, fontes e composição do Pygame 2.6.1, Python 3.12.10 e SDL dummy. Há **34 PNGs antes e 34 depois**, em 960 × 540. Não são imagens simuladas. [Contato inicial](contato_antes.png) e [contato final](contato_depois.png).
 
-`capturar_cenas.py` prepara posições e estados para inspeção e injeta comandos de caminhada, salto e ataque. Combates são amostras com chefe ativado diretamente; derrota, cartão e fim de conteúdo são estados preparados. Isso não demonstra uma partida contínua, sobrevivência ou vitória por habilidade humana. A captura `ataque` registra o estado após entrada X, mas não comprova isoladamente dano; os testes de combate verificam os acertos. A imagem inicial da aula foi capturada antes de revelar texto; a final revela a fala para facilitar a leitura, sem mudança no sistema de diálogo.
+`ferramentas/capturar_cenas.py` prepara posições e estados para inspeção e injeta comandos de caminhada, salto e ataque. Combates são amostras com chefe ativado diretamente; derrota, cartão e fim de conteúdo são estados preparados. Isso não demonstra uma partida contínua, sobrevivência ou vitória por habilidade humana. A captura `ataque` registra o estado após entrada X, mas não comprova isoladamente dano; os testes de combate verificam os acertos. A imagem inicial da aula foi capturada antes de revelar texto; a final revela a fala para facilitar a leitura, sem mudança no sistema de diálogo.
 
 O ponto de entrada `principal.py` ficou ativo por dois segundos sem erro e foi encerrado pelo avaliador. Não houve janela visível, avaliação de áudio nem partida manual. As fases 3–6 não foram avaliadas porque não estão implementadas. Não foi usada a arte não rastreada `referencia/img.png`.
 
@@ -47,8 +47,8 @@ Medição independente com física real em piso plano, sem inimigos: **ambos os 
 Dados: [medidas_movimento.json](medidas_movimento.json). Reprodução:
 
 ```bash
-.venv/bin/python avaliacao/visual/capturar_cenas.py avaliacao/visual/nova_captura
-.venv/bin/python avaliacao/visual/medir_movimento.py
+.venv/bin/python -m ferramentas.capturar_cenas avaliacao/visual/nova_captura
+.venv/bin/python -m ferramentas.medir_movimento
 SDL_VIDEODRIVER=dummy SDL_AUDIODRIVER=dummy PYGAME_HIDE_SUPPORT_PROMPT=1 .venv/bin/python -m unittest discover -s testes -q
 ```
 
@@ -59,7 +59,7 @@ SDL_VIDEODRIVER=dummy SDL_AUDIODRIVER=dummy PYGAME_HIDE_SUPPORT_PROMPT=1 .venv/b
 | `mundo/camera.py` | Zona vertical estável após enquadramento inicial | Salto comum movimenta menos o fundo, subida alta continua acompanhada. |
 | `mundo/biblioteca.py` | Separação fundo/interativos/objetivos, camada escura apenas no fundo, rótulos e faixas | Objetos mais legíveis e aviso do portão visível. Nenhuma arte aprovada sobrescrita. |
 | `mundo/fase.py` | Interativos da biblioteca após sólidos | A barreira deixa de apagar suas próprias faixas. |
-| `jogo.py` | Objetivos após composição do HUD | Contador com painel legível e dicas próximas preservadas. |
+| `sistema/jogo.py` | Objetivos após composição do HUD | Contador com painel legível e dicas próximas preservadas. |
 | `testes/teste_avaliacao_visual.py` | Duas regressões | Câmera, limites, sinal do portão e geometria verificados. |
 | `avaliacao/visual/` | Scripts, dados, relatório e capturas | Avaliação reproduzível com limitações explícitas. |
 
@@ -82,3 +82,12 @@ Notas são julgamento técnico provisório sobre o conteúdo disponível; não c
 | **Geral: soma(nota × peso)/100** | **100%** | **6,80** | **7,08** | Ganho limitado às melhorias demonstradas. |
 
 A etapa 11 do plano continua aberta. Próximo ciclo: partida humana de sobrevivência e leitura do salto/câmera; depois, marcos regionais e redução de áreas visualmente vazias, com novas capturas comparáveis.
+
+## Consolidação do repositório — 10/11/2026
+
+As quantidades acima descrevem a avaliação original. Capturas idênticas foram
+consolidadas por SHA-256, sem perder nenhuma imagem distinta. Links apontam para
+a cópia preservada. O mapa completo de aliases está em
+[documentacao/capturas_consolidadas.json](../../documentacao/capturas_consolidadas.json).
+Scripts passaram para `ferramentas/`, executados com `python -m ferramentas.capturar_cenas`
+e `python -m ferramentas.medir_movimento` pela raiz.

@@ -1,8 +1,6 @@
 """Projéteis disparados pelo aluno (ponteiros) e pelos professores-chefe."""
 import pygame
-import configuracoes
-
-
+from sistema import configuracoes
 class Projetil(pygame.sprite.Sprite):
     def __init__(self, x, y, direcao, dono='jogador', velocidade=None, cor=None, dano=1):
         super().__init__()

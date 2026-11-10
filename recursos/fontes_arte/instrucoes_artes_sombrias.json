@@ -26,5 +26,5 @@
       "prompt": "Use case: stylized-concept. Asset type: transparent jogo entity sprite, companion asset for a dark school platformer boss cutscene. Create one single full-body spectral digital ENTITY hovering upright: a human-sized silhouette in a tattered charcoal academic coat/hood, face hidden in darkness with two thin cold cyan eye slits, fragmented lower robe dissolving into a few square pixels, long slender hands extended slightly as if commanding a kneeling subordinate. Ominous mysterious presence of an AI, serious and restrained, no smile and no cute elements. Crisp 2D pixel art with readable chunky silhouette matching a retro school platformer, desaturated charcoal with restrained gray-violet edge light and pale cyan highlights. Three-quarter view facing RIGHT. Simple compact shape readable at 40 by 40 jogo pixels; no external oversized glow. Genuine transparent background. No other characters, no props, no scene, no floor, no shadow, no text, no watermark. Single entity only."
     }
   ],
-  "export_command": "python preparar_recursos_sombrios.py"
+  "export_command": "python -m ferramentas.preparar_recursos_sombrios"
 }

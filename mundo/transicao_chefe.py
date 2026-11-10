@@ -1,8 +1,8 @@
 """Cena dos 50%: joelho no chão, entidade, fala, metamorfose e retomada."""
 import math
 import pygame
-import recursos
-import configuracoes
+from sistema import recursos
+from sistema import configuracoes
 from interface import tema
 
 

@@ -1,5 +1,5 @@
 """Percurso e diálogos da biblioteca, separados da primeira fase."""
-from configuracoes import TAMANHO_BLOCO
+from sistema.configuracoes import TAMANHO_BLOCO
 
 DIALOGO_MODULO = [
     ('Aluno(a)', 'Módulo de Repetição? Ele consegue executar um segundo impulso no ar!'),

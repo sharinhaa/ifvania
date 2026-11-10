@@ -5,8 +5,8 @@ só precisa decidir *para onde* andar (patrulha simples entre dois pontos)
 e o que acontece quando morre.
 """
 import pygame
-import configuracoes
-import recursos
+from sistema import configuracoes
+from sistema import recursos
 from entidades.personagem import Personagem
 
 

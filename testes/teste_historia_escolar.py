@@ -7,9 +7,9 @@ os.environ.setdefault('PYGAME_HIDE_SUPPORT_PROMPT', '1')
 from collections import defaultdict
 import unittest
 import pygame
-import configuracoes
+from sistema import configuracoes
 from entidades.professor import Professor
-from jogo import (Jogo, ESTADO_JOGANDO, ESTADO_DIALOGO, ESTADO_CARTAO_FASE,
+from sistema.jogo import (Jogo, ESTADO_JOGANDO, ESTADO_DIALOGO, ESTADO_CARTAO_FASE,
                   ESTADO_ABDUCAO, ESTADO_PAUSA)
 from mundo.escola import FaseEscolar
 from mundo.dados_escola import DESCOBERTA_MOUSE

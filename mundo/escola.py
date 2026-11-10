@@ -5,8 +5,8 @@ câmera, spawn, update e draw), sem criar inimigos ou um boss antecipadamente.
 """
 from types import SimpleNamespace
 import pygame
-import recursos
-import configuracoes
+from sistema import recursos
+from sistema import configuracoes
 from entidades.professor import Professor
 from mundo.camera import Camera
 from mundo.arte_escolar import ArteEscolar

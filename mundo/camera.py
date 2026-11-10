@@ -1,8 +1,6 @@
 """Câmera 2D simples que segue o jogador e trava nos limites do nível."""
 import pygame
-import configuracoes
-
-
+from sistema import configuracoes
 class Camera:
     def __init__(self, largura_fase, altura_fase):
         self.deslocamento = pygame.Vector2(0, 0)

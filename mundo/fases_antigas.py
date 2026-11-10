@@ -3,7 +3,7 @@ professores-chefe, textos de diálogo e habilidades concedidas.
 """
 import random
 from entidades.chefe import DEFINICOES_CHEFES
-from habilidades import Habilidade
+from sistema.habilidades import Habilidade
 
 COMPRIMENTOS = [46, 52, 58, 64, 70, 78]
 LINHA_CHAO = 14

@@ -7,10 +7,10 @@ tudo que é específico do aluno: habilidades, dash, tiro, escudo e ataque
 corpo a corpo.
 """
 import pygame
-import configuracoes
-import recursos
+from sistema import configuracoes
+from sistema import recursos
 from entidades.personagem import Personagem
-from habilidades import Habilidade
+from sistema.habilidades import Habilidade
 from entidades.projetil import Projetil
 from entidades.chicote_mouse import ChicoteMouse
 
@@ -261,7 +261,7 @@ class Jogador(Personagem):
         if self.carregando and self.espera_ataque <= 0:
             self.carga = min(configuracoes.TEMPO_CARGA, self.carga + 1)
             if self.carga == configuracoes.TEMPO_CARGA and not self.carga_sinalizada:
-                from sons import tocar
+                from sistema.sons import tocar
                 tocar('carga')
                 self.carga_sinalizada = True
         self.temporizador_recuo = max(0, self.temporizador_recuo-1)

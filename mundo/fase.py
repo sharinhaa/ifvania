@@ -1,14 +1,14 @@
 """Classe Fase: liga tilemap, inimigos, chefe, powerup e câmera numa fase jogável."""
 import pygame
-import configuracoes
-import recursos
+from sistema import configuracoes
+from sistema import recursos
 from mundo.mapa_blocos import MapaBlocos
 from mundo.camera import Camera
 from entidades.inimigo import Inimigo
 from entidades.chefes_professores import CLASSES_CHEFES
 from entidades.romer_bug import RomerBug
 from entidades.professor import Professor
-from habilidades import ItemHabilidade
+from sistema.habilidades import ItemHabilidade
 from mundo.escola_sombria import EscolaSombria
 from mundo.biblioteca import Biblioteca
 

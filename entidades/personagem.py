@@ -14,9 +14,7 @@ tipo de personagem se move de um jeito bem diferente).
 from abc import ABC, abstractmethod
 
 import pygame
-import configuracoes
-
-
+from sistema import configuracoes
 class Personagem(pygame.sprite.Sprite, ABC):
     """Base comum a Jogador, Inimigo e Chefe (posição, vida, física, desenho)."""
 

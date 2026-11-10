@@ -1,0 +1,274 @@
+[
+  {
+    "removido": "avaliacao/visual/depois/01_menu.png",
+    "mantido": "avaliacao/visual/antes/01_menu.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_composicao/01_menu.png",
+    "mantido": "avaliacao/visual/antes/01_menu.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/01_menu.png",
+    "mantido": "avaliacao/visual/antes/01_menu.png"
+  },
+  {
+    "removido": "avaliacao/visual/depois/02_selecao.png",
+    "mantido": "avaliacao/visual/antes/02_selecao.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_composicao/02_selecao.png",
+    "mantido": "avaliacao/visual/antes/02_selecao.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/02_selecao.png",
+    "mantido": "avaliacao/visual/antes/02_selecao.png"
+  },
+  {
+    "removido": "avaliacao/visual/depois/03_nome.png",
+    "mantido": "avaliacao/visual/antes/03_nome.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_composicao/03_nome.png",
+    "mantido": "avaliacao/visual/antes/03_nome.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/03_nome.png",
+    "mantido": "avaliacao/visual/antes/03_nome.png"
+  },
+  {
+    "removido": "avaliacao/visual/depois/05_memoria.png",
+    "mantido": "avaliacao/visual/antes/05_memoria.png"
+  },
+  {
+    "removido": "avaliacao/visual/depois/06_hipnose.png",
+    "mantido": "avaliacao/visual/antes/06_hipnose.png"
+  },
+  {
+    "removido": "avaliacao/visual/depois/07_corridor_inicio.png",
+    "mantido": "avaliacao/visual/antes/07_corridor_inicio.png"
+  },
+  {
+    "removido": "avaliacao/visual/depois/07_lab_inicio.png",
+    "mantido": "avaliacao/visual/antes/07_lab_inicio.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_composicao/07_lab_inicio.png",
+    "mantido": "avaliacao/visual/antes/07_lab_inicio.png"
+  },
+  {
+    "removido": "avaliacao/visual/depois/08_corridor_destino.png",
+    "mantido": "avaliacao/visual/antes/08_corridor_destino.png"
+  },
+  {
+    "removido": "avaliacao/visual/depois/08_lab_destino.png",
+    "mantido": "avaliacao/visual/antes/08_lab_destino.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_composicao/08_lab_destino.png",
+    "mantido": "avaliacao/visual/antes/08_lab_destino.png"
+  },
+  {
+    "removido": "avaliacao/visual/depois/09_succao.png",
+    "mantido": "avaliacao/visual/antes/09_succao.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_composicao/09_succao.png",
+    "mantido": "avaliacao/visual/antes/09_succao.png"
+  },
+  {
+    "removido": "avaliacao/visual/depois/cartao.png",
+    "mantido": "avaliacao/visual/antes/cartao.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_composicao/cartao.png",
+    "mantido": "avaliacao/visual/antes/cartao.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/cartao.png",
+    "mantido": "avaliacao/visual/antes/cartao.png"
+  },
+  {
+    "removido": "avaliacao/visual/depois/derrota.png",
+    "mantido": "avaliacao/visual/antes/derrota.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_composicao/derrota.png",
+    "mantido": "avaliacao/visual/antes/derrota.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/derrota.png",
+    "mantido": "avaliacao/visual/antes/derrota.png"
+  },
+  {
+    "removido": "avaliacao/visual/depois/fase1_andando.png",
+    "mantido": "avaliacao/visual/antes/fase1_andando.png"
+  },
+  {
+    "removido": "avaliacao/visual/depois/fase1_combate.png",
+    "mantido": "avaliacao/visual/antes/fase1_combate.png"
+  },
+  {
+    "removido": "avaliacao/visual/depois/fase1_inicio.png",
+    "mantido": "avaliacao/visual/antes/fase1_inicio.png"
+  },
+  {
+    "removido": "avaliacao/visual/depois/fase1_pausa.png",
+    "mantido": "avaliacao/visual/antes/fase1_pausa.png"
+  },
+  {
+    "removido": "avaliacao/visual/depois/fase1_regiao_1400.png",
+    "mantido": "avaliacao/visual/antes/fase1_regiao_1400.png"
+  },
+  {
+    "removido": "avaliacao/visual/depois/fase1_regiao_2050.png",
+    "mantido": "avaliacao/visual/antes/fase1_regiao_2050.png"
+  },
+  {
+    "removido": "avaliacao/visual/depois/fase1_regiao_500.png",
+    "mantido": "avaliacao/visual/antes/fase1_regiao_500.png"
+  },
+  {
+    "removido": "avaliacao/visual/depois/fase1_regiao_900.png",
+    "mantido": "avaliacao/visual/antes/fase1_regiao_900.png"
+  },
+  {
+    "removido": "avaliacao/visual/depois/fim_conteudo.png",
+    "mantido": "avaliacao/visual/antes/fim_conteudo.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_composicao/fim_conteudo.png",
+    "mantido": "avaliacao/visual/antes/fim_conteudo.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/fim_conteudo.png",
+    "mantido": "avaliacao/visual/antes/fim_conteudo.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_composicao/fase2_andando.png",
+    "mantido": "avaliacao/visual/depois/fase2_andando.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/fase2_andando.png",
+    "mantido": "avaliacao/visual/depois/fase2_andando.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_composicao/fase2_ataque.png",
+    "mantido": "avaliacao/visual/depois/fase2_ataque.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/fase2_ataque.png",
+    "mantido": "avaliacao/visual/depois/fase2_ataque.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_composicao/fase2_combate.png",
+    "mantido": "avaliacao/visual/depois/fase2_combate.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/fase2_combate.png",
+    "mantido": "avaliacao/visual/depois/fase2_combate.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_composicao/fase2_inicio.png",
+    "mantido": "avaliacao/visual/depois/fase2_inicio.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/fase2_inicio.png",
+    "mantido": "avaliacao/visual/depois/fase2_inicio.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_composicao/fase2_pausa.png",
+    "mantido": "avaliacao/visual/depois/fase2_pausa.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/fase2_pausa.png",
+    "mantido": "avaliacao/visual/depois/fase2_pausa.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_composicao/fase2_regiao_1400.png",
+    "mantido": "avaliacao/visual/depois/fase2_regiao_1400.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/fase2_regiao_1400.png",
+    "mantido": "avaliacao/visual/depois/fase2_regiao_1400.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_composicao/fase2_regiao_2050.png",
+    "mantido": "avaliacao/visual/depois/fase2_regiao_2050.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/fase2_regiao_2050.png",
+    "mantido": "avaliacao/visual/depois/fase2_regiao_2050.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_composicao/fase2_regiao_500.png",
+    "mantido": "avaliacao/visual/depois/fase2_regiao_500.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/fase2_regiao_500.png",
+    "mantido": "avaliacao/visual/depois/fase2_regiao_500.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_composicao/fase2_regiao_900.png",
+    "mantido": "avaliacao/visual/depois/fase2_regiao_900.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/fase2_regiao_900.png",
+    "mantido": "avaliacao/visual/depois/fase2_regiao_900.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_composicao/fase2_salto.png",
+    "mantido": "avaliacao/visual/depois/fase2_salto.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/fase2_salto.png",
+    "mantido": "avaliacao/visual/depois/fase2_salto.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/07_corridor_inicio.png",
+    "mantido": "avaliacao/visual/revisao_composicao/07_corridor_inicio.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/08_corridor_destino.png",
+    "mantido": "avaliacao/visual/revisao_composicao/08_corridor_destino.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/fase1_andando.png",
+    "mantido": "avaliacao/visual/revisao_composicao/fase1_andando.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/fase1_ataque.png",
+    "mantido": "avaliacao/visual/revisao_composicao/fase1_ataque.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/fase1_combate.png",
+    "mantido": "avaliacao/visual/revisao_composicao/fase1_combate.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/fase1_inicio.png",
+    "mantido": "avaliacao/visual/revisao_composicao/fase1_inicio.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/fase1_pausa.png",
+    "mantido": "avaliacao/visual/revisao_composicao/fase1_pausa.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/fase1_regiao_1400.png",
+    "mantido": "avaliacao/visual/revisao_composicao/fase1_regiao_1400.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/fase1_regiao_2050.png",
+    "mantido": "avaliacao/visual/revisao_composicao/fase1_regiao_2050.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/fase1_regiao_500.png",
+    "mantido": "avaliacao/visual/revisao_composicao/fase1_regiao_500.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/fase1_regiao_900.png",
+    "mantido": "avaliacao/visual/revisao_composicao/fase1_regiao_900.png"
+  },
+  {
+    "removido": "avaliacao/visual/revisao_profundidade/fase1_salto.png",
+    "mantido": "avaliacao/visual/revisao_composicao/fase1_salto.png"
+  }
+]

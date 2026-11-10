@@ -131,7 +131,7 @@ class ChicoteMouse:
             vida = alvo.vida
             alvo.take_damage(self.dano)
             if alvo.vida < vida:
-                from sons import tocar
+                from sistema.sons import tocar
                 tocar('impacto')
                 jogador.pausa_impacto = 3 if self.dano > 1 else 2
                 self.alvos_atingidos.add(alvo)
@@ -139,7 +139,7 @@ class ChicoteMouse:
         return False
 
     def desenhar_carga(self, superficie, camera, jogador):
-        import configuracoes
+        from sistema import configuracoes
         centro = camera.apply(jogador.rect).move(jogador.direcao_olhar*12, -36).center
         fracao = jogador.carga/configuracoes.TEMPO_CARGA
         angulo = jogador.carga*0.45

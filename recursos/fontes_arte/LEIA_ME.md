@@ -22,7 +22,7 @@ presente no projeto; não houve validação fotográfica do uniforme do campus.
 Na raiz do projeto, executar:
 
 ```bash
-python preparar_figuras_personagens.py
+python -m ferramentas.preparar_figuras_personagens
 ```
 
 O script usa Pygame para separar as figuras pelo canal alfa, ignorando pequenos
@@ -36,7 +36,7 @@ antes de exportar. Um novo atlas com partes desconectadas ou outra disposição
 pode precisar de ajustes no recorte. Os PNG exportados têm transparência;
 nenhum fundo quadriculado é incorporado aos arquivos finais.
 
-`gerar_recursos.py` continua sendo o gerador das artes originais e sobrescreve
+`ferramentas/gerar_recursos.py` continua sendo o gerador das artes originais e sobrescreve
 os sprites. Para recuperar esta versão depois de executá-lo, repetir o comando
 de exportação acima. Para usar os desenhos anteriores, copiar os PNG de
 `originais/jogador/` e `originais/inimigos/` para as respectivas pastas em
@@ -64,7 +64,7 @@ anteriores. O cabo e o mouse são elementos desenhados pelo código do jogo.
 Para exportar esses 15 PNG sem alterar os atlas:
 
 ```bash
-python preparar_figuras_movimento.py
+python -m ferramentas.preparar_figuras_movimento
 ```
 
 Destinos: `recursos/imagens/chefes/romerbug_caminhada_*.png`,
@@ -89,7 +89,7 @@ Fontes geradas pela ferramenta integrada `image_gen`, sem CLI/API:
 Para exportar sem alterar o Menino ou os bosses:
 
 ```bash
-python preparar_recursos_menu.py
+python -m ferramentas.preparar_recursos_menu
 ```
 
 Destinos: `recursos/imagens/menu/fachada_escola.png` (480 × 270, ampliada sem
@@ -114,7 +114,7 @@ do aluno como referência de estilo. `instrucoes_escola.json` registra o prompt
 completo, as referências e os destinos. Há dois quadros de repouso por professor.
 
 ```bash
-python preparar_recursos_escola.py
+python -m ferramentas.preparar_recursos_escola
 ```
 
 A exportação valida quatro figuras, espelha os professores para olharem ao aluno
@@ -153,7 +153,7 @@ Fontes novas geradas com a ferramenta integrada `image_gen`, sem substituir as a
 - `instrucoes_artes_sombrias.json`: prompts completos e referências das quatro gerações.
 
 ```bash
-python preparar_recursos_sombrios.py
+python -m ferramentas.preparar_recursos_sombrios
 ```
 
 Destinos: `recursos/imagens/menu/escola_noturna.png`,
@@ -176,7 +176,7 @@ e `corredor_detalhado.png`. Os prompts completos estão em
 `instrucoes_escola_detalhada.json`; as fontes anteriores foram preservadas.
 
 ```bash
-python preparar_escola_detalhada.py
+python -m ferramentas.preparar_escola_detalhada
 ```
 
 Exporta para `recursos/imagens/cenarios/laboratorio_detalhado.png` e
@@ -202,7 +202,7 @@ usando os atlas anteriores dos dois alunos como referência. O prompt completo,
 as referências e o destino estão em `instrucoes_caminhada_jogador.json`.
 
 ```bash
-python preparar_caminhada_jogador.py
+python -m ferramentas.preparar_caminhada_jogador
 ```
 
 O exportador valida 16 figuras e grava oito quadros de 40 × 40 por personagem
@@ -220,7 +220,7 @@ de nome e a conversa inicial sem narrador.
 Sem novas gerações raster: mouse reforçado, rastro, carga, sinais de ataque e
 faixas de plataforma são desenhos nativos de Pygame sobre os sprites existentes.
 As fontes antigas permanecem preservadas. Sons de carga, aviso e impacto são
-sintetizados localmente em `sons.py`, sem dependência de arquivos ou rede.
+sintetizados localmente em `sistema/sons.py`, sem dependência de arquivos ou rede.
 
 Capturas renderizadas e inspecionadas: `previa_plataformas_legiveis.png`,
 `previa_ataque_carregado.png`, `previa_mouse_reforcado.png`,
@@ -244,7 +244,7 @@ A arte de `laboratorio_detalhado.png` orienta estilo, acabamento e iluminação;
 as capturas em `referencia/ifrn/` orientam biblioteca e espaços externos.
 As fontes e as artes anteriores foram preservadas.
 
-Exportar com `python preparar_ambientes_ifrn.py`, a partir da raiz do projeto.
+Exportar com `python -m ferramentas.preparar_ambientes_ifrn`, a partir da raiz do projeto.
 Usar `--destino /tmp/ifvania_ambientes` para conferir antes da integração.
 Os três fundos são normalizados para módulos de 960 × 540 sem suavização.
 

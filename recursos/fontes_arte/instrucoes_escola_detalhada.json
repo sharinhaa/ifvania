@@ -14,5 +14,5 @@
       "output": "recursos/imagens/cenarios/corredor_detalhado.png"
     }
   ],
-  "export_command": "python preparar_escola_detalhada.py"
+  "export_command": "python -m ferramentas.preparar_escola_detalhada"
 }

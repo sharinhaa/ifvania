@@ -7,10 +7,10 @@ os.environ.setdefault('PYGAME_HIDE_SUPPORT_PROMPT', '1')
 from collections import defaultdict
 import unittest
 import pygame
-import configuracoes
+from sistema import configuracoes
 from entidades.jogador import Jogador
 from entidades.projetil import Projetil
-from jogo import (Jogo, ESTADO_JOGANDO, ESTADO_DIALOGO, ESTADO_INFECCAO,
+from sistema.jogo import (Jogo, ESTADO_JOGANDO, ESTADO_DIALOGO, ESTADO_INFECCAO,
                   ESTADO_PAUSA, ESTADO_FIM_CONTEUDO, ESTADO_MENU, ESTADO_TRANSFORMACAO_CHEFE, ESTADO_CARTAO_FASE)
 from mundo.fase import Fase
 from mundo.dados_fases import build_levels, DIALOGO_REENCONTRO, DIALOGO_APOS_CHEFE

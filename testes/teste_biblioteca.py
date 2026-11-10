@@ -6,8 +6,8 @@ os.environ.setdefault('PYGAME_HIDE_SUPPORT_PROMPT', '1')
 from collections import defaultdict
 import unittest
 import pygame
-from jogo import Jogo, ESTADO_JOGANDO, ESTADO_DIALOGO, ESTADO_PAUSA, ESTADO_DERROTA
-from habilidades import Habilidade
+from sistema.jogo import Jogo, ESTADO_JOGANDO, ESTADO_DIALOGO, ESTADO_PAUSA, ESTADO_DERROTA
+from sistema.habilidades import Habilidade
 
 
 class TestesBiblioteca(unittest.TestCase):
@@ -137,7 +137,7 @@ class TestesBiblioteca(unittest.TestCase):
             self.assertTrue(chegou, personagem)
 
     def test_combater_indexador_pelo_chicote_e_encerrar_conteudo(self):
-        from jogo import ESTADO_FIM_CONTEUDO
+        from sistema.jogo import ESTADO_FIM_CONTEUDO
         for personagem in ('boy', 'menina'):
             self.jogo.personagem_escolhido = personagem
             self.jogo._load_level(1, novo_jogador=True)

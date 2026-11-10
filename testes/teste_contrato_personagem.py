@@ -9,8 +9,8 @@ from unittest.mock import patch
 from types import SimpleNamespace
 
 import pygame
-import recursos
-import configuracoes
+from sistema import recursos
+from sistema import configuracoes
 from entidades.chefe import Chefe
 from entidades.jogador import Jogador
 from mundo.fase import Fase

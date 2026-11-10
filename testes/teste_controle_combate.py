@@ -5,11 +5,11 @@ os.environ.setdefault('SDL_AUDIODRIVER', 'dummy')
 import unittest
 from collections import defaultdict
 import pygame
-import configuracoes
+from sistema import configuracoes
 from entidades.jogador import Jogador
 from entidades.inimigo import Inimigo
 from entidades.romer_bug import RomerBug
-from jogo import Jogo, ESTADO_JOGANDO, ESTADO_PAUSA, ESTADO_DIALOGO
+from sistema.jogo import Jogo, ESTADO_JOGANDO, ESTADO_PAUSA, ESTADO_DIALOGO
 from mundo.escola_sombria import EscolaSombria
 from mundo.camera import Camera
 

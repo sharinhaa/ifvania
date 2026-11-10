@@ -1,7 +1,7 @@
 """Ambientes escolares detalhados com mobiliário e terminais em camadas."""
 import pygame
-import recursos
-import configuracoes
+from sistema import recursos
+from sistema import configuracoes
 from mundo.terminal import TelaTerminal
 from mundo.turma_laboratorio import TurmaLaboratorio
 

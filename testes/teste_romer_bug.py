@@ -12,7 +12,7 @@ from entidades.chefe import Chefe
 from entidades.chefes_professores import CLASSES_CHEFES
 from entidades.romer_bug import RomerBug, ProjetilProfessor
 from entidades.jogador import Jogador
-from habilidades import Habilidade
+from sistema.habilidades import Habilidade
 from mundo.fase import Fase
 from mundo.fases_antigas import build_legacy_levels
 

@@ -1,6 +1,6 @@
 """Campanha disponível: A28 e biblioteca; conteúdo antigo permanece isolado."""
 from entidades.chefe import DEFINICOES_CHEFES
-from configuracoes import TAMANHO_BLOCO
+from sistema.configuracoes import TAMANHO_BLOCO
 from mundo.dados_biblioteca import criar_biblioteca
 
 

@@ -7,8 +7,8 @@ flutua dentro de uma arena fixa, então cuida do próprio movimento.
 """
 import pygame
 from abc import abstractmethod
-import configuracoes
-import recursos
+from sistema import configuracoes
+from sistema import recursos
 from entidades.personagem import Personagem
 from entidades.projetil import Projetil
 

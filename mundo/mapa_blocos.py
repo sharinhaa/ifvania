@@ -11,8 +11,7 @@ Legenda dos tiles:
     'X'  saída da fase (zona de trigger, ativa após derrotar o chefe)
 """
 import pygame
-import configuracoes
-
+from sistema import configuracoes
 TB = configuracoes.TAMANHO_BLOCO
 
 

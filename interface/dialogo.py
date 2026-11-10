@@ -1,6 +1,6 @@
 """Sistema simples de caixas de diálogo estilo RPG/metroidvania."""
 import pygame
-import configuracoes
+from sistema import configuracoes
 from interface import tema
 
 

@@ -5,7 +5,7 @@ os.environ.setdefault('SDL_AUDIODRIVER', 'dummy')
 import unittest
 import pygame
 from mundo.camera import Camera
-from jogo import Jogo
+from sistema.jogo import Jogo
 
 
 class TestesAvaliacaoVisual(unittest.TestCase):
