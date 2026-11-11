@@ -123,7 +123,7 @@ Os itens abaixo descrevem a base atual do jogo. Preserve-os em alterações sem 
 - O corpo lógico comum é de `40 × 40`, definido em `configuracoes.TAMANHO_PERSONAGEM`.
 - Jogador, chefes e professores usam escala visual de 200%; bugs usam 100%, com arte ancorada pelos pés.
 - A introdução apresenta uma conversa do aluno com Max, sem narrador.
-- O ataque carregado usa X na soltura.
+- O ataque carregado usa X, K ou botão esquerdo do mouse, na soltura do comando que iniciou a carga.
 - Shift oferece esquiva básica após a descoberta do mouse.
 - RomerBug lança aviões e SpeedBug lança medalhas, alternando lançamentos, pausas e investidas anunciadas.
 

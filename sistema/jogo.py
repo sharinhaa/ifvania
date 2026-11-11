@@ -240,6 +240,7 @@ class Jogo:
         self.jogador.chicote_desbloqueado = False
         self.jogador.no_chao = True
         self.fase.camera.update(self.jogador.rect)
+        self.caixa_dialogo.personagem_jogador = self.jogador.personagem
 
     def _begin_corridor(self):
         self._load_school('corridor')
@@ -283,6 +284,7 @@ class Jogo:
         self.jogador.no_chao = True
         self.caixa_dialogo.nome_jogador = self.jogador.nome
         self.fase.camera.update(self.jogador.rect)
+        self.caixa_dialogo.personagem_jogador = self.jogador.personagem
 
     def _retomar_biblioteca(self):
         """Recomeça o encontro local, conservando módulo e consultas desta fase."""

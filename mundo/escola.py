@@ -204,11 +204,11 @@ class FaseEscolar:
                 superficie.blit(escuro, area)
                 self._text(superficie, 'Continuidade de aprendizagem ativada', 360, 312, (135, 235, 215), pequeno=True)
             return
-        painel = pygame.Rect(38, 52, 350, 146)
+        painel = pygame.Rect(305, 40, 350, 126)
         pygame.draw.rect(superficie, (7, 17, 25), painel)
         pygame.draw.rect(superficie, (66, 103, 111), painel, 2)
         etapa = self.arte.etapa_aula
-        self._text(superficie, 'MONITOR DO ALUNO / tarefa.py', 50, 59, pequeno=True)
+        self._text(superficie, 'MONITOR DO ALUNO / tarefa.py', 317, 47, pequeno=True)
         linhas = {
             'codigo': ('class Atividade:', '    def executar(self):', '        return tarefa'),
             'pendrive': ('USB conectado', 'Abrindo tarefa.py...', 'Origem: pendrive do aluno'),
@@ -216,7 +216,7 @@ class FaseEscolar:
             'revolta': ('IFVANIA / SESSAO SEM FIM', 'encerrar() -> ACESSO NEGADO', 'Controle da turma: ATIVADO'),
         }[etapa]
         for numero, linha in enumerate(linhas):
-            self._text(superficie, linha, 51, 86+numero*24,
+            self._text(superficie, linha, 318, 74+numero*24,
                        (233, 166, 148) if self.corrompido else (132, 219, 205), pequeno=True)
         if indice >= indice_execucao:
             self._rect(superficie, (151, 166, 161), (88, 310, 18, 7))

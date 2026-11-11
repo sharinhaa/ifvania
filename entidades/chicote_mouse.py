@@ -139,17 +139,8 @@ class ChicoteMouse:
         return False
 
     def desenhar_carga(self, superficie, camera, jogador):
-        from sistema import configuracoes
-        centro = camera.apply(jogador.rect).move(jogador.direcao_olhar*12, -36).center
-        fracao = jogador.carga/configuracoes.TEMPO_CARGA
-        angulo = jogador.carga*0.45
-        ponta = (centro[0]+round(math.cos(angulo)*23), centro[1]+round(math.sin(angulo)*17))
-        pygame.draw.line(superficie, (28, 33, 37), centro, ponta, 4)
-        pygame.draw.line(superficie, (149, 151, 140), centro, ponta, 1)
-        pygame.draw.rect(superficie, (46, 51, 56), (*ponta, 12, 9), border_radius=3)
-        pygame.draw.rect(superficie, (195, 179, 130), (centro[0]-24, centro[1]-29, round(48*fracao), 4))
-        if fracao >= 1:
-            pygame.draw.circle(superficie, (231, 218, 173), ponta, 9, 2)
+        from entidades.efeito_carga import desenhar_energia
+        desenhar_energia(superficie, camera, jogador)
 
     def draw(self, superficie, camera, jogador, solidos):
         pontos = self.points(jogador, solidos)

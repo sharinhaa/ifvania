@@ -38,7 +38,7 @@ class PainelInformacoes:
         if jogador.chicote_desbloqueado:
             tema.panel(superficie, (18, 91, 204, 45))
             pronto = jogador.espera_esquiva == 0
-            rotulo = ('CARGA PRONTA / SOLTE X' if jogador.carga >= configuracoes.TEMPO_CARGA else 'CARREGANDO') if jogador.carregando else ('ESQUIVA PRONTA' if pronto else 'ESQUIVA RECUPERANDO')
+            rotulo = ('CARGA PRONTA / SOLTE' if jogador.carga >= configuracoes.TEMPO_CARGA else 'CARREGANDO') if jogador.carregando else ('ESQUIVA PRONTA' if pronto else 'ESQUIVA RECUPERANDO')
             tema.text(superficie, self.fonte_pequena, rotulo, (30, 99), tema.CIANO if pronto else tema.ATENUADO)
             fracao = (jogador.carga/configuracoes.TEMPO_CARGA if jogador.carregando
                       else 1-jogador.espera_esquiva/configuracoes.ESPERA_ESQUIVA)
@@ -62,7 +62,7 @@ class PainelInformacoes:
 
     def draw_controls_hint(self, superficie, jogador):
         dicas = ['A/D ou SETAS  mover', 'ESPAÇO  saltar',
-                 'X tocar  golpe / segurar  carga' if jogador.chicote_desbloqueado else 'E  interagir']
+                 'X / K / CLIQUE  golpe / segurar  carga' if jogador.chicote_desbloqueado else 'E  interagir']
         if jogador.chicote_desbloqueado and not jogador.has(Habilidade.ARRANCADA):
             dicas.append('SHIFT  esquiva')
         for habilidade, dica in ((Habilidade.SALTO_DUPLO, 'ESPAÇO 2x  salto duplo'),

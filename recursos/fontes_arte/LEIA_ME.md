@@ -254,3 +254,38 @@ fica em `mundo/succao_computador.py`, com imagens transformadas apenas no desenh
 Capturas de inspeção desta revisão: `revisao_inicio_*.png`, `revisao_succao_*.png`,
 `revisao_patio.png` e `revisao_biblioteca.png`. São capturas de estados controlados,
 não evidência de partida manual ou homologação final.
+
+## Caminhada mantendo carga — 10/11/2026
+
+`caminhada_carregando.png` é um novo atlas transparente de 16 quadros (oito
+por protagonista), criado com `image_gen.imagegen` integrada a partir do ciclo
+normal. O braço permanece preparado com o mouse na mão enquanto as pernas
+caminham. Atlas anteriores preservados. Prompt completo e proveniência em
+[instrucoes_caminhada_carregando.json](instrucoes_caminhada_carregando.json).
+
+Exportação: `python -m ferramentas.preparar_caminhada_carregando`. Conferida
+primeiro em pasta temporária, depois integrada em
+`recursos/imagens/jogador/caminhada_carregando/` e
+`recursos/imagens/jogador/menina/caminhada_carregando/`.
+
+O efeito de energia é desenhado em `entidades/efeito_carga.py`, inspirado nas
+partículas convergentes da [referência fornecida](https://giffiles.alphacoders.com/124/12442.gif).
+O GIF foi consultado; seus sprites não foram incorporados ao projeto. O efeito
+mantém relógio visual próprio após carga máxima e não altera dano ou colisões.
+Retratos usam recortes dos sprites aprovados, sem gerar ou substituir rostos.
+
+## Bustos de conversa em alta resolução — 10/11/2026
+
+`retratos_dialogo/` contém seis ilustrações novas, geradas individualmente com
+`image_gen.imagegen` integrada a partir das identidades existentes. Cada fonte
+possui 1024 × 1536 e canal alfa. Prompts completos, referências do HUD e destinos
+estão em [instrucoes_retratos_dialogo.json](instrucoes_retratos_dialogo.json).
+
+Exportação: `python -m ferramentas.preparar_retratos_dialogo`. As versões de
+jogo têm 768 × 1152, em `recursos/imagens/dialogos/`; Sistema recebe símbolo
+vetorial na mesma resolução. A entidade é espelhada na exportação para olhar
+para o centro da conversa. O renderer reduz os bustos suavemente, sem aumentar
+sprites de 40 × 40. Atlas e artes anteriores foram preservados.
+
+Prévias reais: [conversa](../../avaliacao/dialogos_hd/abertura_menina_1.png) e
+[entidade](../../avaliacao/dialogos_hd/ifvania.png).

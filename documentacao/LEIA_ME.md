@@ -69,8 +69,8 @@ A referência oficial de A28 está no [documento de requisitos](DOCUMENTO_DE_REQ
 |---|---|
 | Setas esquerda/direita ou A/D | Mover |
 | Espaço / W / seta para cima | Salto básico |
-| Tocar e soltar X | Golpe rápido de mouse com cabo reforçado: 1 de dano |
-| Segurar X por 0,6 s e soltar | Golpe carregado: 2 de dano |
+| Tocar e soltar X, K ou botão esquerdo do mouse | Golpe rápido de mouse com cabo reforçado: 1 de dano |
+| Segurar X, K ou botão esquerdo do mouse por 0,6 s e soltar | Golpe carregado: 2 de dano |
 | Shift | Esquiva curta, após encontrar o mouse; recarga de 0,9 s |
 | E | Entrar no A28 / falar com Romerito / consultar terminais e módulo na biblioteca |
 | Salto novamente no ar | Salto duplo após examinar o módulo na biblioteca |
@@ -91,7 +91,7 @@ O mouse mantém sua identidade de arma improvisada: carcaça gasta, cinta metál
 e cabo reforçado, com rastro discreto, som seco e pausa de impacto de 2–3 quadros.
 O chicote tem alcance nominal de 100 pixels e tolerância em torno da curva;
 paredes bloqueiam os golpes. Cada alvo recebe no máximo um acerto por golpe.
-A direção fica fixada ao soltar X. Durante a carga, é possível andar a 75% da
+A direção fica fixada ao soltar o comando que iniciou a carga. Durante a carga, é possível andar a 75% da
 velocidade, saltar e virar. Dano, diálogos e transformação cancelam a carga;
 pausa e perda de foco descartam comandos pendentes sem disparar na retomada.
 
@@ -326,3 +326,41 @@ Os laboratórios da aula e A28 agora têm composição visual 2.5D: bancadas em
 profundidades diferentes e colegas sentados de costas diante dos monitores.
 A movimentação continua lateral, sem mudança de colisões. Capturas desta versão
 em `avaliacao/visual/revisao_profundidade/`.
+
+## Sprites de carga e retratos — 10/11/2026
+
+Menino e Menina possuem oito quadros próprios para caminhar com o mouse
+preparado. A postura permanece ao parar e saltar. Partículas pixeladas convergem
+para o personagem; ao completar a carga, há um pulso ciano local. O efeito
+continua animando enquanto o comando for mantido, inclusive após 0,6 s.
+
+Diálogos exibem retrato do falante, incluindo a aparência e o nome escolhidos
+para o protagonista. Max, Romerito, entidade/IFVania e Indexador usam suas
+próprias figuras; Sistema usa um ícone de terminal. A caixa acomoda o texto
+completo ao lado do retrato sem truncar falas longas. Os comandos de diálogo
+continuam os mesmos.
+
+Prévia: [animação da carga](../avaliacao/carga_dialogos/previa_carga.gif) e
+[diálogo com retrato](../avaliacao/carga_dialogos/retrato_max.png).
+Exportar sprites: `python -m ferramentas.preparar_caminhada_carregando`.
+Capturar: `python -m ferramentas.capturar_carga_dialogos /tmp/ifvania_carga --quadros`.
+ffmpeg é opcional para montar prévias; não é necessário para jogar ou exportar.
+
+## HUD de conversa com bustos HD — 10/11/2026
+
+A conversa usa moldura azul com filetes claros, placa de nome e bustos grandes
+acima da caixa, inspirados nas referências fornecidas. Protagonista à esquerda,
+interlocutor à direita; quem fala fica iluminado e quem escuta, escurecido.
+O monitor ampliado da abertura ocupa o espaço central livre entre os bustos.
+
+Seis ilustrações originais geradas com `image_gen` integrada: Menino, Menina,
+Max, Romerito, IFVania/Entidade e Indexador, com fontes transparentes em
+**1024 × 1536** e PNGs de jogo em **768 × 1152**. Sistema usa símbolo vetorial
+na mesma resolução de exportação. Não são ampliações dos sprites de combate.
+A resolução lógica do jogo continua 960 × 540, com redução suave dos bustos.
+
+[Captura da conversa](../avaliacao/dialogos_hd/abertura_menina_1.png).
+Fontes em `recursos/fontes_arte/retratos_dialogo/`; prompts, referências e
+proveniência em `recursos/fontes_arte/instrucoes_retratos_dialogo.json`.
+Exportar: `python -m ferramentas.preparar_retratos_dialogo`.
+**127 testes passaram**; capturas e testes são offscreen, sem partida manual.

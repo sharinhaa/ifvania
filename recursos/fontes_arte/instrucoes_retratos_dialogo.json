@@ -1,0 +1,68 @@
+{
+  "ferramenta": "image_gen.imagegen integrada",
+  "referencias_hud": [
+    "https://forums.rpgmakerweb.com/data/attachments/12/12601-4e056d11b68ce4adb837bafde4369bc0.jpg",
+    "https://cdn.prod.website-files.com/6a2a0a2dc1af77454b9e4539/6a2a0a2dc1af77454b9e4f5b_image6.png"
+  ],
+  "fundo_transparente": true,
+  "retratos": [
+    {
+      "nome": "menino",
+      "prompt": "Use case: stylized-concept. Asset type: high resolution RPG conversation bust portrait, genuine transparent background. Reference image is identity reference ONLY, not style to copy. Depict exactly the BOY student, brown skin, voluminous rounded curly black afro, rectangular black glasses, green IFRN school polo with white collar and cuffs and small red/white geometric school badge, black backpack straps. Curious determined friendly teenage expression. Preserve clothing and recognizable facial identity of the supplied IFVania sprite. Upgrade to polished high-resolution hand-drawn 2D JRPG/anime graphic-novel illustration, clean fine dark ink outlines, smooth cel shading, subtle painterly shadow edges, rich but restrained colors, detailed eyes and hair, no pixelation, no enlarged sprite pixels. Single character alone, waist-up/upper-body bust from crown through lower chest, three-quarter view facing to the RIGHT toward center of conversation. Camera at eye level. Full head, entire hair silhouette and shoulders entirely within canvas with generous transparent margins, hands not required. Composition portrait 2:3, character large, 1536px-class source quality. Soft neutral key light with subtle cool edge light. No environment, ground, background color, particles, frame, panels, text or watermarks. Respectful cartoon identity. Deliver only the finished transparent bust.",
+      "saida": "Generated images are saved to /Users/max/.codex/generated_images/01a1c060-8bb4-71a3-8044-8e280590ffa5 as /Users/max/.codex/generated_images/01a1c060-8bb4-71a3-8044-8e280590ffa5/exec-9e0e6af3-87f1-48b8-892c-eb6344aa95e2.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "fonte_projeto": "recursos/fontes_arte/retratos_dialogo/menino.png",
+      "destino_jogo": "recursos/imagens/dialogos/menino.png"
+    },
+    {
+      "nome": "menina",
+      "prompt": "Use case: stylized-concept. Asset type: high resolution RPG conversation bust portrait, genuine transparent background. Reference image is identity reference ONLY, not style to copy. Depict exactly the GIRL student, brown skin, curly black hair in a large high ponytail with green tie, rectangular black glasses, green IFRN school polo white collar and cuffs and small red/white geometric school badge, black backpack straps. Confident friendly teenage expression. Preserve clothing and recognizable facial identity of the supplied IFVania sprite. Upgrade to polished high-resolution hand-drawn 2D JRPG/anime graphic-novel illustration, clean fine dark ink outlines, smooth cel shading, subtle painterly shadow edges, rich but restrained colors, detailed eyes and hair, no pixelation, no enlarged sprite pixels. Single character alone, waist-up/upper-body bust from crown through lower chest, three-quarter view facing to the RIGHT toward center of conversation. Camera at eye level. Full head, entire hair silhouette and shoulders entirely within canvas with generous transparent margins, hands not required. Composition portrait 2:3, character large, 1536px-class source quality. Soft neutral key light with subtle cool edge light. No environment, ground, background color, particles, frame, panels, text or watermarks. Respectful cartoon identity. Deliver only the finished transparent bust.",
+      "saida": "Generated images are saved to /Users/max/.codex/generated_images/01a1c060-8bb4-71a3-8044-8e280590ffa5 as /Users/max/.codex/generated_images/01a1c060-8bb4-71a3-8044-8e280590ffa5/exec-fc466d21-9ba0-4262-98d3-9cb9c2154793.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "fonte_projeto": "recursos/fontes_arte/retratos_dialogo/menina.png",
+      "destino_jogo": "recursos/imagens/dialogos/menina.png"
+    },
+    {
+      "nome": "max",
+      "prompt": "Use case: stylized-concept. Single high resolution transparent RPG conversation bust portrait. Reference image is character identity ONLY: Professor Max, upper pair of the identity reference: adult Brazilian man with medium brown skin, short curly black hair, black rectangular glasses, neatly trimmed black beard and moustache, brown casual jacket over gray horizontally striped shirt. Warm thoughtful teacher, natural expressive eyebrows. Do not depict the yellow-shirt man. Keep recognizable identity, age, beard, outfit and respectful likeness. Polished hand-drawn 2D JRPG/anime graphic-novel illustration, fine dark ink, smooth cel shading and subtle painterly edge shading, detailed eyes and hair, restrained colors, no pixel-art pixels or blurry enlargement. Waist-up/upper-body, full head and shoulders, generous transparent space around hair. Three-quarter view facing LEFT toward the center of a conversation. Eye-level. Portrait 2:3, 1536px-class source quality. Soft neutral key lighting, tiny cool rim. Genuine transparent background; isolated cutout character ONLY. NO background paint or gradient, no atmosphere, backdrop glow, scene, floor, panel, frame, words or watermark. Match the supplied character's clothing exactly.",
+      "saida": "Generated images are saved to /Users/max/.codex/generated_images/01a1c060-8bb4-71a3-8044-8e280590ffa5 as /Users/max/.codex/generated_images/01a1c060-8bb4-71a3-8044-8e280590ffa5/exec-6405ed40-163a-4c88-9284-a223d5384238.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "fonte_projeto": "recursos/fontes_arte/retratos_dialogo/max.png",
+      "destino_jogo": "recursos/imagens/dialogos/max.png"
+    },
+    {
+      "nome": "romerito",
+      "prompt": "Use case: stylized-concept. Single high resolution transparent RPG conversation bust portrait. Reference image is character identity ONLY: Professor Romerito, lower pair of the identity reference: adult Brazilian man medium brown skin, short slightly wavy black hair, neat dark beard and moustache, NO glasses, yellow polo shirt. Approachable attentive teacher, relaxed confident expression. Do not depict the brown-jacket man. Keep recognizable identity, age, beard, outfit and respectful likeness. Polished hand-drawn 2D JRPG/anime graphic-novel illustration, fine dark ink, smooth cel shading and subtle painterly edge shading, detailed eyes and hair, restrained colors, no pixel-art pixels or blurry enlargement. Waist-up/upper-body, full head and shoulders, generous transparent space around hair. Three-quarter view facing LEFT toward the center of a conversation. Eye-level. Portrait 2:3, 1536px-class source quality. Soft neutral key lighting, tiny cool rim. Genuine transparent background; isolated cutout character ONLY. NO background paint or gradient, no atmosphere, backdrop glow, scene, floor, panel, frame, words or watermark. Match the supplied character's clothing exactly.",
+      "saida": "Generated images are saved to /Users/max/.codex/generated_images/01a1c060-8bb4-71a3-8044-8e280590ffa5 as /Users/max/.codex/generated_images/01a1c060-8bb4-71a3-8044-8e280590ffa5/exec-bd01b279-5ec4-4896-a90f-be0644092682.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "fonte_projeto": "recursos/fontes_arte/retratos_dialogo/romerito.png",
+      "destino_jogo": "recursos/imagens/dialogos/romerito.png"
+    },
+    {
+      "nome": "entidade",
+      "prompt": "Use case: stylized-concept. Single high resolution RPG conversation bust, genuine transparent background. Identity reference supplied. Depict IFVania/the Entity: a mysterious hooded digital apparition with a dark violet charcoal robe, obscured black face and two tiny narrow luminous cyan eyes. Preserve the angular layered hood, gray-violet piping and cyan digital detail. Menacing intelligence, not horror gore. Upper torso and head, no hands needed. Polished hand-drawn 2D JRPG graphic-novel illustration, fine dark ink, smooth cel shading, restrained rich colors, detailed material rendering, NO pixel-art pixels or blurry enlargement. Three-quarter pose facing LEFT toward center of conversation; whole head and shoulders/upper torso, generous margins, do not crop crown. Portrait 2:3 composition, 1536px-class source quality. Isolated character cutout ONLY. Absolutely no painted backdrop, gradient background, atmosphere, scenery, frame, lettering or watermark. Transparent outside the character silhouette.",
+      "saida": "Generated images are saved to /Users/max/.codex/generated_images/01a1c060-8bb4-71a3-8044-8e280590ffa5 as /Users/max/.codex/generated_images/01a1c060-8bb4-71a3-8044-8e280590ffa5/exec-b676f63b-4e6e-44c8-a0a0-21141922249e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "fonte_projeto": "recursos/fontes_arte/retratos_dialogo/entidade.png",
+      "destino_jogo": "recursos/imagens/dialogos/entidade.png"
+    },
+    {
+      "nome": "indexador",
+      "prompt": "Use case: stylized-concept. Single high resolution RPG conversation bust, genuine transparent background. Identity reference supplied. Depict Indexador: an anthropomorphic metal filing cabinet robot, NOT a human. Cyan rectangular head with two square dark eyes above a blue-gray steel cabinet torso with exactly three beige file drawers, each with a dark horizontal handle. Translate the simple supplied sprite identity into detailed polished illustrated character art with beveled metal, fine seams and restrained weathering. Calm severe bureaucratic personality, no text. Polished hand-drawn 2D JRPG graphic-novel illustration, fine dark ink, smooth cel shading, restrained rich colors, detailed material rendering, NO pixel-art pixels or blurry enlargement. Three-quarter pose facing LEFT toward center of conversation; whole head and shoulders/upper torso, generous margins, do not crop crown. Portrait 2:3 composition, 1536px-class source quality. Isolated character cutout ONLY. Absolutely no painted backdrop, gradient background, atmosphere, scenery, frame, lettering or watermark. Transparent outside the character silhouette.",
+      "saida": "Generated images are saved to /Users/max/.codex/generated_images/01a1c060-8bb4-71a3-8044-8e280590ffa5 as /Users/max/.codex/generated_images/01a1c060-8bb4-71a3-8044-8e280590ffa5/exec-fa41df18-28f4-40c0-93e7-d8ddd16d1d3f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "fonte_projeto": "recursos/fontes_arte/retratos_dialogo/indexador.png",
+      "destino_jogo": "recursos/imagens/dialogos/indexador.png"
+    }
+  ],
+  "resolucao_fontes": [
+    1024,
+    1536
+  ],
+  "resolucao_exportada": [
+    768,
+    1152
+  ],
+  "comando_exportacao": "python -m ferramentas.preparar_retratos_dialogo",
+  "identidades_referenciadas": [
+    "recursos/fontes_arte/aluno_ifrn_caico.png",
+    "recursos/fontes_arte/aluna.png",
+    "recursos/fontes_arte/professores.png",
+    "recursos/fontes_arte/entidade_chefe.png",
+    "Figura vetorial original da classe entidades.indexador.Indexador"
+  ]
+}

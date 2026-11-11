@@ -1,0 +1,12 @@
+{
+  "ferramenta": "image_gen.imagegen integrada",
+  "fonte": "recursos/fontes_arte/caminhada_carregando.png",
+  "referencias": [
+    "recursos/fontes_arte/ciclo_caminhada_jogador.png"
+  ],
+  "fundo_transparente": true,
+  "prompt": "Use case: identity-preserve. Production spritesheet for IFVania. Reference is the existing 8-column by 2-row walking atlas. Create a NEW corresponding charge-walking atlas: exactly sixteen separated full-body sprites, eight columns and two rows, BOY top and GIRL bottom. Preserve the exact student identities and crisp pixel-art style: brown skin, black glasses, black curly boy afro / girl ponytail, green school polo white collar/cuffs, navy pants, backpack, green and red shoes. ALL face RIGHT. Each row is an eight-frame ordinary walking cycle with alternating foot contact, compression, passing, lift, opposite contact; visibly varied legs with stable torso/head size. Throughout ALL frames hold the NEAR arm bent at chest height with fist lifted slightly forward, gripping a computer mouse by its short cable, the mouse hanging just below fist. The charge posture of shoulder, bent elbow and fist remains steady through the walking cycle while legs animate. The other arm stays naturally bent. The character is storing energy in the held mouse but DO NOT draw any aura, particles, electricity or effects: these are rendered by the engine. Keep body proportions and baseline aligned. Wide transparent gutters around each sprite, avoid any adjoining components. Genuine transparent background. No text, captions, gridlines, borders, shadows, floor, new costume, Mega Man character, weapons or armor. Entire atlas only. Match reference proportions and color palette tightly.",
+  "comando_exportacao": "python -m ferramentas.preparar_caminhada_carregando",
+  "referencia_efeito": "https://giffiles.alphacoders.com/124/12442.gif",
+  "observacao": "GIF consultado como referência de partículas convergentes. Nenhuma imagem ou personagem do GIF foi incorporado ao jogo. Efeito implementado em Pygame."
+}

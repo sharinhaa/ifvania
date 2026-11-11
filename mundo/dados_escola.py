@@ -16,6 +16,6 @@ DESCOBERTA_MOUSE = [
     ('Aluno(a)', 'Deixe eu procurar na bolsa... Achei um mouse com fio!'),
     ('Aluno(a)', 'Posso segurar pelo fio e usar o mouse como chicote. Vou procurar o professor!'),
     ('Sistema', 'Mouse com cabo reforçado disponível. Use os golpes para se defender dos bugs.'),
-    ('Sistema', 'Toque e solte X para golpear. Segure X até completar a carga e solte para causar o dobro de dano.'),
+    ('Sistema', 'Use X, K ou botão esquerdo do mouse. Toque e solte para golpear; segure e solte para causar o dobro de dano.'),
     ('Sistema', 'Use SHIFT para um passo evasivo. Ele protege por um instante e precisa de tempo para recuperar.'),
 ]

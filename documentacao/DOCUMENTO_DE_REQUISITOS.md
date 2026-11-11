@@ -394,3 +394,45 @@ e documentação em `documentacao/`. Os recursos são resolvidos relativamente
 diretório. Exportadores são executados como módulos (`python -m ferramentas.nome`).
 Campanha, controles e apresentação preservados; detalhes e verificações em
 [REORGANIZACAO.md](REORGANIZACAO.md).
+
+### Entradas alternativas de ataque e caminhada durante carga — 10/11/2026
+
+X, K e botão esquerdo do mouse são alternativas equivalentes para o chicote:
+tocar e soltar causa 1 de dano; segurar por 0,6 s e soltar causa 2. O comando
+que iniciou a carga é o que deve ser solto; outra entrada não reinicia a carga
+nem dispara um golpe extra. Pausa, foco, dano e transições continuam cancelando
+entradas pendentes. Menus e diálogos preservam suas funções de entrada.
+Durante a carga, caminhada e salto acompanham o deslocamento real; a pose de
+preparação fixa só é usada quando parado no chão. Velocidade de carga permanece
+em 75% da velocidade normal, sem alterar colisões ou janelas de dano.
+
+### Postura de carga, energia e retratos — 10/11/2026
+
+O ciclo de carga usa oito sprites próprios por protagonista, preservando
+braço/mouse preparado e passos sincronizados ao deslocamento. Parado usa pose
+de apoio; no ar mantém postura de carga. Escala de 200%, pés e corpo lógico
+40 × 40 preservados. Energia possui partículas convergentes, mudança para
+ciano na carga completa e animação contínua enquanto o comando é mantido.
+Pausa, foco, transições e dano mantêm cancelamento seguro.
+
+Cada fala mostra imagem do falante: protagonista escolhido, Max, Romerito,
+IFVania/Entidade, Indexador ou ícone do Sistema. Retratos aproveitam sprites
+aprovados; falantes antigos sem arte própria usam busto neutro. Nomes
+personalizados não alteram textos compartilhados. O texto determina a altura
+da caixa, sem cortar falas ao reservar espaço para o retrato. Animação de
+digitação e comandos de avanço preservados.
+
+### Composição do diálogo e imagens em alta resolução — 10/11/2026
+
+O HUD de conversa usa bustos grandes acima da caixa azul, com interlocutores
+voltados ao centro e destaque do falante atual. Nome em placa alinhada ao lado
+ativo; ouvinte escurecido, sem modificar a imagem original. Texto completo,
+digitação, comandos de avanço, pausa e callbacks permanecem preservados.
+
+Protagonistas, Max, Romerito, entidade e Indexador possuem ilustrações próprias
+em 1024 × 1536 com transparência; o jogo carrega versões de 768 × 1152 e as
+reduz suavemente para o HUD. Sistema usa ícone vetorial na mesma resolução.
+A resolução lógica da janela permanece 960 × 540. Falantes exclusivos da
+campanha antiga mantêm alternativas de compatibilidade; não foram redesenhados.
+O monitor ampliado da abertura é centralizado para preservar a leitura entre
+os bustos. Assets de combate, colisões e campanhas não foram modificados.

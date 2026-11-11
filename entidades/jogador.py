@@ -50,6 +50,10 @@ class Jogador(Personagem):
                     "jump" + sufixo: sequencia[10],
                     "dash" + sufixo: sequencia[11],
                 })
+            carga = recursos.load_character_frames([
+                f'{pasta}/caminhada_carregando/caminhada_{i}.png' for i in range(8)], uniforme)
+            figuras['walk_charge_r'] = carga
+            figuras['walk_charge_l'] = [pygame.transform.flip(quadro, True, False) for quadro in carga]
             cls._FIGURAS[chave_cache] = figuras
         return cls._FIGURAS[chave_cache]
 
@@ -85,6 +89,7 @@ class Jogador(Personagem):
         self.carregando = False
         self.carga = 0
         self.aguardando_soltar = False
+        self.comando_carga = None
         self.ataque_pendente = 0
         self.memoria_ataque = 0
         self.memoria_salto = 0
@@ -94,6 +99,7 @@ class Jogador(Personagem):
         self.espera_esquiva = 0
         self.direcao_esquiva = 1
         self.carga_sinalizada = False
+        self.instante_carga = 0
 
         # Timers de habilidades
         self.temporizador_arrancada = 0
@@ -150,6 +156,32 @@ class Jogador(Personagem):
                 self.direcao_olhar = movimento
 
         for evento in eventos:
+            comando = None
+            if evento.type in (pygame.KEYDOWN, pygame.KEYUP) and evento.key in (pygame.K_x, pygame.K_k):
+                comando = ('tecla', evento.key)
+            elif evento.type in (pygame.MOUSEBUTTONDOWN, pygame.MOUSEBUTTONUP) and evento.button == 1:
+                comando = ('mouse', 1)
+            if comando is not None:
+                pressionado = evento.type in (pygame.KEYDOWN, pygame.MOUSEBUTTONDOWN)
+                if pressionado and not getattr(evento, 'repeat', False):
+                    if (self.chicote_desbloqueado and not self.aguardando_soltar
+                            and self.temporizador_esquiva == 0 and self.temporizador_golpe == 0
+                            and self.espera_ataque <= 6):
+                        self.carregando = True
+                        self.aguardando_soltar = True
+                        self.comando_carga = comando
+                        self.carga = 0
+                        self.carga_sinalizada = False
+                        self.instante_carga = 0
+                elif not pressionado and comando == self.comando_carga:
+                    if self.carregando:
+                        self.ataque_pendente = 2 if self.carga >= configuracoes.TEMPO_CARGA else 1
+                        self.memoria_ataque = 6
+                        self.carregando = False
+                        self._try_melee(self.ataque_pendente)
+                    self.aguardando_soltar = False
+                    self.comando_carga = None
+                continue
             if evento.type == pygame.KEYDOWN:
                 if evento.key in (pygame.K_SPACE, pygame.K_w, pygame.K_UP):
                     self.memoria_salto = configuracoes.TOLERANCIA_SALTO
@@ -163,28 +195,15 @@ class Jogador(Personagem):
                     self._try_shoot()
                 elif evento.key == pygame.K_q and self.has(Habilidade.ESCUDO):
                     self._toggle_shield()
-                elif evento.key == pygame.K_x and not getattr(evento, 'repeat', False):
-                    if (self.chicote_desbloqueado and not self.aguardando_soltar
-                            and self.temporizador_esquiva == 0 and self.temporizador_golpe == 0
-                            and self.espera_ataque <= 6):
-                        self.carregando = True
-                        self.aguardando_soltar = True
-                        self.carga = 0
-                        self.carga_sinalizada = False
-            elif evento.type == pygame.KEYUP and evento.key == pygame.K_x:
-                if self.carregando:
-                    self.ataque_pendente = 2 if self.carga >= configuracoes.TEMPO_CARGA else 1
-                    self.memoria_ataque = 6
-                    self.carregando = False
-                    self._try_melee(self.ataque_pendente)
-                self.aguardando_soltar = False
 
     def cancelar_entrada(self):
+        self.instante_carga = 0
         self.carregando = False
         self.carga = 0
         self.ataque_pendente = self.memoria_ataque = 0
         self.memoria_salto = 0
         self.aguardando_soltar = False
+        self.comando_carga = None
 
     def cancelar_combate(self):
         self.cancelar_entrada()
@@ -195,6 +214,7 @@ class Jogador(Personagem):
         self.chicote.limpar_trajetoria()
         # Um novo KEYDOWN físico é necessário após qualquer interrupção.
         self.aguardando_soltar = False
+        self.comando_carga = None
 
     def tentar_esquiva(self):
         if (not self.chicote_desbloqueado or self.espera_esquiva > 0
@@ -258,6 +278,8 @@ class Jogador(Personagem):
 
     def update(self, solidos, perigos):
         self._solidos = solidos
+        if self.carregando:
+            self.instante_carga += 1
         if self.carregando and self.espera_ataque <= 0:
             self.carga = min(configuracoes.TEMPO_CARGA, self.carga + 1)
             if self.carga == configuracoes.TEMPO_CARGA and not self.carga_sinalizada:
@@ -366,9 +388,9 @@ class Jogador(Personagem):
     def _animate(self):
         """Escolhe o estado de animação (ataque > dash > pulo > andar > parado) e
         sincroniza os passos ao deslocamento real; repouso usa temporizador."""
-        if self.carregando:
+        if self.carregando and self.no_chao and self.deslocamento_x <= 0.01:
             self.estado_animacao = 'charge'
-            self.image = self.figuras['attack_r' if self.direcao_olhar > 0 else 'attack_l'][0]
+            self.image = self.figuras['walk_charge_r' if self.direcao_olhar > 0 else 'walk_charge_l'][1]
             return
         if self.temporizador_esquiva > 0:
             self.estado_animacao = 'dodge'
@@ -401,6 +423,10 @@ class Jogador(Personagem):
 
         sufixo = "_r" if self.direcao_olhar > 0 else "_l"
         figura = self.figuras[estado + sufixo]
+        if self.carregando and estado == 'walk':
+            figura = self.figuras['walk_charge' + sufixo]
+        elif self.carregando and estado == 'jump':
+            figura = self.figuras['walk_charge' + sufixo][3]
         if estado == 'walk':
             self.distancia_caminhada += self.deslocamento_x
             distancia_passo = 6*self.ESCALA_VISUAL

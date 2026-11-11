@@ -220,3 +220,26 @@ Comandos: `python principal.py` e `python -m unittest discover -s testes -v`. Se
 - 68 capturas duplicadas exatas consolidadas, economizando 23.550.148 bytes sem apagar frames distintos; links redirecionados. [Mapa das cópias preservadas](capturas_consolidadas.json). Materiais históricos e campanha antiga preservados por uso documentado em testes/regeneração. Imagem local `referencia/img.png` intacta e não rastreada.
 - Validação: 112 testes antes; **114 testes depois**, incluindo ponto de entrada pela raiz e por diretório externo e recursos carregados fora da raiz sem placeholders. 34 capturas reproduzidas byte a byte, métricas de movimento iguais, 87 imagens de execução carregadas e hashes de 195 binários de arte/referência preservados. Nove exportadores Pygame conferidos em cópia temporária (77 PNGs distintos); ferramenta reproduzível `python -m ferramentas.verificar_exportadores`.
 - Gerador original preservado e caminho atualizado, mas não executado porque Pillow está ausente. Validação offscreen, sem nova homologação manual; etapa 11 permanece aberta. Nenhum commit/publicação feito nesta reorganização.
+
+## Entradas de ataque e animação durante carga — 10/11/2026
+
+- K e botão esquerdo do mouse adicionados como alternativas a X, incluindo carga e golpe na soltura. A entrada inicial possui a carga; outras teclas/cliques não a reiniciam nem disparam ao serem soltos.
+- Corrigida a animação congelada ao andar carregando: a pose fixa de preparação agora só aparece parado no chão; caminhada e salto continuam durante a carga. Velocidade de 75% e física preservadas.
+- Tutorial, HUD e tabela de controles atualizados. Regressões verificam dano rápido/carregado das três entradas, combinação de comandos, caminhada/salto dos dois protagonistas, pausa/foco e bloqueio de botão direito/repetição/arma indisponível.
+- Validação: **119 testes passaram** com SDL dummy (9,036 s). Sem homologação manual nesta revisão; nenhum commit criado.
+
+## Sprites de carga, efeito de energia e retratos — 10/11/2026
+
+- Criado atlas transparente com ferramenta `image_gen` integrada, preservando fontes anteriores. Oito quadros por protagonista em postura de carga, braço preparado e mouse preso ao cabo. Fonte e prompt em `recursos/fontes_arte/caminhada_carregando.png` e `instrucoes_caminhada_carregando.json`.
+- Exportador `ferramentas/preparar_caminhada_carregando.py`: 16 PNGs em 40 × 40, conferidos em pasta temporária antes de integrar. Carregamento separado preserva a normalização dos sprites existentes; caminhada usa distância real e direção. Postura de carga mantida parado e no salto.
+- GIF indicado pelo responsável baixado e inspecionado por quadros. Substituído mouse girando/barra sobre a cabeça por partículas de energia convergentes e pulso local na carga completa. Relógio visual próprio continua após saturação da carga; colisões, velocidade de carga, dano e comandos X/K/botão esquerdo preservados.
+- `interface/retratos.py`: recortes dos sprites aprovados, com cache por identidade/aparência; Sistema usa terminal, Indexador sua figura real. A caixa troca retrato a cada fala e ajusta altura para acomodar o texto completo. Falantes antigos sem sprite próprio usam busto neutro. Não houve nova arte de rosto.
+- Validação: **124 testes passaram** com SDL dummy (9,482 s), incluindo cinco regressões de sprites/energia/retratos/texto longo. Capturas Pygame de ambos carregando e retratos em `avaliacao/carga_dialogos/`, com `previa_carga.gif` de 72 atualizações. Inspeção visual offscreen; não houve partida manual. Estado local do incremento anterior mantido; nenhum commit criado.
+
+## HUD de conversa inspirado nas referências — 10/11/2026
+
+- Ambas as URLs fornecidas foram baixadas e inspecionadas: composição com bustos grandes e ouvinte escurecido; moldura azul clara e placa de nome. As imagens de referência não foram incorporadas ao jogo.
+- Seis bustos originais gerados com `image_gen` integrada (Menino, Menina, Max, Romerito, entidade e Indexador), preservando identidades e roupas. Fontes transparentes em 1024 × 1536 em `recursos/fontes_arte/retratos_dialogo/`, prompts e proveniência em `instrucoes_retratos_dialogo.json`. Exportador `ferramentas/preparar_retratos_dialogo.py`: seis ilustrações + ícone de Sistema em 768 × 1152. Conferência em pasta temporária antes de integrar.
+- `interface/quadro_dialogo.py`: moldura azul, filetes, sombra, bustos grandes e escurecimento do ouvinte com cache; `interface/dialogo.py` mantém texto completo e regras de entrada, adicionando placa de nome conforme o lado do falante. `interface/retratos.py` carrega PNGs HD sem normalização para o corpo de combate. Monitor ampliado da abertura reposicionado ao centro para não ser encoberto.
+- Validação: **127 testes passaram** (9,623 s), incluindo resolução/transparência real, destaque sem mutar fonte e alternância de interlocutores. Todos os 11 exportadores Pygame passaram em cópia temporária, produzindo 100 PNGs distintos. Capturas reais em `avaliacao/dialogos_hd/`, com abertura de ambos os protagonistas e falantes da campanha.
+- Limites: renderização offscreen em 960 × 540, sem partida manual. Fontes anteriores, controles, física e alterações locais do incremento anterior preservados. Nenhum commit criado.
