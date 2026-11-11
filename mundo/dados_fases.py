@@ -2,6 +2,7 @@
 from entidades.chefe import DEFINICOES_CHEFES
 from sistema.configuracoes import TAMANHO_BLOCO
 from mundo.dados_biblioteca import criar_biblioteca
+from entidades.max_boss import MaxBoss
 
 
 FALA_CORRUPCAO_INTRODUCAO = ('Aluno(a)', 'Espere, professor! A tela diz que ela não vai permitir ser desligada!')
@@ -86,3 +87,15 @@ def build_levels():
         'clear_encounter_on_defeat': True,
         'arena_left': 38 * TAMANHO_BLOCO,
     }, criar_biblioteca()]
+
+    def gerar_fase_2():
+        # config. do mapa da fase 2
+        
+        boss_max = MaxBoss (
+            x=600,
+            y=300, 
+            caminho_spritesheet="recursos/imagens/max_spritesheet.png"
+        )
+        mapa.adicionar_inimigo(boss_max)
+
+        return mapa
